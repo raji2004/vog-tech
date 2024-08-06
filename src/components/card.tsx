@@ -14,8 +14,8 @@ export const Card = ({ className, title, description, icon }: cardProps) => {
             <div className=" bg-white rounded-md p-2 text-primary w-fit flex justify-center items-center gap-4">
                 {icon}
             </div>
-            <H3 color={'primary-foreground'}>{title}</H3>
-            <P color={'primary-foreground'}>{description}</P>
+            <H3 color={'text-primary-foreground'}>{title}</H3>
+            <P color={'text-primary-foreground'}>{description}</P>
         </div>
     );
 }
