@@ -66,7 +66,7 @@ export const cardData: CardObj[] = [
     {
         title: 'Personalized Solutions',
         description: 'We understand that every business is unique. Our team takes the time to thoroughly understand your specific needs, challenges, and goals. We tailor our services to provide customized solutions that drive your business forward.',
-        icon: '/icon/idea.svg'
+        icon: '/icon/Idea.svg'
     },
     {
         title: 'Expert Guidance',
