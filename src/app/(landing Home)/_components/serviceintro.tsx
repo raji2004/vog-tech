@@ -33,7 +33,7 @@ export const ServiceIntro = () => {
                     Financial Assurance Brings!
                 </H1>
                 <AdjustableSVG width={25} height={250} strokeWidth={1.8} circleRadius={12} gap={250} />
-                <P className=" text-[10px] w-5/6 text-left">
+                <P className=" text-[7px] w-5/6 text-left">
                     Secure your {"business's"} future with comprehensive financial assurance. Our expert assurance services provide
                     accurate and reliable financial insights, enhancing your credibility with stakeholders and ensuring compliance
                     with regulatory standards.
