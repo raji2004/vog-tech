@@ -121,3 +121,26 @@ export const cardData: CardObj[] = [
         icon: '/icon/Graphic-design.svg'
     },
 ]
+
+export const faqData = [
+    {
+        question: 'What services do you offer?',
+        answer: `We offer a wide range of services to meet your business needs. Our services include business consulting, tax audit, assurance, and more.
+            We tailor our services to provide customized solutions that drive your business forward.`,
+    },
+    {
+        question: 'How do I get started?',
+        answer: `Getting started is easy! Simply contact us to schedule a consultation. Our team will work with you to understand your specific needs, challenges, and goals.
+            We will then develop a customized plan to address your unique requirements and help you achieve your business objectives.`,
+    },
+    {
+        question: 'What industries do you specialize in?',
+        answer: `We work with businesses across a wide range of industries, including manufacturing, retail, healthcare, technology, and more.
+            Our team has the expertise and experience to provide specialized services tailored to your industry’s unique requirements.`,
+    },
+    {
+        question: 'How can VOG Global help my business?',
+        answer: `VOG Global can help your business by providing expert guidance, personalized solutions, and proactive risk management.
+            Our team will work closely with you to identify and mitigate potential risks, improve compliance, and drive your business forward.`,
+    },
+]
