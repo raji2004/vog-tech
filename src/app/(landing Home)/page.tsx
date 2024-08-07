@@ -4,6 +4,7 @@ import { WhatWeProvide } from "./_components/whatweprovide";
 import { ServiceIntro } from "./_components/serviceintro";
 import { OurApproach } from "./_components/ourapproach";
 import { WhyChooseUs } from "./_components/whychooseus";
+import { MeetTheTeam } from "./_components/meettheteam";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <ServiceIntro />
       <OurApproach/>
       <WhyChooseUs/>
+      <MeetTheTeam/>
 
     </main>
   );

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { title } from "process"
 import React from "react"
 
 export const heroCarouselImg = [
@@ -143,4 +144,39 @@ export const faqData = [
         answer: `VOG Global can help your business by providing expert guidance, personalized solutions, and proactive risk management.
             Our team will work closely with you to identify and mitigate potential risks, improve compliance, and drive your business forward.`,
     },
+]
+export const teamData = [
+    {
+        image: '/img/home/meettheteam.svg',
+        title: 'UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK),PHD (USA), CNA, ACTI.',
+        position: 'CEO, VOG Global',
+        description: `Udo is a graduate of Economics from the University of Calabar,
+         MSc in international finance and account from the University of Liverpool.
+          PHD in finance from the Walden University, USA. 
+          He is a practicing licenced member of the Association of National Accountants of Nigeria (ANAN), 
+        a practicing licenced member of the Chartered Institute of Taxation of Nigeria (CITN) and a Fellow 
+        of the Association of Chartered System Accountants (ACSA), USA.`
+    },
+    {
+        image: '/img/home/meettheteam.svg',
+        title: 'UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK),PHD (USA), CNA, ACTI.',
+        position: 'CEO, VOG Global',
+        description: `Udo is a graduate of Economics from the University of Calabar,
+         MSc in international finance and account from the University of Liverpool.
+          PHD in finance from the Walden University, USA. 
+          He is a practicing licenced member of the Association of National Accountants of Nigeria (ANAN), 
+        a practicing licenced member of the Chartered Institute of Taxation of Nigeria (CITN) and a Fellow 
+        of the Association of Chartered System Accountants (ACSA), USA.`
+    },
+    {
+        image: '/img/home/meettheteam.svg',
+        title: 'UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK),PHD (USA), CNA, ACTI.',
+        position: 'CEO, VOG Global',
+        description: `Udo is a graduate of Economics from the University of Calabar,
+         MSc in international finance and account from the University of Liverpool.
+          PHD in finance from the Walden University, USA. 
+          He is a practicing licenced member of the Association of National Accountants of Nigeria (ANAN), 
+        a practicing licenced member of the Chartered Institute of Taxation of Nigeria (CITN) and a Fellow 
+        of the Association of Chartered System Accountants (ACSA), USA.`
+    }
 ]

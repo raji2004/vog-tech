@@ -11,7 +11,7 @@ type TeamProps = {
 }
 
 export const TeamCard = ({ title, position, image, description }: TeamProps) => {
-    const dimension = 180
+    const dimension = 500
     return (
         <div className={cn("flex flex-col text-center items-center justify-between gap-5 md:flex-row md:text-left")}>
 
@@ -21,7 +21,7 @@ export const TeamCard = ({ title, position, image, description }: TeamProps) => 
                 <H3 className=" font-light" color={'text-secondary-foreground'}>{title}</H3>
                 <P className=" hidden md:block" color={'text-popover'}>{position}</P>
                 <P color={'text-secondary-foreground'}>{description}</P>
-                <Button className=" my-5">Read More</Button>
+                <Button className=" my-5 rounded-full">Read More</Button>
             </div>
         </div>
     )
