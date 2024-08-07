@@ -3,7 +3,7 @@ import { H1, H2, P, List } from "@/components/typography"
 import { IconButton } from "@/components/button"
 import { ArrowRight, ArrowLeft } from "lucide-react"
 import { useRef } from "react"
-
+import { heroCarouselImg } from "./data";
 import Image from "next/image"
 
 export const WhatWeProvide = () => {
@@ -19,7 +19,7 @@ export const WhatWeProvide = () => {
                 </P>
             </div>
 
-            <Carosel />
+            <Carosel imgList={heroCarouselImg} />
             <div>
                 <P color={"text-primary-foreground"}>Here at VOG Tech:</P>
                 <List color={"text-primary-foreground"}>
@@ -33,8 +33,8 @@ export const WhatWeProvide = () => {
     )
 }
 
-
-const Carosel = () => {
+type imgObj = { src: string, size: number }
+export const Carosel = ({ imgList }: { imgList?: imgObj[] }) => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const imgSize = 300
     const scroll = (direction: "left" | "right") => {
@@ -44,6 +44,10 @@ const Carosel = () => {
             scrollRef.current.scrollTo({ left: scrollLeft + scrollAmount, behavior: "smooth" });
         }
     };
+
+    const generateId =()=>{
+        return Math.random().toString(36).substring(7);
+    }
 
     return (
         <div className="flex flex-col gap-3">
@@ -62,56 +66,40 @@ const Carosel = () => {
                 </IconButton>
             </div>
             <div ref={scrollRef} className="overflow-x-scroll flex gap-3 no-scrollbar">
-                <Image
-                    src="/img/home/whatweprovide.svg"
-                    width={imgSize}
-                    height={imgSize}
-                    className="rounded-lg"
-                    alt="what we provide"
-                />
-                <Image
-                    src="/img/home/whatweprovide.svg"
-                    width={imgSize}
-                    height={imgSize}
-                    className="rounded-lg"
-                    alt="what we provide"
-                />
-                <Image
-                    src="/img/home/whatweprovide.svg"
-                    width={imgSize}
-                    height={imgSize}
-                    className="rounded-lg"
-                    alt="what we provide"
-                />
-                <Image
-                    src="/img/home/whatweprovide.svg"
-                    width={imgSize}
-                    height={imgSize}
-                    className="rounded-lg"
-                    alt="what we provide"
-                />
-                <Image
-                    src="/img/home/whatweprovide.svg"
-                    width={imgSize}
-                    height={imgSize}
-                    className="rounded-lg"
-                    alt="what we provide"
-                />
-                <Image
-                    src="/img/home/whatweprovide.svg"
-                    width={imgSize}
-                    height={imgSize}
-                    className="rounded-lg"
-                    alt="what we provide"
-                />
-                <Image
-                    src="/img/home/whatweprovide.svg"
-                    width={imgSize}
-                    height={imgSize}
-                    className="rounded-lg"
-                    alt="what we provide"
-                />
+                {imgList?.length != 0 ? imgList?.map((item, i) => {
+                    const id = generateId()
+                    return (
+                        <Image
+                           key={id}
+                            src={item.src}
+                            height={item.size}
+                            width={item.size}
+                            className="rounded-lg"
+                            alt={item.src}
+                        />
+                    )
+                }) :
+                    <>
+                        <Image
+                            src="/img/home/whatweprovide.svg"
+                            width={imgSize}
+                            height={imgSize}
+                            className="rounded-lg"
+                            alt="what we provide"
+                        />
+                        <Image
+                            src="/img/home/whatweprovide.svg"
+                            width={imgSize}
+                            height={imgSize}
+                            className="rounded-lg"
+                            alt="what we provide"
+                        />
+                        
+                    </>
+                }
             </div>
         </div>
     );
 };
+
+

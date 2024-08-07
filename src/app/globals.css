@@ -13,7 +13,7 @@
     --primary: #264E26;
     --primary-foreground: #E9EDE9;
     --secondary: #024D52;
-    --secondary-foreground: #0000;
+    --secondary-foreground: #012022;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 210 40% 96.1%;
@@ -58,6 +58,7 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+  
 }
 
 @layer base {

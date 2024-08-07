@@ -3,6 +3,7 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
+  
   darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -19,6 +20,9 @@ const config: Config = {
       },
     },
     extend: {
+      fontSize: {
+        "xxs": '10px', // 10px
+      },
       fontFamily: {
         montserrat: ['var(--montserrat)', ...fontFamily.sans],
       },
