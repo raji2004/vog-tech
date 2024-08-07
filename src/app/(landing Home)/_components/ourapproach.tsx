@@ -12,7 +12,7 @@ export const OurApproach = () => {
                 your specific needs and challenges.
             </P>
 
-            <div className=" flex flex-row justify-center flex-wrap gap-x-3 gap-y-6  w-fit " >
+            <div className=" flex flex-row justify-center flex-wrap gap-x-3 gap-y-10  w-fit " >
                 {
                     cardData.map((item, i) => {
                         return (

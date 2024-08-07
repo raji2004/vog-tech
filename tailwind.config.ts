@@ -27,6 +27,8 @@ const config: Config = {
         montserrat: ['var(--montserrat)', ...fontFamily.sans],
       },
       colors: {
+        'custom-green': '#024D52',
+        'custom-purple': '#5F5D99',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -60,6 +62,9 @@ const config: Config = {
           DEFAULT: 'var(--card)',
           foreground: 'hsl(var(--card-foreground))',
         },
+      },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(to right, #024D52, #5F5D99)',
       },
       borderRadius: {
         lg: 'var(--radius)',
