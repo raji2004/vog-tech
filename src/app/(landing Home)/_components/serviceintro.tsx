@@ -3,6 +3,7 @@ import { Carosel } from "./whatweprovide"
 import { Button } from "@/components/button";
 import { serviceIntroImg } from "./data";
 
+
 const AdjustableSVG = ({ width = 8, height = 90, strokeWidth = 0.8, circleRadius = 4, gap = 10 }) => {
     const lineStartY = circleRadius + strokeWidth + gap;
     const lineEndY = height - (circleRadius + strokeWidth + gap);

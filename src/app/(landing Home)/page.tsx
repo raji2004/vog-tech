@@ -5,6 +5,8 @@ import { ServiceIntro } from "./_components/serviceintro";
 import { OurApproach } from "./_components/ourapproach";
 import { WhyChooseUs } from "./_components/whychooseus";
 import { MeetTheTeam } from "./_components/meettheteam";
+import { CoreTeam } from "./_components/coreteam";
+
 
 export default function Home() {
   return (
@@ -12,9 +14,11 @@ export default function Home() {
       <Hero />
       <WhatWeProvide />
       <ServiceIntro />
-      <OurApproach/>
-      <WhyChooseUs/>
-      <MeetTheTeam/>
+      <OurApproach />
+      <WhyChooseUs />
+      <MeetTheTeam />
+      <CoreTeam />
+     
 
     </main>
   );

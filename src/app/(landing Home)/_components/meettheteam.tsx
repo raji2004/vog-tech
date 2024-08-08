@@ -31,13 +31,13 @@ export const MeetTheTeam = () => {
                         to success with the right finances and financial practices.
                     </P>
                     <div className=" flex gap-9">
-                        <Button>Mission Statement</Button>
-                        <Button className=" border-primary border-2 text-primary bg-primary-foreground">Vision Statement</Button>
+                        <Button size="sm">Mission Statement</Button>
+                        <Button size="sm" className=" border-primary border-2 text-primary bg-primary-foreground text-sm">Vision Statement</Button>
                     </div>
-                   <div className=" w-full p-2 bg-popover-foreground text-left">
-                    <P color="text-primary">To create professional rewarding services for all our clients through
-                    relentless pursuit of perfection with necessary technological aids.</P>
-                   </div>
+                    <div className=" w-full p-2 bg-popover-foreground text-left">
+                        <P color="text-primary">To create professional rewarding services for all our clients through
+                            relentless pursuit of perfection with necessary technological aids.</P>
+                    </div>
                 </div>
             </div>
         </div>
