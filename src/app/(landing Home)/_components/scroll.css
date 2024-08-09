@@ -6,3 +6,6 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* Chrome, Safari, and Opera */
   }
+  .review-card {
+    will-change: transform, opacity;
+}

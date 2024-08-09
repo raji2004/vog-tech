@@ -11,7 +11,7 @@ import { Review } from "./_components/review";
 
 export default function Home() {
   return (
-    <main className=" ">
+    <main className="  ">
       <Hero />
       <WhatWeProvide />
       <ServiceIntro />

@@ -6,6 +6,7 @@ import { H3, H4, List, P } from "@/components/typography";
 import { motion } from "framer-motion";
 
 
+
 type reviewType = {
     image: string;
     review: string;
@@ -32,11 +33,21 @@ export const ReviewCard = forwardRef<HTMLDivElement, ReviewCardProps>(
                     alt={image}
                     width={200}
                     height={200}
-                    className="w-full h-full object-cover object-center rounded-md"
+                    className="w-full h-full object-contain object-center rounded-md"
                 />
             </div>
             <div className="w-full md:w-1/2 p-6 flex flex-col text-left m items-center justify-center text-secondary-foreground">
-                <P className="mb-4" >{review}</P>
+                <div className=" justify-self-start mb">
+
+                    <Image
+                        src={'/img/home/reviewquote.svg'}
+                        alt="quote"
+                        width={150}
+                        height={150}
+                        className=" self-start"
+                    />
+                    <P className="mb-4" >{review}</P>
+                </div>
                 <div className="flex items-center mb-2">
                     {/* Render stars based on rating */}
                     {starArray.map((_, i) => (

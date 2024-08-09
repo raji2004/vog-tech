@@ -6,23 +6,25 @@ import {
 } from "@/components/ui/accordion"
 
 type faqProps = {
-value:string,
-content:string
+    value: string,
+    content: string
 
 }
-export const Faq = ({value,content}:faqProps) => {
+export const Faq = ({ value, content }: faqProps) => {
     return (
         <>
-        <div className=" bg-custom-gradient w-full h-[2px] "></div>
-        <Accordion  className=" m-0 p-0" type="single" collapsible>
-            <AccordionItem  value={value}>
-                <AccordionTrigger className=" hover:no-underline">{value}</AccordionTrigger>
-                <AccordionContent>
-                    {content}
-                </AccordionContent>
-            </AccordionItem>
-        </Accordion>
-        <div className=" bg-custom-gradient w-full h-[2px]"></div>
+            <div className="bg-custom-gradient w-full h-[2px]"></div>
+            <Accordion className="border-none m-0 p-0" type="single" collapsible>
+                <AccordionItem className="border-none" value={value}>
+                    <AccordionTrigger className="hover:no-underline p-0 "> {/* Adjust padding */}
+                        {value}
+                    </AccordionTrigger>
+                    <AccordionContent className="p-0"> {/* Adjust padding */}
+                        {content}
+                    </AccordionContent>
+                </AccordionItem>
+            </Accordion>
+            <div className="bg-custom-gradient w-full h-[2px]"></div>
         </>
     )
 
