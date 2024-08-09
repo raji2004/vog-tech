@@ -6,6 +6,7 @@ import { OurApproach } from "./_components/ourapproach";
 import { WhyChooseUs } from "./_components/whychooseus";
 import { MeetTheTeam } from "./_components/meettheteam";
 import { CoreTeam } from "./_components/coreteam";
+import { Review } from "./_components/review";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <WhyChooseUs />
       <MeetTheTeam />
       <CoreTeam />
+      <Review />
      
 
     </main>

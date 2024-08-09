@@ -180,3 +180,26 @@ export const teamData = [
         of the Association of Chartered System Accountants (ACSA), USA.`
     }
 ]
+export const reviews = [
+    {
+        image: "/img/home/review.svg",
+        review: "VOG Global has been an invaluable partner for our company. Their expertise in tax auditing and business consulting has helped us streamline our operations and achieve significant cost savings. The team is professional, knowledgeable, and always available to provide guidance. We couldn't have asked for a better partner",
+        rating: 3,
+        name: "John Doe",
+        reviewertitle: "CEO",
+    },
+    {
+        image: "/img/home/review.svg",
+        review: "VOG Global has been an invaluable partner for our company. Their expertise in tax auditing and business consulting has helped us streamline our operations and achieve significant cost savings. The team is professional, knowledgeable, and always available to provide guidance. We couldn't have asked for a better partner",
+        rating: 5,
+        name: "Jane Doe",
+        reviewertitle: "COO",
+    },
+    {
+        image: "/img/home/review.svg",
+        review: "VOG Global has been an invaluable partner for our company. Their expertise in tax auditing and business consulting has helped us streamline our operations and achieve significant cost savings. The team is professional, knowledgeable, and always available to provide guidance. We couldn't have asked for a better partner",
+        rating: 4,
+        name: "Michael Smith",
+        reviewertitle: "CTO",
+    },
+];
