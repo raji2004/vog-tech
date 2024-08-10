@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import './globals.css';
 import { NavBar } from "@/components/nav";
+import { Footer } from "@/components/footer";
 
 
 
 export const metadata: Metadata = {
   title: "Vog tech",
   description: "start up",
- 
+
 };
 
 export default function RootLayout({
@@ -20,7 +21,8 @@ export default function RootLayout({
       <body >
         <NavBar />
         {children}
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }

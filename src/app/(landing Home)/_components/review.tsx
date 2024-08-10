@@ -34,7 +34,7 @@ export const Review = () => {
         <div
             style={{ perspective: "1000px" }}
             className={cn(
-                "bg-white p-10 text-center space-y-7 flex flex-col"
+                "bg-white p-4 text-center space-y-7 flex flex-col"
             )}
         >
             <div className="flex flex-row items-center justify-center ">

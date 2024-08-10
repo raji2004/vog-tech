@@ -8,7 +8,7 @@ import Image from "next/image"
 
 export const WhatWeProvide = () => {
     return (
-        <div className="p-10 bg-primary w-full text-left space-y-7">
+        <div className="p-4 bg-primary w-full text-left space-y-7">
             <div className=" md:flex md:justify-center">
 
                 <H2 className=" font-normal " color={"text-primary-foreground"}>

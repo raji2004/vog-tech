@@ -55,7 +55,7 @@ export const CoreTeam = () => {
 
 
   return (
-    <div className="bg-white space-y-5 p-10">
+    <div className="bg-white space-y-5 p-4">
       <H1 color="text-primary" className="text-center">
         Our Core Team
       </H1>

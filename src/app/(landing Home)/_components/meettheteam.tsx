@@ -6,7 +6,7 @@ import { Button } from "@/components/button";
 
 export const MeetTheTeam = () => {
     return (
-        <div className=" bg-white p-10 text-center space-y-10 ">
+        <div className=" bg-white p-4 text-center space-y-10 ">
             <H1 color="text-primary">Meet Our Team Of Innovative Problem Solvers</H1>
             <div className="  space-y-10">
                 {
