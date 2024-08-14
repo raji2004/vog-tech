@@ -3,7 +3,7 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
-  
+
   darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -65,6 +65,9 @@ const config: Config = {
       },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(to right, #024D52, #5F5D99)',
+      },
+      padding: {
+        'section-padding': ' var(--section-padding)',
       },
       borderRadius: {
         lg: 'var(--radius)',

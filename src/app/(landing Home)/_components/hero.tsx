@@ -4,7 +4,7 @@ import Image from "next/image"
 export const Hero = () => {
     const imgDimensions: number = 500;
     return (
-        <div className="p-4 flex flex-col items-center md:flex-row">
+        <div className=" p-section-padding flex flex-col items-center md:flex-row">
             <div className=" flex flex-col items-center gap-2 md:items-start md:gap-4 ">
                 <div className="flex flex-row justify-between">
                     <div className=" text-center space-y-2 md:flex flex-col-reverse md:text-left md:gap-5">

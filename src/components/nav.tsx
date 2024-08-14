@@ -45,7 +45,7 @@ export const NavBar = () => {
     );
 };
 
-const NavItem = ({ href, title, isMobile }: { href: string, title: string, isMobile?: boolean }) => {
+const NavItem = ({ href, title, isMobile, setIsOpen }: { href: string, title: string, isMobile?: boolean, setIsOpen?: (isOpen: boolean) => void }) => {
     const pathname = usePathname();
 
     return (
@@ -60,6 +60,11 @@ const NavItem = ({ href, title, isMobile }: { href: string, title: string, isMob
                     "text-popover border-b-2 border-popover rounded-ee-sm": pathname === href && !isMobile,
                 }
             )}
+            onClick={() => {
+                if (isMobile && setIsOpen) {
+                    setIsOpen(false); // Close the mobile menu when a link is clicked
+                }
+            }}
         >
             {title}
         </Link>
@@ -91,7 +96,7 @@ const MobileMenu = (
             </div>
             <div className="flex flex-col items-center space-y-1 sm:px-3">
                 {items.map((item, index) => (
-                    <NavItem key={index} href={item.href} title={item.title} isMobile />
+                    <NavItem key={index} href={item.href} title={item.title} isMobile setIsOpen={setIsOpen} />
                 ))}
             </div>
         </div>
