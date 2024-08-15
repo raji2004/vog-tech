@@ -1,13 +1,8 @@
 import { cn } from "@/lib/utils";
 import { H4, P } from "./typography";
 import Image from "next/image";
+import { cardProps } from "@/lib/types";
 
-type cardProps = {
-    className?: string;
-    title?: string;
-    description?: string;
-    icon: string;
-};
 
 export const Card = ({ className, title, description, icon }: cardProps) => {
     return (

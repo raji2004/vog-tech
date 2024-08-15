@@ -5,10 +5,11 @@ import { ArrowRight, ArrowLeft } from "lucide-react"
 import { useRef } from "react"
 import { heroCarouselImg } from "./data";
 import Image from "next/image"
+import { imgObj } from "@/lib/types";
 
 export const WhatWeProvide = () => {
     return (
-        <div className=" p-section-padding bg-primary w-full text-left space-y-7">
+        <div className=" p-section-padding-sm md:p-section-padding bg-primary w-full text-left space-y-7">
             <div className=" md:flex md:justify-center">
 
                 <H2 className=" font-normal " color={"text-primary-foreground"}>
@@ -33,7 +34,7 @@ export const WhatWeProvide = () => {
     )
 }
 
-type imgObj = { src: string, size: number }
+
 export const Carosel = ({ imgList }: { imgList?: imgObj[] }) => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const imgSize = 300

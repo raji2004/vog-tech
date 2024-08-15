@@ -4,18 +4,10 @@ import { HTMLAttributes, forwardRef } from "react";
 import Image from "next/image";
 import { H3, H4, List, P } from "@/components/typography";
 import { motion } from "framer-motion";
+import { ReviewCardProps } from "@/lib/types";
 
 
 
-type reviewType = {
-    image: string;
-    review: string;
-    rating: number; // 1 to 5
-    name: string;
-    reviewertitle: string;
-};
-
-interface ReviewCardProps extends HTMLAttributes<HTMLDivElement>, reviewType { }
 const starArray = [1, 2, 3, 4, 5]
 export const ReviewCard = forwardRef<HTMLDivElement, ReviewCardProps>(
     ({ image, review, rating, name, reviewertitle, className, ...props }, ref) => (

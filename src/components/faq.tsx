@@ -4,12 +4,8 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+import { faqProps } from "@/lib/types"
 
-type faqProps = {
-    value: string,
-    content: string
-
-}
 export const Faq = ({ value, content }: faqProps) => {
     return (
         <>

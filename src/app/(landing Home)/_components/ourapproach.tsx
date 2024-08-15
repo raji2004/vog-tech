@@ -4,7 +4,7 @@ import { cardData } from "./data"
 
 export const OurApproach = () => {
     return (
-        <div className=" bg-primary p-section-padding space-y-8 text-center ">
+        <div className=" bg-primary p-section-padding-sm md:p-section-padding space-y-8 text-center ">
             <H1 color="text-primary-foreground">Our Approach</H1>
             <P  color="text-primary-foreground">
                 At VOG Global, our approach to financial assurance and business consulting is rooted in a commitment to excellence,

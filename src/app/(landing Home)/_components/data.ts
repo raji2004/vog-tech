@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { title } from "process"
+import { CardObj } from "@/lib/types"
 import React from "react"
 
 export const heroCarouselImg = [
@@ -56,11 +56,7 @@ export const serviceIntroImg = [
 
 ]
 
-type CardObj = {
-    title: string;
-    description: string;
-    icon: string;
-}
+
 
 
 export const cardData: CardObj[] = [

@@ -2,15 +2,8 @@
 import { cn } from "@/lib/utils";
 import { Mail, Lock, Eye, EyeOff } from 'lucide-react'
 import { useState } from "react";
+import { inputProps } from "@/lib/types";
 
-type inputProps = {
-    className?: string;
-    type?: 'text' | 'password' | 'email' | 'number',
-    placeholder?: string,
-    label?: string,
-    noLabel?: boolean,
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
-};
 
 export const Input = ({ className, type, placeholder, label,noLabel, onChange }: inputProps) => {
     const [showPassword, setShowPassword] = useState(false);

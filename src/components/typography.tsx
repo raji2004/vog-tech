@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
+import {typographyProps }from "@/lib/types";
 
-type typographyProps = { className?: string; children: React.ReactNode, color?: 'text-primary' | 'text-secondary' | 'text-primary-foreground' | 'text-secondary-foreground' | 'text-popover' };
+
 
 export function H1({ className, children, color }: typographyProps) {
   return (
@@ -82,7 +83,7 @@ export function Quote({ className, children, color }: typographyProps) {
 
 export function List({ className, children, color }: typographyProps) {
   return (
-    <ul className={cn("my-6 ml-6 list-disc [&>li]:mt-2", className, color ? `${color}` : 'text-primary')}>
+    <ul className={cn("my-6 ml-6 list-disc [&>li]:mb-2", className, color ? `${color}` : 'text-primary')}>
       {children}
     </ul>
   );

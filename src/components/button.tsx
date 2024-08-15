@@ -1,13 +1,7 @@
 import { cn } from "@/lib/utils";
+import { buttonProps } from "@/lib/types";
 
-type buttonProps = {
-    className?: string;
-    children: React.ReactNode,
-    color?: 'primary' | 'secondary' | 'primary-foreground' | 'secondary-foreground',
-    size?: 'sm' | 'md' | 'lg',
-    active?: boolean,
-    onClick?: () => void
-};
+
 export const Button = ({ children, className, color, size, onClick }: buttonProps) => {
     return (
         <button

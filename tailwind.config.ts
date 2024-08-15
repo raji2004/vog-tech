@@ -23,6 +23,13 @@ const config: Config = {
       fontSize: {
         "xxs": '10px', // 10px
       },
+      screens: {
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+      },
       fontFamily: {
         montserrat: ['var(--montserrat)', ...fontFamily.sans],
       },
@@ -68,6 +75,7 @@ const config: Config = {
       },
       padding: {
         'section-padding': ' var(--section-padding)',
+        'section-padding-sm': ' var(--section-padding-sm)',
       },
       borderRadius: {
         lg: 'var(--radius)',

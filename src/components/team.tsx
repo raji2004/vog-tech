@@ -2,13 +2,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { H3, P, } from '@/components/typography'
 import { Button } from "./button";
-
-type TeamProps = {
-    title: string,
-    position: string,
-    image: string,
-    description: string
-}
+import { TeamProps } from "@/lib/types";
 
 export const TeamCard = ({ title, position, image, description }: TeamProps) => {
     const dimension = 500
