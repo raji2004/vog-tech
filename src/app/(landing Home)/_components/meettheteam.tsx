@@ -1,13 +1,17 @@
 'use client';
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { TeamCard } from "@/components/team";
-import { H1, P, } from "@/components/typography";
+import { H1, P } from "@/components/typography";
 import { teamData } from "./data";
 import Image from "next/image";
 import { Button } from "@/components/button";
+import { useRef } from "react";
 
 export const MeetTheTeam = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
     // Define the animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -35,7 +39,8 @@ export const MeetTheTeam = () => {
             className=" bg-white p-section-padding-sm md:p-section-padding text-center space-y-10 "
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            animate={isInView ? "visible" : "hidden"}
+            ref={ref}
         >
             <motion.div variants={itemVariantsLeft}>
                 <H1 color="text-primary">Meet Our Team Of Innovative Problem Solvers</H1>

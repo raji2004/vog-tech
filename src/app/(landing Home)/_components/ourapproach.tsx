@@ -1,11 +1,15 @@
 'use client';
-import { motion } from "framer-motion";
+import { motion,useInView } from "framer-motion";
 import { H1, P, } from "@/components/typography"
 import { Card } from "@/components/card"
 import { cardData } from "./data"
+import { useRef } from "react";
+
 
 export const OurApproach = () => {
     // Define the animation variants
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -51,14 +55,15 @@ export const OurApproach = () => {
             <motion.div
                 variants={headerVariants}
                 initial="hidden"
-                animate="visible"
+                animate={isInView ? "visible" : "hidden"}
+                ref={ref}
             >
                 <H1 color="text-primary-foreground">Our Approach</H1>
             </motion.div>
             <motion.div
                 variants={textVariants}
                 initial="hidden"
-                animate="visible"
+                  animate={isInView ? "visible" : "hidden"}
             >
                 <P color="text-primary-foreground">
                     At VOG Global, our approach to financial assurance and business consulting is rooted in a commitment to excellence,
@@ -71,7 +76,7 @@ export const OurApproach = () => {
                 className=" flex flex-row justify-center flex-wrap gap-x-3 gap-y-10  w-fit "
                 variants={containerVariants}
                 initial="hidden"
-                animate="visible"
+                animate={isInView ? "visible" : "hidden"}
             >
                 {
                     cardData.map((item, i) => {
