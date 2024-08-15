@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from "framer-motion";
 import { TeamCard } from "@/components/team";
 import { H1, P, } from "@/components/typography";
 import { teamData } from "./data";
@@ -5,29 +8,76 @@ import Image from "next/image";
 import { Button } from "@/components/button";
 
 export const MeetTheTeam = () => {
+    // Define the animation variants
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 0.6,
+                staggerChildren: 0.2
+            }
+        }
+    };
+
+    const itemVariantsLeft = {
+        hidden: { opacity: 0, x: -50 },
+        visible: { opacity: 1, x: 0 }
+    };
+
+    const itemVariantsRight = {
+        hidden: { opacity: 0, x: 50 },
+        visible: { opacity: 1, x: 0 }
+    };
+
     return (
-        <div className=" bg-white p-section-padding-sm md:p-section-padding text-center space-y-10 ">
-            <H1 color="text-primary">Meet Our Team Of Innovative Problem Solvers</H1>
-            <div className="  space-y-10">
+        <motion.div
+            className=" bg-white p-section-padding-sm md:p-section-padding text-center space-y-10 "
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+        >
+            <motion.div variants={itemVariantsLeft}>
+                <H1 color="text-primary">Meet Our Team Of Innovative Problem Solvers</H1>
+            </motion.div>
+            <motion.div
+                className="  space-y-10"
+                variants={containerVariants}
+            >
                 {
                     teamData.map((item, i) => {
                         return (
-                            <TeamCard
+                            <motion.div
                                 key={i}
-                                title={item.title}
-                                position={item.position}
-                                image={item.image}
-                                description={item.description}
-                            />
+                                variants={i % 2 === 0 ? itemVariantsLeft : itemVariantsRight}
+                            >
+                                <TeamCard
+                                    title={item.title}
+                                    position={item.position}
+                                    image={item.image}
+                                    description={item.description}
+                                />
+                            </motion.div>
                         )
                     })
                 }
-            </div>
-            <div className=" md:flex md:gap-4 space-y-6">
-                <Image src="/img/home/meettheteamb.svg" alt="team" className=" md:w-3/6" width={500} height={500} />
-                <div className=" md:w-1/2 space-y-5 text-left">
+            </motion.div>
+            <motion.div
+                className=" md:flex md:gap-4 space-y-6"
+                variants={containerVariants}
+            >
+                <motion.div
+                    className=" md:w-3/6"
+                    variants={itemVariantsLeft}
+                >
+                    <Image src="/img/home/meettheteamb.svg" alt="team" className=" md:w-full" width={500} height={500} />
+                </motion.div>
+                <motion.div
+                    className=" md:w-1/2 space-y-5 text-left"
+                    variants={itemVariantsRight}
+                >
                     <H1 color="text-primary">We Lead Your Business To Success!</H1>
-                    <P color="text-secondary-foreground">Our {"Team’s "}goal is to drive your team
+                    <P color="text-secondary-foreground">Our {"Team's "}goal is to drive your team
                         to success with the right finances and financial practices.
                     </P>
                     <div className=" flex gap-9">
@@ -38,8 +88,8 @@ export const MeetTheTeam = () => {
                         <P color="text-primary">To create professional rewarding services for all our clients through
                             relentless pursuit of perfection with necessary technological aids.</P>
                     </div>
-                </div>
-            </div>
-        </div>
+                </motion.div>
+            </motion.div>
+        </motion.div>
     )
 }

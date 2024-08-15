@@ -199,3 +199,31 @@ export const reviews = [
         reviewertitle: "CTO",
     },
 ];
+
+export const teamMembers = [
+    {
+    img: "/img/home/coreteam.svg",
+    title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
+    pos: "CEO",
+    },
+    {
+    img: "/img/home/coreteam.svg",
+    title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
+    pos: "CEO",
+    },
+    {
+    img: "/img/home/coreteam.svg",
+    title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
+    pos: "CEO",
+    },
+    {
+    img: "/img/home/coreteam.svg",
+    title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
+    pos: "CEO",
+    },
+    {
+    img: "/img/home/coreteam.svg",
+    title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
+    pos: "CEO",
+    },
+]

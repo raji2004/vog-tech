@@ -1,27 +1,71 @@
 'use client';
-import { H1, H2, P, List } from "@/components/typography"
-import { IconButton } from "@/components/button"
-import { ArrowRight, ArrowLeft } from "lucide-react"
-import { useRef } from "react"
+import { H1, H2, P, List } from "@/components/typography";
+import { IconButton } from "@/components/button";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import { useRef, useEffect } from "react";
 import { heroCarouselImg } from "./data";
-import Image from "next/image"
+import Image from "next/image";
 import { imgObj } from "@/lib/types";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 
 export const WhatWeProvide = () => {
-    return (
-        <div className=" p-section-padding-sm md:p-section-padding bg-primary w-full text-left space-y-7">
-            <div className=" md:flex md:justify-center">
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
 
-                <H2 className=" font-normal " color={"text-primary-foreground"}>
-                    We provide the best financial services for your business
-                </H2>
-                <P color={"text-primary-foreground"}>
-                    Successfully audited and consulted for over 500 businesses across various industries.
-                </P>
+    useEffect(() => {
+        if (inView) {
+            controls.start({
+                x: 0,
+                opacity: 1,
+                transition: { duration: 0.5, delay: 0.2 },
+            });
+        } else {
+            controls.start({
+                x: -100,
+                opacity: 0,
+            });
+        }
+    }, [controls, inView]);
+
+    return (
+        <div
+            ref={ref}
+            className=" p-section-padding-sm md:p-section-padding bg-primary w-full text-left space-y-7"
+        >
+            <div className=" md:flex md:justify-center">
+                <motion.div
+                    initial={{ x: -100, opacity: 0 }}
+                    animate={controls}
+                >
+                    <H2
+                        className=" font-normal "
+                        color={"text-primary-foreground"}
+                    >
+                        We provide the best financial services for your business
+                    </H2>
+                </motion.div>
+
+                <motion.div
+                    initial={{ x: -100, opacity: 0 }}
+                    animate={controls}
+                    transition={{ duration: 0.5, delay: 1 }}
+                >
+                    <P
+                        color={"text-primary-foreground"}
+                    >
+                        Successfully audited and consulted for over 500 businesses across
+                        various industries.
+                    </P>
+                </motion.div>
             </div>
 
             <Carosel imgList={heroCarouselImg} />
-            <div>
+            <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                animate={controls}
+                transition={{ delay: 0.6 }}
+            >
                 <P color={"text-primary-foreground"}>Here at VOG Tech:</P>
                 <List color={"text-primary-foreground"}>
                     <li>We are utilizing the latest technologies and methodologies to ensure compliance and efficiency.</li>
@@ -29,15 +73,15 @@ export const WhatWeProvide = () => {
                     <li>Recognized by leading industry bodies and certified by [relevant authority].</li>
                     <li>Clear and transparent processes with regular updates and reports.</li>
                 </List>
-            </div>
+            </motion.div>
         </div>
-    )
-}
-
+    );
+};
 
 export const Carosel = ({ imgList }: { imgList?: imgObj[] }) => {
     const scrollRef = useRef<HTMLDivElement>(null);
-    const imgSize = 300
+    const imgSize = 300;
+
     const scroll = (direction: "left" | "right") => {
         if (scrollRef.current) {
             const { scrollLeft, clientWidth } = scrollRef.current;
@@ -95,12 +139,9 @@ export const Carosel = ({ imgList }: { imgList?: imgObj[] }) => {
                             className="rounded-lg"
                             alt="what we provide"
                         />
-                        
                     </>
                 }
             </div>
         </div>
     );
 };
-
-
