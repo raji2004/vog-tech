@@ -9,7 +9,6 @@ import { faqProps } from "@/lib/types"
 export const Faq = ({ value, content }: faqProps) => {
     return (
         <>
-            <div className="bg-custom-gradient w-full h-[2px]"></div>
             <Accordion className="border-none m-0 p-0" type="single" collapsible>
                 <AccordionItem className="border-none" value={value}>
                     <AccordionTrigger className="hover:no-underline p-0 "> {/* Adjust padding */}

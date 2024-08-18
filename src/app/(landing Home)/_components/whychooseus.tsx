@@ -20,6 +20,7 @@ export const WhyChooseUs = () => {
                     <Image src="/img/home/whychooseus.svg" width={300} height={300} className=" w-full object-cover" alt="whychooseus" />
                 </div>
                 <div className=" md:w-1/2 space-y-5">
+                    <div className="bg-custom-gradient w-full h-[2px]"></div>
                     {
                         faqData.map((item, i) => {
                             return (
