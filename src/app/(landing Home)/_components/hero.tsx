@@ -41,10 +41,10 @@ export const Hero = () => {
                     variants={containerVariants}
                 >
                     <motion.div
-                        className=" text-center space-y-2 md:flex flex-col-reverse md:text-left md:gap-5"
+                        className=" text-center space-y-2  md:flex flex-col-reverse md:text-left md:gap-5"
                         variants={itemVariants}
                     >
-                        <H1>
+                        <H1 >
                             Expert Tax Auditing and Business Consulting
                             Services in Nigeria.
                         </H1>
@@ -57,7 +57,7 @@ export const Hero = () => {
                         alt="hero.svg"
                         width={imgDimensions}
                         height={imgDimensions}
-                        className="hidden md:block"
+                        className="hidden w-[400px] lg:w-[500px] h-auto  md:block"
                     />
                 </motion.div>
                 <motion.div

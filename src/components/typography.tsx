@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import {typographyProps }from "@/lib/types";
+import { typographyProps } from "@/lib/types";
 
 
 
@@ -7,7 +7,7 @@ export function H1({ className, children, color }: typographyProps) {
   return (
     <h1
       className={cn(
-        " text-3xl xs:text-3xl md:text-5xl font-semibold tracking-tight lg:text-6xl",
+        " text-3xl  leading-normal lg:text-5xl font-semibold lg:leading-normal lg:tracking-widest ",
         className,
         color ? `${color}` : ' text-primary'
       )}
@@ -21,7 +21,7 @@ export function H2({ className, children, color }: typographyProps) {
   return (
     <h2
       className={cn(
-        " pb-2 text-2xl md:text-3xl font-semibold tracking-tight first:mt-0",
+        "  text-3xl lg:text-4xl font-normal md:leading-normal ",
         className,
         color ? `${color}` : 'text-primary'
       )}

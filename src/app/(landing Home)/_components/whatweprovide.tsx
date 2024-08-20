@@ -33,7 +33,7 @@ export const WhatWeProvide = () => {
             ref={ref}
             className=" p-section-padding-sm md:p-section-padding bg-primary w-full text-left space-y-7"
         >
-            <div className=" md:flex md:justify-center">
+            <div className=" md:flex space-y-4 md:justify-center">
                 <motion.div
                     initial={{ x: -100, opacity: 0 }}
                     animate={controls}
