@@ -8,6 +8,7 @@ import Image from "next/image";
 import { imgObj } from "@/lib/types";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
+import { cn } from "@/lib/utils";
 
 export const WhatWeProvide = () => {
     const controls = useAnimation();
@@ -31,25 +32,33 @@ export const WhatWeProvide = () => {
     return (
         <div
             ref={ref}
-            className=" p-section-padding-sm md:p-section-padding bg-primary w-full text-left space-y-7"
+            className=" p-section-padding-sm md:p-section-padding bg-primary w-full text-left space-y-10"
         >
-            <div className=" md:flex space-y-4 md:justify-center">
+            <div className=" md:flex space-y-4 items-center md:justify-center">
                 <motion.div
                     initial={{ x: -100, opacity: 0 }}
                     animate={controls}
+                    className=" lg:w-1/2"
                 >
                     <H2
-                        className=" font-normal "
+                        
                         color={"text-primary-foreground"}
                     >
                         We provide the best financial services for your business
                     </H2>
                 </motion.div>
-
+                <Image
+                src={"/img/home/whatweprovidestroke.svg"}
+                alt="what we provide"
+                width={300}
+                height={300}
+                className="hidden md:block relative top-10 left-3 w-28 h-auto"
+                />
                 <motion.div
                     initial={{ x: -100, opacity: 0 }}
                     animate={controls}
                     transition={{ duration: 0.5, delay: 1 }}
+                    className="lg:w-2/5"
                 >
                     <P
                         color={"text-primary-foreground"}
@@ -60,7 +69,7 @@ export const WhatWeProvide = () => {
                 </motion.div>
             </div>
 
-            <Carosel imgList={heroCarouselImg} />
+            <Carosel imgList={heroCarouselImg} noButton />
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={controls}
@@ -78,7 +87,7 @@ export const WhatWeProvide = () => {
     );
 };
 
-export const Carosel = ({ imgList }: { imgList?: imgObj[] }) => {
+export const Carosel = ({ imgList,size,noButton }: { imgList?: imgObj[],size?:string,noButton?:boolean }) => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const imgSize = 300;
 
@@ -96,20 +105,23 @@ export const Carosel = ({ imgList }: { imgList?: imgObj[] }) => {
 
     return (
         <div className="flex flex-col gap-3">
+            {!noButton &&
+            
             <div className="flex self-end gap-3">
                 <IconButton
                     onClick={() => scroll("left")}
-                    className="bg-primary text-primary-foreground border border-primary-foreground"
+                   
                 >
                     <ArrowLeft size={24} />
                 </IconButton>
                 <IconButton
                     onClick={() => scroll("right")}
-                    className="bg-primary text-primary-foreground border border-primary-foreground"
+                   
                 >
                     <ArrowRight size={24} />
                 </IconButton>
             </div>
+            }
             <div ref={scrollRef} className="overflow-x-scroll flex gap-3 no-scrollbar">
                 {imgList?.length != 0 ? imgList?.map((item, i) => {
                     const id = generateId()
@@ -119,7 +131,7 @@ export const Carosel = ({ imgList }: { imgList?: imgObj[] }) => {
                             src={item.src}
                             height={item.size}
                             width={item.size}
-                            className="rounded-lg"
+                            className={cn("rounded-lg",size,'h-auto')}
                             alt={item.src}
                         />
                     )

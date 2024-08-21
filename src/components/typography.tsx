@@ -21,7 +21,7 @@ export function H2({ className, children, color }: typographyProps) {
   return (
     <h2
       className={cn(
-        "  text-3xl lg:text-4xl font-normal md:leading-normal ",
+        " text-3xl lg:text-4xl font-normal md:leading-normal ",
         className,
         color ? `${color}` : 'text-primary'
       )}
@@ -63,7 +63,7 @@ export function P({ className, children, color }: typographyProps) {
   return (
     <p
       className={cn(
-        "text-sm sm:text-base leading-7 ",
+        " text-sm md:text-2xl leading-4 ",
         className,
         color ? `${color}` : 'text-primary'
       )}

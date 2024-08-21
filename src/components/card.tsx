@@ -6,7 +6,7 @@ import { cardProps } from "@/lib/types";
 
 export const Card = ({ className, title, description, icon }: cardProps) => {
     return (
-        <div className={cn("flex flex-col max-w-xs w-fit items-center justify-between gap-1 p-4 bg-card text-primary-foreground rounded-lg", className)}>
+        <div className={cn("flex flex-col md:max-w-xs lg:max-w-sm w-fit items-center justify-between gap-6 p-4 bg-card text-primary-foreground rounded-lg", className)}>
             <div className=" bg-white rounded-md p-2 text-primary w-fit flex justify-center items-center gap-4">
                 <Image
                 src={icon}
@@ -17,7 +17,7 @@ export const Card = ({ className, title, description, icon }: cardProps) => {
                 />
             </div>
             <H4 color={'text-primary-foreground'}>{title}</H4>
-            <P className=" text-center" color={'text-primary-foreground'}>{description}</P>
+            <P className=" md:text-base text-center" color={'text-primary-foreground'}>{description}</P>
         </div>
     );
 }

@@ -51,7 +51,7 @@ export const OurApproach = () => {
     };
 
     return (
-        <div className=" bg-primary p-section-padding-sm md:p-section-padding space-y-8 text-center ">
+        <div className=" bg-primary p-section-padding-sm md:p-section-padding space-y-6 text-center ">
             <motion.div
                 variants={headerVariants}
                 initial="hidden"

@@ -50,7 +50,19 @@ export const serviceIntroImg = [
         size: 200
     },
     {
-        src: '/img/home/serviceintro.svg',
+        src: '/img/home/serviceintro5.svg',
+        size: 200
+    },
+    {
+        src: '/img/home/serviceintro6.svg',
+        size: 200
+    },
+    {
+        src: '/img/home/serviceintro7.svg',
+        size: 200
+    },
+    {
+        src: '/img/home/serviceintro8.svg',
         size: 200
     },
 

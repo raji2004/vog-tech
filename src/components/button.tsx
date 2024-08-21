@@ -24,7 +24,7 @@ export const IconButton = ({ children, className, active, size, onClick }: butto
         <button
             onClick={onClick}
             className={cn(
-                "p-2 font-semibold rounded-full text-primary-foreground",
+                "p-2 font-semibold rounded-full text-primary-foreground hover:scale-150",
                 size === "sm" ? "text-sm" : size === "lg" ? "text-lg" : "text-base",
                active ?
                 "bg-primary hover:bg-primary-foreground hover:text-primary hover:border hover:border-primary " : 
