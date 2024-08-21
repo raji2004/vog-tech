@@ -27,7 +27,7 @@ export const Hero = () => {
 
     return (
         <motion.div
-            className=" bg-white p-section-padding-sm md:p-section-padding flex flex-col items-center md:flex-row"
+            className="   p-section-padding-sm md:p-section-padding flex flex-col items-center md:flex-row"
             variants={containerVariants}
             initial="hidden"
             animate="visible"

@@ -33,7 +33,7 @@ export const Review = () => {
     return (
         <div
             className={cn(
-                "bg-white p-section-padding-sm my-10 md:p-section-padding text-center space-y-7 flex flex-col"
+                "   p-section-padding-sm my-10 md:p-section-padding text-center space-y-7 flex flex-col"
             )}
         >
             <div className="flex flex-row items-center justify-center ">

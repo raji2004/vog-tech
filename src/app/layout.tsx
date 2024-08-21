@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className=" bg-white" >
+      <body className="bg-hero bg-50% bg-center  bg-white " >
         <NavBar />
         {children}
         <Footer />

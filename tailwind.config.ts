@@ -18,7 +18,12 @@ const config: Config = {
       screens: {
         '2xl': '1400px',
       },
+      
     },
+    backgroundSize: {  
+      '50%': '83%',
+      '16': '4rem',
+    } ,
     extend: {
       fontSize: {
         "xxs": '10px', // 10px
@@ -72,7 +77,9 @@ const config: Config = {
       },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(to right, #024D52, #5F5D99)',
+        'hero': "url('/img/bg.svg')",
       },
+      
       padding: {
         'section-padding': ' var(--section-padding)',
         'section-padding-sm': ' var(--section-padding-sm)',

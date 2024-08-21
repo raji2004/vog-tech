@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const Footer = () => {
     return (
-        <div className=" bg-white p-4 space-y-36 flex flex-col items-center">
+        <div className=" p-4 space-y-36 flex flex-col items-center">
             <div className=" bg-primary w-11/12 md:w-3/4 md:flex md:flex-col md:items-center text-center rounded-3xl p-10 space-y-5">
                 <H2 className=" text-base" color="text-primary-foreground">Ready To Change Your Business</H2>
                 <P className=" text-[10px] md:w-4/6 md:text-sm " color="text-primary-foreground">

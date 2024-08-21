@@ -42,7 +42,7 @@ export const CoreTeam = () => {
 
 
   return (
-    <div className="bg-white my-10 space-y-5 p-section-padding-sm md:p-section-padding">
+    <div className="  my-10 space-y-5 p-section-padding-sm md:p-section-padding">
       <motion.div
         initial={{ opacity: 0, translateY: 50 }}
         whileInView={{ opacity: 1, translateY: 0 }}

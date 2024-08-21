@@ -36,7 +36,7 @@ export const MeetTheTeam = () => {
 
     return (
         <motion.div
-            className=" bg-white my-10  p-section-padding-sm md:p-section-padding text-center space-y-10 "
+            className=" my-10  p-section-padding-sm md:p-section-padding text-center space-y-10 "
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}

@@ -6,7 +6,7 @@ import { faqData } from "./data";
 
 export const WhyChooseUs = () => {
     return (
-        <div className=" bg-white my-10 p-section-padding-sm md:p-section-padding  text-center space-y-10 ">
+        <div className=" my-10 p-section-padding-sm md:p-section-padding  text-center space-y-10 ">
             <div className="  md:flex md:items-center md:text-left space-y-5">
                 <H1 color="text-primary">Why Is Vog Global The Best Choice for Your Business?</H1>
                 <P className=" lg:text-sm md:w-1/2" color="text-secondary-foreground">

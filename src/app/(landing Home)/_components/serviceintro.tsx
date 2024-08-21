@@ -27,7 +27,7 @@ const AdjustableSVG = ({ width = 8, height = 90, strokeWidth = 0.8, circleRadius
 
 export const ServiceIntro = () => {
     return (
-        <div className="bg-white space-y-6 p-section-padding-sm md:p-section-padding">
+        <div className=" space-y-6 p-section-padding-sm md:p-section-padding">
             <div className="flex items-center ">
 
                 <H2 className=" text-xl w-7/12 md:text-3xl md:w-1/2  lg:w-[36%]" color="text-secondary-foreground">
