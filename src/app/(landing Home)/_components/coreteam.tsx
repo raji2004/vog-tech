@@ -57,6 +57,7 @@ export const CoreTeam = () => {
         {teamMembers.map((member, index) => (
 
           <Team
+          key={index}
             img={member.img}
             title={member.title}
             pos={member.pos}
