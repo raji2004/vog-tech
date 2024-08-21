@@ -23,7 +23,7 @@ export const Input = ({ className, type, placeholder, label,noLabel, onChange }:
                     onChange={onChange}
 
                     className={cn(
-                        "pl-12 py-2 font-semibold rounded-md text-primary border border-black w-full",
+                        "pl-12 py-2 font-semibold rounded-md  text-primary border border-black w-full",
                         "bg-transparent",
                         className
                     )}

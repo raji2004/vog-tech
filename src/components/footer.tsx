@@ -63,8 +63,9 @@ export const Footer = () => {
 
                     <div className=" flex flex-col items-center md:items-start gap-4 md:pt-5">
                         <P color="text-secondary-foreground" className=" text-2xl">Subscribe To Our Newsletters</P>
-                        <Input placeholder=" Enter your email" noLabel className=" border text-secondary-foreground" />
-                        <Button className=" border border-secondary-foreground bg-white text-secondary-foreground"> Suscribe</Button>
+                        <Input placeholder=" Enter your email"  type="text" noLabel className=" border border-primary  bg-white rounded-xl text-secondary-foreground" />
+                       
+                        <Button className=" border-2 border-primary rounded-xl bg-white text-secondary-foreground"> Suscribe</Button>
                     </div>
                 </div>
 
