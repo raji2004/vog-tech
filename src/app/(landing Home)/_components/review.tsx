@@ -32,9 +32,8 @@ export const Review = () => {
 
     return (
         <div
-            style={{ perspective: "1000px" }}
             className={cn(
-                "bg-white p-section-padding-sm md:p-section-padding text-center space-y-7 flex flex-col"
+                "bg-white p-section-padding-sm my-10 md:p-section-padding text-center space-y-7 flex flex-col"
             )}
         >
             <div className="flex flex-row items-center justify-center ">

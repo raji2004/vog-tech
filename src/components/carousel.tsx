@@ -28,7 +28,7 @@ export const ReviewCard = forwardRef<HTMLDivElement, ReviewCardProps>(
                     className="w-full h-full object-contain object-center rounded-md"
                 />
             </div>
-            <div className="w-full md:w-1/2 p-6 flex flex-col text-left m items-center justify-center text-secondary-foreground">
+            <div className="w-full md:w-1/2 p-6 flex flex-col text-left items-center space-y-7 md:space-y-2 md:items-start justify-center text-secondary-foreground">
                 <div className=" justify-self-start mb">
 
                     <Image
@@ -36,14 +36,14 @@ export const ReviewCard = forwardRef<HTMLDivElement, ReviewCardProps>(
                         alt="quote"
                         width={150}
                         height={150}
-                        className=" self-start"
+                        className=" w-11 md:w-28 h-auto"
                     />
-                    <P className="mb-4" >{review}</P>
+                    <P className="mb-4 md:text-xl" >{review}</P>
                 </div>
                 <div className="flex items-center mb-2">
                     {/* Render stars based on rating */}
                     {starArray.map((_, i) => (
-                        <span key={i} className={i < rating ? "text-yellow-500" : "text-gray-400"}>
+                        <span key={i} className={cn(i < rating ? "text-yellow-500" : "text-gray-400",' text-3xl')}>
                             ★
                         </span>
                     ))}

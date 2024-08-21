@@ -7,7 +7,7 @@ export function H1({ className, children, color }: typographyProps) {
   return (
     <h1
       className={cn(
-        " text-3xl  leading-normal lg:text-5xl font-semibold lg:leading-normal lg:tracking-widest ",
+        " text-2xl  leading-normal lg:text-5xl font-semibold lg:leading-normal lg:tracking-widest ",
         className,
         color ? `${color}` : ' text-primary'
       )}
@@ -35,7 +35,7 @@ export function H3({ className, children, color }: typographyProps) {
   return (
     <h3
       className={cn(
-        " text-lg sm:text-xl md:text-2xl font-semibold tracking-tight",
+        " text-lg sm:text-sm md:text-3xl font-normal tracking-tight",
         className,
         color ? `${color}` : 'text-primary'
       )}

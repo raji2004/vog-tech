@@ -13,26 +13,36 @@ const Team = ({ img, title, pos }: { img: string; title: string; pos: string }) 
       transition={{ duration: 0.6 }}
       className="flex flex-col items-center text-center"
     >
-      <Image
+      {/* <Image
         src={img}
         alt={title}
-        width={200}
-        height={200}
-        className=" rounded-tl-3xl rounded-tr-3xl"
-      />
-      <H4 className="text-sm md:text-sm" color="text-secondary-foreground">
+        width={800}
+        height={800}
+        className="  h-auto"
+      /> */}
+      <div className=" bg-gray-200 pt-7 rounded-tr-xl  w-64 md:w-[385px] rounded-bl-xl">
+        <Image
+          src={img}
+          alt={title}
+          width={800}
+          height={800}
+          className="w-full h-auto "
+        />
+
+      </div>
+      <P className=" md:text-sm" color="text-secondary-foreground">
         {title}
-      </H4>
+      </P>
       <P color="text-popover">{pos}</P>
     </motion.div>
   );
 };
 
 export const CoreTeam = () => {
-  
+
 
   return (
-    <div className="bg-white space-y-5 p-section-padding-sm md:p-section-padding">
+    <div className="bg-white my-10 space-y-5 p-section-padding-sm md:p-section-padding">
       <motion.div
         initial={{ opacity: 0, translateY: 50 }}
         whileInView={{ opacity: 1, translateY: 0 }}
@@ -43,15 +53,15 @@ export const CoreTeam = () => {
           Our Core Team
         </H1>
       </motion.div>
-      <div className="flex flex-col md:flex-row md:flex-nowrap items-center justify-center md:gap-5 md:overflow-x-auto no-scrollbar">
+      <div className="flex flex-col md:flex-row   items-center justify-start md:gap-5 md:overflow-x-scroll no-scrollbar">
         {teamMembers.map((member, index) => (
-          <div key={index} className="flex-shrink-0 w-40">
-            <Team
-              img={member.img}
-              title={member.title}
-              pos={member.pos}
-            />
-          </div>
+
+          <Team
+            img={member.img}
+            title={member.title}
+            pos={member.pos}
+          />
+
         ))}
       </div>
     </div>
