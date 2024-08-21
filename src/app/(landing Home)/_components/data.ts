@@ -4,10 +4,6 @@ import React from "react"
 
 export const heroCarouselImg = [
     {
-        src: '/img/home/whatweprovide.svg',
-        size: 300
-    },
-    {
         src: '/img/home/whatweprovide1.svg',
         size: 300
     },
@@ -15,9 +11,13 @@ export const heroCarouselImg = [
         src: '/img/home/whatweprovide2.svg',
         size: 300
     },
-
     {
         src: '/img/home/whatweprovide.svg',
+        size: 300
+    },
+
+    {
+        src: '/img/home/whatweprovide3.svg',
         size: 300
     },
     {

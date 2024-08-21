@@ -69,7 +69,7 @@ export const WhatWeProvide = () => {
                 </motion.div>
             </div>
 
-            <Carosel imgList={heroCarouselImg} noButton />
+            <Carosel imgList={heroCarouselImg} size=" ml-7" noButton />
             <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={controls}
