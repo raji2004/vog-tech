@@ -28,7 +28,7 @@ export const Hero = () => {
     return (
         <div className=" bg-white space-y-10  ">
             <div className=" flex flex-col md:flex-row justify-center gap-6 p-section-padding-sm md:p-section-padding">
-                <Image src="/img/about/hero.svg" className=" md:w-5/12  h-auto" width={500} height={500} alt="hero" />
+                <Image src="/img/about/hero.svg" className=" md:w-1/2   h-auto" width={500} height={500} alt="hero" />
                 <div className=" md:w-1/2 space-y-8">
                     <H1>
                         Take Control Of Your
