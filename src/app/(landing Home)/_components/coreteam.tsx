@@ -13,13 +13,6 @@ const Team = ({ img, title, pos }: { img: string; title: string; pos: string }) 
       transition={{ duration: 0.6 }}
       className="flex flex-col items-center text-center"
     >
-      {/* <Image
-        src={img}
-        alt={title}
-        width={800}
-        height={800}
-        className="  h-auto"
-      /> */}
       <div className=" bg-gray-200 pt-7 rounded-tr-xl  w-64 md:w-[385px] rounded-bl-xl">
         <Image
           src={img}
