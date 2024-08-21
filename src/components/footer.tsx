@@ -45,20 +45,20 @@ export const Footer = () => {
 
                 <div  className=" flex flex-col-reverse md:flex-row gap-10">
 
-                    <List className=" text-secondary-foreground  text-center  list-none">
-                        <P color="text-secondary-foreground" className=" text-2xl" > Our Services</P>
-                        <li>IT Audits</li>
-                        <li>Internal Auditing</li>
-                        <li>External Auditing</li>
-                        <li>Financial Reviews</li>
-                        <li>Financial Services</li>
-                        <li>Tax Auditing Services</li>
+                    <List className=" m  text-center  list-none">
+                        <P color="text-secondary-foreground"  className="  text-2xl" > Our Services</P>
+                        <li className="text-secondary-foreground  underline font-medium ">IT Audits</li>
+                        <li className="text-secondary-foreground underline font-medium ">Internal Auditing</li>
+                        <li className="text-secondary-foreground underline font-medium ">External Auditing</li>
+                        <li className="text-secondary-foreground underline font-medium ">Financial Reviews</li>
+                        <li className="text-secondary-foreground underline font-medium ">Financial Services</li>
+                        <li className="text-secondary-foreground underline font-medium ">Tax Auditing Services</li>
                     </List>
                     <List className=" text-secondary-foreground  text-center  list-none">
                         <P color="text-secondary-foreground" className=" text-2xl" > VOG Global</P>
-                        <li>VOG Finance </li>
-                        <li>VOG GlobalTech</li>
-                        <li>VOG Global Consult</li>
+                        <li className="text-secondary-foreground underline font-medium ">VOG Finance </li>
+                        <li className="text-secondary-foreground underline font-medium ">VOG GlobalTech</li>
+                        <li className="text-secondary-foreground underline font-medium ">VOG Global Consult</li>
                     </List>
 
                     <div className=" flex flex-col items-center md:items-start gap-4 md:pt-5">
