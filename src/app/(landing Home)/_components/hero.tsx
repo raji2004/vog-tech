@@ -37,14 +37,14 @@ export const Hero = () => {
                 variants={containerVariants}
             >
                 <motion.div
-                    className="flex flex-row justify-between"
+                    className="flex flex-row justify-between max-w-6xl"
                     variants={containerVariants}
                 >
                     <motion.div
                         className=" text-center space-y-5  md:flex flex-col-reverse md:text-left md:gap-5"
-                        variants={itemVariants}
+                       
                     >
-                        <H1 className=" md:after:w-9/12 md:after:h-5 md:after:bg-popover md:after:relative after:bottom-6 after:opacity-40 after:float-start" >
+                        <H1 className=" " >
                             Expert Tax Auditing and Business Consulting
                             Services in Nigeria.
                         </H1>

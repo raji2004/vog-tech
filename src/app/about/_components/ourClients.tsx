@@ -67,10 +67,10 @@ export const OurClients = () => {
                     </IconButton>
                 </div>
               
-                <CarouselContent className=" md:w-[40%]" >
+                <CarouselContent >
 
                     {clientData.map((client, index) => (
-                        <CarouselItem key={index}    >
+                        <CarouselItem key={index} className=" basis-1/3"    >
                             <ClientCard title={client.title} icon={client.icon} />
                         </CarouselItem>
                     ))}
