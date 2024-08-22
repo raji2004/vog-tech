@@ -90,7 +90,7 @@ export const MeetTheTeam = () => {
                         <Button size="sm" className=" border-primary border-2 text-primary bg-primary-foreground text-sm">Vision Statement</Button>
                     </div>
                     <div className=" w-full p-2 bg-popover-foreground text-left">
-                        <P className=" md:text-xl" color="text-primary">To create professional rewarding services for all our clients through
+                        <P className=" md:text-xl" color="text-secondary-foreground">To create professional rewarding services for all our clients through
                             relentless pursuit of perfection with necessary technological aids.</P>
                     </div>
                 </motion.div>
