@@ -4,7 +4,7 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
-  type CarouselApi
+    type CarouselApi
 } from "@/components/ui/carousel";
 import { ReviewCardMotion } from "@/components/carousel";
 import { IconButton } from "@/components/button";
@@ -15,7 +15,7 @@ import '@/app/(landing Home)/_components/scroll.css';
 import { useState } from "react";
 
 export const Review = () => {
-    const [api,setApi] = useState<CarouselApi>();
+    const [api, setApi] = useState<CarouselApi>();
 
     const handleNext = () => {
         if (api) {
@@ -24,7 +24,7 @@ export const Review = () => {
     };
 
     const handlePrevious = () => {
-        if(api){
+        if (api) {
             api.scrollPrev()
         }
 
@@ -51,15 +51,20 @@ export const Review = () => {
             </div>
             <P>We serve and are trusted by numerous companies and small businesses across the country.</P>
             <div className=" md:hidden block  space-x-7 self-end">
-                    <IconButton onClick={handlePrevious} aria-label="Previous">
-                        <ArrowLeft />
-                    </IconButton>
-                    <IconButton onClick={handleNext} aria-label="Next">
-                        <ArrowRight />
-                    </IconButton>
-                </div>
+                <IconButton onClick={handlePrevious} aria-label="Previous">
+                    <ArrowLeft />
+                </IconButton>
+                <IconButton onClick={handleNext} aria-label="Next">
+                    <ArrowRight />
+                </IconButton>
+            </div>
 
-            <Carousel setApi={setApi}>
+            <Carousel
+                setApi={setApi}
+                opts={{ loop: true }}
+                autoplay={true}
+                autoplayInterval={5000}
+            >
                 <CarouselContent>
                     {reviews.map((review, index) => (
                         <CarouselItem key={index}>
@@ -75,8 +80,8 @@ export const Review = () => {
                 </CarouselContent>
 
                 {/* Custom navigation buttons */}
-                
-              
+
+
             </Carousel>
         </div>
     );

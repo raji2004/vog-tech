@@ -5,7 +5,7 @@ import { ServiceIntro } from "./_components/serviceintro";
 import { OurApproach } from "./_components/ourapproach";
 import { WhyChooseUs } from "./_components/whychooseus";
 import { MeetTheTeam } from "./_components/meettheteam";
-import { CoreTeam } from "./_components/coreteam";
+import {CoreTeam} from "./_components/coreteam";
 import { Review } from "./_components/review";
 
 

@@ -18,3 +18,43 @@ export const icondata = [
         percent:false
     },
 ]
+
+export const clientData = [
+    {
+        icon: '/img/about/client.svg',
+        title: 'Family Health International'
+    },
+    {
+        icon: '/img/about/client1.svg',
+        title: 'Julius Berger'
+    },
+    {
+        icon: '/img/about/client1.svg',
+        title: 'Julius Berger'
+    },
+    {
+        icon: '/img/about/client.svg',
+        title: 'Family Health International'
+    },
+    {
+        icon: '/img/about/client1.svg',
+        title: 'Julius Berger'
+    },
+
+    {
+        icon: '/img/about/client1.svg',
+        title: 'Julius Berger'
+    },
+    {
+        icon: '/img/about/client.svg',
+        title: 'Family Health International'
+    },
+    {
+        icon: '/img/about/client1.svg',
+        title: 'Julius Berger'
+    },
+    {
+        icon: '/img/about/client1.svg',
+        title: 'Julius Berger'
+    },
+]
