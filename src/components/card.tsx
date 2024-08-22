@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export const Card = ({ className, title, description, icon }: cardProps) => {
     return (
-        <div className={cn("flex flex-col md:max-w-xs lg:max-w-sm w-fit items-center justify-between gap-6 p-4 bg-card text-primary-foreground rounded-lg", className)}>
+        <div className={cn("flex flex-col md:max-w-xs min-h-80 lg:max-w-sm w-fit items-center justify-between gap-6 p-4 bg-card text-primary-foreground rounded-lg", className)}>
             <div className=" bg-white rounded-md p-2 text-primary w-fit flex justify-center items-center gap-4">
                 <Image
                     src={icon}
