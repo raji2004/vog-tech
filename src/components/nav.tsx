@@ -85,7 +85,7 @@ const MobileMenu = (
         }
 ) => {
     return (
-        <div className={`fixed max-w-[100vw] inset-0 z-50 transition-transform duration-300 ease-in-out bg-white ${isOpen ? 'translate-x-0 ' : ' translate-x-full '}`}>
+        <div className={`fixed  inset-0 z-50 transition-transform duration-300 ease-in-out  bg-white ${isOpen ? ' translate-x-0  ' : ' translate-x-full '}`}>
             <div className="flex justify-end p-4">
                 <button
                     onClick={() => setIsOpen(false)}

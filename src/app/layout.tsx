@@ -19,9 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" bg-white  " >
-        <NavBar />
-        {children}
-        <Footer />
+        <div className=" bg-transparent overflow-x-hidden">
+
+          <NavBar />
+          {children}
+
+          <Footer />
+        </div>
       </body>
     </html>
   );
