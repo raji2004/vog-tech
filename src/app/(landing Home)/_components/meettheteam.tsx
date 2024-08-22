@@ -43,7 +43,7 @@ export const MeetTheTeam = () => {
             ref={ref}
         >
             <motion.div variants={itemVariantsLeft}>
-                <H1  color="text-primary">Meet Our Team Of Innovative Problem Solvers</H1>
+                <H1 className=" "  color="text-primary">Meet Our Team Of Innovative Problem Solvers</H1>
             </motion.div>
             <motion.div
                 className="  space-y-10"

@@ -27,13 +27,13 @@ export const Hero = () => {
 
     return (
         <motion.div
-            className="   p-section-padding-sm md:p-section-padding flex flex-col items-center md:flex-row"
+            className="   p-section-padding-sm md:p-section-padding  flex flex-col items-center md:flex-row"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
         >
             <motion.div
-                className=" flex flex-col items-center gap-2 md:items-start md:gap-4 "
+                className=" flex flex-col items-center gap-5 md:items-start md:gap-4 "
                 variants={containerVariants}
             >
                 <motion.div
@@ -41,10 +41,10 @@ export const Hero = () => {
                     variants={containerVariants}
                 >
                     <motion.div
-                        className=" text-center space-y-2  md:flex flex-col-reverse md:text-left md:gap-5"
+                        className=" text-center space-y-5  md:flex flex-col-reverse md:text-left md:gap-5"
                         variants={itemVariants}
                     >
-                        <H1 >
+                        <H1 className=" md:after:w-9/12 md:after:h-5 md:after:bg-popover md:after:relative after:bottom-6 after:opacity-40 after:float-start" >
                             Expert Tax Auditing and Business Consulting
                             Services in Nigeria.
                         </H1>
