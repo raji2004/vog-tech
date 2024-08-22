@@ -17,11 +17,11 @@ export const Footer = () => {
                 </P>
                 <div className="flex items-center md:w-4/6 rounded-2xl overflow-hidden pr-1 bg-white">
                     <Input
-                        className="flex-grow px-3 py-2 border-none  focus:outline-none"
+                        className="flex-grow px-3 py-2 border-none placeholder:text-xs  focus:outline-none"
                         placeholder="Enter Your email"
                         noLabel
                     />
-                    <Button className="bg-secondary text-white w-1/2 md:w-1/3 md:text-base  rounded-2xl px-0 py-2 text-[10px]">
+                    <Button className="bg-secondary text-white w-40 md:w-40 md:text-base  rounded-2xl px-0 py-[1.1rem] md:py-3 text-[10px]">
                         Get Started
                     </Button>
                 </div>

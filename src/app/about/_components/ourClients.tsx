@@ -37,7 +37,7 @@ export const OurClients = () => {
                 <AdjustableSVG width={25} height={90} strokeWidth={1.4} circleRadius={5} gap={80} />
 
 
-                <P className=" text-[6px] w-1/4 md:text-[8px] md:w-2/12 md:leading-snug text-left">
+                <P className=" text-[6px] w-1/4 md:text-[10px] md:w-2/12 md:leading-snug text-left">
                     Our clientele base ranges from oil and gas, energy and electricity,
                     construction and contractual, banking and finance, agriculture, NGOs,
                     Government agencies, shipping, import and export, general commerce, e.t.c.
