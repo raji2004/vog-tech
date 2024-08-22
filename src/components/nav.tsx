@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 const navigationMenuItems = [
     { title: "Home", href: "/" },
     { title: "About Us", href: "/about" },
-    { title: "Our Approach", href: "/approach" },
     { title: "Our Services", href: "/services" },
     { title: "Contact Us", href: "/contact" },
 ];

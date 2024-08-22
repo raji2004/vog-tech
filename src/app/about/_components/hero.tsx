@@ -45,8 +45,7 @@ export const Hero = () => {
             opacity: 1,
             x: 0,
             transition: {
-                duration: 0.5,
-                delay: 0.3,
+                delay: 0.2,
             }
         },
         visibleContainer: {
@@ -60,12 +59,12 @@ export const Hero = () => {
     };
     return (
         <div className=" bg-white space-y-10  ">
-            <div className=" flex flex-col md:flex-row justify-center gap-6 p-section-padding-sm md:p-section-padding">
-                <motion.div variants={variants} initial={"hiddenLeft"} whileInView={'visible'} className=" md:w-1/2 ">
+            <div className=" flex flex-col md:flex-row  justify-center gap-6 p-section-padding-sm md:p-section-padding">
+                <motion.div variants={variants} initial={"hiddenLeft"} animate={'visible'} className=" md:w-1/2 ">
                     <Image src="/img/about/hero.svg" className=" w-full  h-auto" width={500} height={500} alt="hero" />
                 </motion.div>
                 <div className=" md:w-1/2 space-y-8">
-                    <motion.div variants={variants} initial={"hiddenRight"} whileInView={'visible'}>
+                    <motion.div variants={variants} initial={"hiddenRight"} animate={'visible'} >
 
                         <H1>
                             Take Control Of Your
@@ -82,7 +81,7 @@ export const Hero = () => {
                     </motion.div>
                 </div>
             </div>
-            <motion.div variants={variants} initial={"hiddenUp"} whileInView={'visibleContainer'} className=" border-primary md:border-b-2 md:border-t-2 flex flex-col md:flex-row md:space-y-0 space-y-6 items-center justify-between p-section-padding-sm md:p-section-padding" >
+            <motion.div variants={variants} initial={"hiddenUp"} whileInView={'visibleContainer'}  className=" border-primary md:border-b-2 md:border-t-2 flex flex-col md:flex-row md:space-y-0 space-y-6 items-center justify-between p-section-padding-sm md:p-section-padding" >
                 {icondata.map((icon, index) => {
                     return (
                         <motion.div variants={variants} key={index} >
