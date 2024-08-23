@@ -1,6 +1,6 @@
 'use client';
 import { motion } from "framer-motion";
-import { H1, H2, P } from "@/components/typography"
+import { H1, H2, P ,UnderLine} from "@/components/typography"
 import { Button } from "@/components/button"
 import Image from "next/image"
 
@@ -46,7 +46,7 @@ export const Hero = () => {
                     >
                         <H1  >
                             Expert Tax Auditing and Business Consulting
-                            <span className=" md:bg-gradient-to-b from-primary/30 to-primary/30 bg-[length:100%_40%] bg-bottom bg-no-repeat"> Services in Nigeria.</span>
+                            <UnderLine> Services in Nigeria.</UnderLine>
                         </H1>
                         <P>
                             Ensuring Compliance, Maximizing Efficiency, Driving Success

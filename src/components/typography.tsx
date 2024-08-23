@@ -89,3 +89,10 @@ export function List({ className, children, color }: typographyProps) {
   );
 }
 
+export const UnderLine = ({ className, children, color }: typographyProps) => {
+  return (
+    <span className={cn("md:bg-gradient-to-b from-primary/30 to-primary/30 bg-[length:100%_40%] bg-bottom bg-no-repeat", className, color )}>
+      {children}
+    </span>
+  );
+}
