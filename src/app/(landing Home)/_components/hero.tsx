@@ -42,11 +42,11 @@ export const Hero = () => {
                 >
                     <motion.div
                         className=" text-center space-y-5  md:flex flex-col-reverse md:text-left md:gap-5"
-                       
+
                     >
-                        <H1 className=" " >
+                        <H1  >
                             Expert Tax Auditing and Business Consulting
-                            Services in Nigeria.
+                            <span className=" md:bg-gradient-to-b from-primary/30 to-primary/30 bg-[length:100%_40%] bg-bottom bg-no-repeat"> Services in Nigeria.</span>
                         </H1>
                         <P>
                             Ensuring Compliance, Maximizing Efficiency, Driving Success

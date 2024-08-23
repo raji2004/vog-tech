@@ -21,7 +21,7 @@ const config: Config = {
       
     },
     backgroundSize: {  
-      '50%': '83%',
+      '50%': '100%',
       '16': '4rem',
     } ,
     extend: {
