@@ -37,7 +37,7 @@ export const Hero = () => {
                 variants={containerVariants}
             >
                 <motion.div
-                    className="flex flex-row justify-between max-w-6xl"
+                    className="flex flex-row basis-1/2 justify-between max-w-6xl"
                     variants={containerVariants}
                 >
                     <motion.div
