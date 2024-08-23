@@ -1,5 +1,5 @@
 'use client'
-import { H1, P, List } from "@/components/typography"
+import { H1, P, List, UnderLine } from "@/components/typography"
 import Image from "next/image"
 import { Button } from "@/components/button"
 import { icondata } from "./data"
@@ -64,11 +64,10 @@ export const Hero = () => {
                     <Image src="/img/about/hero.svg" className=" w-full  h-auto" width={500} height={500} alt="hero" />
                 </div>
                 <div className=" md:w-1/2 space-y-8">
-                    <div className=" space-y-7" >
-
+                    
                         <H1>
                             Take Control Of Your
-                            Finances Today!
+                            <UnderLine> Finances Today!</UnderLine>
                         </H1>
                         <P>
                             At VOG Global, we are more than just consultants; we are your
@@ -78,10 +77,10 @@ export const Hero = () => {
                             .
                         </P>
                         <Button className=" rounded-full">Learn More</Button>
-                    </div>
+                   
                 </div>
             </div>
-            <div  className=" border-primary md:border-b-2 md:border-t-2 flex flex-col md:flex-row md:space-y-0 space-y-6 items-center justify-between p-section-padding-sm md:p-section-padding" >
+            <div className=" border-primary md:border-b-2 md:border-t-2 flex flex-col md:flex-row md:space-y-0 space-y-6 items-center justify-between p-section-padding-sm md:p-section-padding" >
                 {icondata.map((icon, index) => {
                     return (
                         <motion.div variants={variants} key={index} >
@@ -91,10 +90,9 @@ export const Hero = () => {
                 })}
             </div>
             <div className=" flex flex-col md:flex-row items-center justify-between p-section-padding-sm md:p-section-padding space-y-7 md:space-y-0 md:space-x-7 ">
-                <div  className=" md:w-1/2 space-y-7">
+                <div className=" md:w-1/2 space-y-7">
                     <H1 className=" text-xl md:text-2xl lg:text-4xl" color="text-secondary-foreground">
-                        We Provide Multiple
-                        Services With Specialized Departments To Help Your Business
+                        We Provide Multiple <br /><UnderLine>Services With Specialized</UnderLine> Departments To Help Your Business
                     </H1>
 
                     <div>
@@ -121,7 +119,7 @@ export const Hero = () => {
                     </div>
                     <Button className=" rounded-full">Get Started</Button>
                 </div>
-                <motion.div className=" md:w-1/2 " variants={variants} initial={"hiddenRight"}    whileInView={'visible'}>
+                <motion.div className=" md:w-1/2 " variants={variants} initial={"hiddenRight"} whileInView={'visible'}>
 
                     <Image src="/img/about/provide.svg" width={500} height={500} className=" w-fullh-auto" alt="mission" />
                 </motion.div>

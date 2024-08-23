@@ -1,4 +1,4 @@
-import { H1, P, } from "@/components/typography"
+import { H1, P,UnderLine } from "@/components/typography"
 import { Faq } from "@/components/faq"
 import Image from "next/image";
 import { faqData } from "./data";
@@ -8,7 +8,7 @@ export const WhyChooseUs = () => {
     return (
         <div className=" my-10 p-section-padding-sm md:p-section-padding  text-center space-y-10 ">
             <div className="  md:flex md:items-center md:text-left space-y-5">
-                <H1 color="text-primary" >Why Is Vog Global The Best Choice for Your Business?</H1>
+                <H1 color="text-primary" >Why Is Vog Global The Best Choice for Your <UnderLine>Business?</UnderLine> </H1>
                 <P className=" lg:text-sm md:w-1/2" color="text-secondary-foreground">
                     Choosing the right partner for your business consulting, tax audit, and assurance
                     needs is crucial to your success. At VOG Global, we stand out as the premier choice

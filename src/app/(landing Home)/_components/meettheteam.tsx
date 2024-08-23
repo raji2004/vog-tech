@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { TeamCard } from "@/components/team";
-import { H1, P,H2 } from "@/components/typography";
+import { H1, P,H2,UnderLine } from "@/components/typography";
 import { teamData } from "./data";
 import Image from "next/image";
 import { Button } from "@/components/button";
@@ -43,7 +43,7 @@ export const MeetTheTeam = () => {
             ref={ref}
         >
             <motion.div variants={itemVariantsLeft}>
-                <H1 className=" "  color="text-primary">Meet Our Team Of Innovative Problem Solvers</H1>
+                <H1 className=" "  color="text-primary">Meet Our Team Of <UnderLine> Innovative Problem</UnderLine> Solvers</H1>
             </motion.div>
             <motion.div
                 className="  space-y-10"
@@ -81,7 +81,7 @@ export const MeetTheTeam = () => {
                     className=" md:w-1/2 space-y-5 md:text-left text-center"
                     variants={itemVariantsRight}
                 >
-                    <H2 className=" lg:text-5xl" color="text-primary">We Lead Your Business To Success!</H2>
+                    <H2 className=" lg:text-5xl" color="text-primary">We Lead Your Business To <UnderLine>Success!</UnderLine> </H2>
                     <P color="text-secondary-foreground">Our {"Team's "}goal is to drive your team
                         to success with the right finances and financial practices.
                     </P>

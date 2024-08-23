@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { P, H4, H1 } from "@/components/typography";
+import { P, H4, H1,UnderLine } from "@/components/typography";
 
 import { teamMembers } from "./data";
 import { TeamCard } from "@/components/card";
@@ -18,7 +18,7 @@ export const CoreTeam = () => {
         transition={{ duration: 0.6 }}
       >
         <H1 color="text-primary" className="text-center">
-          Our Core Team
+          Our <UnderLine>Core Team</UnderLine>
         </H1>
       </motion.div>
       <div className="flex flex-col md:flex-row   items-center justify-start md:gap-5 md:overflow-x-scroll no-scrollbar">

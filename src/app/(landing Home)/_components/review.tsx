@@ -1,5 +1,5 @@
 "use client";
-import { P, H1 } from "@/components/typography";
+import { P, H1,UnderLine } from "@/components/typography";
 import {
     Carousel,
     CarouselContent,
@@ -38,7 +38,7 @@ export const Review = () => {
         >
             <div className="flex flex-row items-center justify-center ">
                 <H1 color="text-primary" className="text-center flex-1">
-                    What Do Our Clients Say?
+                    What Do Our <UnderLine> Clients Say?</UnderLine>
                 </H1>
                 <div className=" hidden md:block space-x-7">
                     <IconButton onClick={handlePrevious} aria-label="Previous">
