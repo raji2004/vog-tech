@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const LoginForm = () => {
     return (
-        <form className=" p-section-padding-sm md:p-section-padding flex flex-col justify-between space-y-8 items-center">
+        <form className=" flex flex-col justify-between space-y-8 items-center">
             <Image
                 src={'/icon/user.svg'}
                 alt="user"
@@ -28,6 +28,26 @@ export const LoginForm = () => {
             </div>
 
             <Button className=" rounded-3xl px-9">Sign in</Button>
+
+        </form>
+    )
+}
+export const ForgotForm = () => {
+    return (
+        <form className="  flex flex-col justify-between space-y-8 items-center">
+            <Image
+                src={'/icon/user.svg'}
+                alt="user"
+                width={300}
+                height={300}
+                className=" w-36 h-auto"
+            />
+            <H2>Forgot Password</H2>
+            <div className=" md:w-[40%]  ">
+                <Input type="email" placeholder="Enter your email" label="Email address" />
+            </div>
+
+            <Button className=" rounded-3xl px-9">Send Reset Link</Button>
 
         </form>
     )
