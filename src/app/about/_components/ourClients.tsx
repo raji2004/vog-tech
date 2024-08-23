@@ -70,7 +70,7 @@ export const OurClients = () => {
                 <CarouselContent >
 
                     {clientData.map((client, index) => (
-                        <CarouselItem key={index} className=" basis-1/3"    >
+                        <CarouselItem key={index} className=" md:basis-1/3"    >
                             <ClientCard title={client.title} icon={client.icon} />
                         </CarouselItem>
                     ))}
