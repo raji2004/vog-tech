@@ -11,9 +11,9 @@ export const Input = ({ className, type, placeholder, label,noLabel, onChange }:
         setShowPassword(!showPassword);
     }
     return (
-        <div className={cn("flex flex-col ", className)}>
+        <div className={cn("flex flex-col w-full ", className)}>
             {!noLabel && <label className="text-primary font-semibold">{label}</label>}
-            <div className=" relative ">
+            <div className=" relative w-full ">
                 {type === 'email' && <Mail size={24} className="absolute top-2 left-4 text-primary" />}
                 {type === 'password' && <Lock size={24} className="absolute top-2 left-4 text-primary" />}
                 <input
