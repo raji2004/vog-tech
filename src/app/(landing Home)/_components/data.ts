@@ -240,14 +240,14 @@ export const teamMembers = [
         pos: "CEO",
     },
     {
-        img: "/img/home/coreteam.svg",
-        title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
-        pos: "CEO",
+        img: "/img/home/coreteam1.svg",
+        title: "EMMANUEL UDUMA GEORGE BSc,ACA.",
+        pos: "Head Auditor in the Audit and Accounting Service Department",
     },
     {
-        img: "/img/home/coreteam.svg",
-        title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
-        pos: "CEO",
+        img: "/img/home/coreteam2.svg",
+        title: "ANGELA ADAMU, BSc,ACA",
+        pos: "Chief Executive Officer",
     },
     {
         img: "/img/home/coreteam.svg",
