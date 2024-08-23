@@ -167,26 +167,47 @@ export const teamData = [
     },
     {
         image: '/img/home/meettheteam.svg',
-        title: 'UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK),PHD (USA), CNA, ACTI.',
-        position: 'CEO, VOG Global',
-        description: `Udo is a graduate of Economics from the University of Calabar,
-         MSc in international finance and account from the University of Liverpool.
-          PHD in finance from the Walden University, USA. 
-          He is a practicing licenced member of the Association of National Accountants of Nigeria (ANAN), 
-        a practicing licenced member of the Chartered Institute of Taxation of Nigeria (CITN) and a Fellow 
-        of the Association of Chartered System Accountants (ACSA), USA.`
+        title: 'EMMANUEL UDUMA GEORGE BSc, ACA.',
+        position: 'Head Auditor in the Audit and Accounting Service Department, VOG Global Consult',
+        description: `Emmanuel Uduma George is a graduate of Government and Public Administration, Abia State University, where he obtained a Bachelor of Science Degree. He is also an Associate member of the institute of Chartered Accountants of Nigeria (ICAN). He has a profound knowledge in audit system and taxation...`
+    },
+    {
+        image: '/img/home/meettheteam1.svg',
+        title: 'ANGELA ADAMU, BSc, ACA.',
+        position: 'Head the Audit and Accounting Service department, VOG Global Consult',
+        description: `Angela Adamu is a graduate of Economics from Ambrose Ali University, Edo state. She is also an associate member of the Institute of Chartered Accountants of Nigeria (ICAN). She has in dept knowledge and skills in accounting system...`
+    },
+    {
+        image: '/img/home/meettheteam2.svg',
+        title: 'AJAYIOLUWANIYIMOSES, MBA, ACA, CISA, CAMS, CFLT.',
+        position: 'Manager, Corporate Services and Business Development Department, VOG Global Consult',
+        description: `Ajayi Oluwaniyi Moses is a young and dynamic self-motivated and result oriented person that is committed to producing result in any area or field of empowerment and high core value. He is an associate of the institute of chartered accountants of Nigeria (ICAN),a certified Anti money Laundry Specialist (CAMS), a certified Information System Auditor (CISA) and a Certified Financial Literacy Trainer (CFLT)...`
+    },
+    {
+        image: '/img/home/meettheteam3.svg',
+        title: 'IDIKA KALU IBE, FCIIN, MPA, BSc, CILRM.',
+        position: 'head of Insurance & Risk Assessment Team, VOG Global Consult',
+        description: `Kalu Uche Eme is an astute Statistician, he is an associate of the Nigerian Statistical Association (NSA) and having worked with several international organizations including the British Council, UNODC and others. He comes over with above 22 years of experience with statistics.`
     },
     {
         image: '/img/home/meettheteam.svg',
-        title: 'UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK),PHD (USA), CNA, ACTI.',
-        position: 'CEO, VOG Global',
-        description: `Udo is a graduate of Economics from the University of Calabar,
-         MSc in international finance and account from the University of Liverpool.
-          PHD in finance from the Walden University, USA. 
-          He is a practicing licenced member of the Association of National Accountants of Nigeria (ANAN), 
-        a practicing licenced member of the Chartered Institute of Taxation of Nigeria (CITN) and a Fellow 
-        of the Association of Chartered System Accountants (ACSA), USA.`
-    }
+        title: 'KALU UCHE EME, NSA, MPA, HND..',
+        position: 'Head of Actuary, VOG Global Consult',
+        description: `Kalu Uche Eme is an astute Statistician, he is an associate of the Nigerian Statistical Association (NSA) and having worked with several international organizations including the British Council, UNODC and others. He comes over with above 22 years of experience with statistics.`
+    },
+    {
+        image: '/img/home/meettheteam4.svg',
+        title: 'KALU UCHE EME, NSA, MPA, HND..',
+        position: 'Admin Officer and Head Of ICT Department, VOG Global Consult',
+        description: `Benedict Uwaokhonye is a graduate of Applied Mathematics from the University of Benin, Edo state, he also is an Associate of the Chartered institute of Human Resource Managers (ACIHRM). He has Msc. in Financial Mathematics, and is in the final stage of being an associate member of the
+Institute of chartered accountant in Nigeria (ICAN).`
+    },
+    {
+        image: '/img/home/meettheteam.svg',
+        title: 'VIVIAN ENEOKAFOR BSc, CNA.',
+        position: 'Audit and Accounting Department, VOG Global Consult',
+        description: `Vivian Eneokafor holds a Bsc in Accounting. She is also a Certified National Accountant a certificate earned from the Association of National Accountants (ANAN). She is also a member of the Audit and Accounting Department.`
+    },
 ]
 export const reviews = [
     {
@@ -214,28 +235,28 @@ export const reviews = [
 
 export const teamMembers = [
     {
-    img: "/img/home/coreteam.svg",
-    title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
-    pos: "CEO",
+        img: "/img/home/coreteam.svg",
+        title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
+        pos: "CEO",
     },
     {
-    img: "/img/home/coreteam.svg",
-    title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
-    pos: "CEO",
+        img: "/img/home/coreteam.svg",
+        title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
+        pos: "CEO",
     },
     {
-    img: "/img/home/coreteam.svg",
-    title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
-    pos: "CEO",
+        img: "/img/home/coreteam.svg",
+        title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
+        pos: "CEO",
     },
     {
-    img: "/img/home/coreteam.svg",
-    title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
-    pos: "CEO",
+        img: "/img/home/coreteam.svg",
+        title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
+        pos: "CEO",
     },
     {
-    img: "/img/home/coreteam.svg",
-    title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
-    pos: "CEO",
+        img: "/img/home/coreteam.svg",
+        title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
+        pos: "CEO",
     },
 ]
