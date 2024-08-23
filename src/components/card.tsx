@@ -44,27 +44,28 @@ export const ClientCard = ({ title, icon }: Omit<cardProps,"description"| 'class
 export const TeamCard = ({ img, title, pos }: { img: string; title: string; pos: string }) => {
     return (
       <motion.div
-        initial={{ opacity: 0, translateY: 50 }}
-        whileInView={{ opacity: 1, translateY: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="flex flex-col items-center text-center"
-      >
-        <div className=" bg-gray-200 pt-7 rounded-tr-xl  w-64 md:w-[385px] rounded-bl-xl">
+      initial={{ opacity: 0, translateY: 50 }}
+      whileInView={{ opacity: 1, translateY: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="flex flex-col items-center text-center"
+    >
+      <div className="bg-gray-200 pt-7 rounded-tr-xl w-64 md:w-[375px] rounded-bl-xl">
+        <div className="relative w-full h-0 pb-[100%]"> {/* Maintains a consistent aspect ratio */}
           <Image
             src={img}
             alt={title}
-            width={800}
-            height={800}
-            className="w-full h-auto "
+            layout="fill"   
+            className="rounded-tr-2xl object-cover  rounded-bl-2xl"
           />
-  
         </div>
-        <P className=" md:text-sm" color="text-secondary-foreground">
-          {title}
-        </P>
-        <P color="text-popover">{pos}</P>
-      </motion.div>
+      </div>
+      <P className="md:text-sm" color="text-secondary-foreground">
+        {title}
+      </P>
+      <P className="md:text-sm" color="text-popover">{pos}</P>
+    </motion.div>
+    
     );
   };
   

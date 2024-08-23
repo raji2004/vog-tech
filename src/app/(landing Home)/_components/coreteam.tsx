@@ -1,7 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import { P, H4, H1,UnderLine } from "@/components/typography";
-
+import { P, H4, H1, UnderLine } from "@/components/typography";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi
+} from "@/components/ui/carousel";
 import { teamMembers } from "./data";
 import { TeamCard } from "@/components/card";
 
@@ -21,18 +26,25 @@ export const CoreTeam = () => {
           Our <UnderLine>Core Team</UnderLine>
         </H1>
       </motion.div>
-      <div className="flex flex-col md:flex-row   items-center justify-start md:gap-5 md:overflow-x-scroll no-scrollbar">
-        {teamMembers.map((member, index) => (
 
-          <TeamCard
-          key={index}
-            img={member.img}
-            title={member.title}
-            pos={member.pos}
-          />
+      <Carousel
+        opts={{ loop: true }}
+        autoplay={true}
+        autoplayInterval={5000}
+      >
+        <CarouselContent >
+          {teamMembers.map((member, index) => (
+            <CarouselItem className=" md:basis-1/3" key={index}>
+              <TeamCard
+                img={member.img}
+                title={member.title}
+                pos={member.pos}
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
 
-        ))}
-      </div>
     </div>
   );
 };
