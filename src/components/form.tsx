@@ -5,7 +5,7 @@ import { Button } from "@/components/button";
 import { CheckBox } from "@/components/input";
 import Link from "next/link";
 import { State, Action, Pending } from "@/lib/types";
-export const LoginForm = ({ state, action, pending }: { state: State, action: Action, pending: Pending }) => {
+export const LoginForm = ({ state, action, pending }: { state?: State, action?: Action, pending?: Pending }) => {
     return (
         <form className=" flex flex-col justify-between space-y-8 items-center">
             <Image
