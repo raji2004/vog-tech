@@ -1,11 +1,12 @@
 'use client';
 import { LoginForm } from "@/components/form";
-import { useActionState } from "react";
+
+import { useFormState } from "react-dom";
 import { signin } from "@/lib/action";
 
 
 export default function Page() {
-    const [state, action, pending] = useActionState(signin, undefined)
+    const [state, action, pending] = useFormState(signin, undefined)
  
     return (
         <div className=" h-dvh p-section-padding-sm md:p-section-padding ">
