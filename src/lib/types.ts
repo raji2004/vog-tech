@@ -1,5 +1,5 @@
+import { JWTPayload } from "jose";
 import { HTMLAttributes } from "react";
-
 
 
 export type elementProps = {
@@ -25,7 +25,7 @@ export type inputProps = elementProps & {
 };
 
 export type TeamProps = titleDescriptionProps & {
-   position: string;
+    position: string;
     image: string;
 };
 
@@ -67,3 +67,56 @@ export type imgObj = {
     src: string;
     size: number;
 };
+
+export type FormState =
+    | {
+        errors?: {
+            name?: string[]
+            email?: string[]
+            password?: string[]
+        }
+        message?: string
+    }
+    | undefined
+
+
+export type State = {
+                        errors: {
+                            email?: string[] | undefined;
+                            password?: string[] | undefined;
+                        };
+                        message?: undefined;
+                    } | {
+                        message: string;
+                        errors?: undefined;
+                    } | undefined
+
+export type Action = (payload: FormData) => void
+
+export type Pending = boolean;
+
+export interface SessionPayload extends JWTPayload {
+    userId: string;
+    expiresAt: Date;
+    [key: string]: string | string[] | number | boolean | Date | undefined;
+}
+
+export interface Admin {
+    id: string;
+    email: string;
+    password: string;
+    blogs?: Blog[];
+    name: string;
+  }
+  
+  export interface Blog {
+    id: string;
+    title: string;
+    content: string;
+    createdAt: Date;
+    updatedAt: Date;
+    published: boolean;
+    author: Admin;
+    authorId: string;
+  }
+  
