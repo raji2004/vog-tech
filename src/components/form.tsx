@@ -4,8 +4,8 @@ import { Input } from "@/components/input";
 import { Button } from "@/components/button";
 import { CheckBox } from "@/components/input";
 import Link from "next/link";
-import { State, Action, Pending } from "@/lib/types";
-export const LoginForm = ({ state, action, pending }: { state?: State, action?: Action, pending?: Pending }) => {
+
+export const LoginForm = () => {
     return (
         <form className=" flex flex-col justify-between space-y-8 items-center">
             <Image
@@ -18,18 +18,9 @@ export const LoginForm = ({ state, action, pending }: { state?: State, action?: 
             <H2>Sign in</H2>
             <div className=" md:w-[40%] space-y-8 ">
                 <Input type="email" placeholder="Enter your email" label="Email address" />
-                {state?.errors?.email && <p>{state.errors.email}</p>}
+               
                 <Input type="password" placeholder="Enter your password" label="Password" />
-                {state?.errors?.password && (
-                    <div>
-                        <p>Password must:</p>
-                        <ul>
-                            {state.errors.password.map((error) => (
-                                <li key={error}>- {error}</li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
+               
             </div>
             <div className="flex flex-col md:flex-row ml-8 md:ml-0 space-y-2 self-start md:self-center md:w-[40%] justify-between">
                 <CheckBox label="Remember me" />
