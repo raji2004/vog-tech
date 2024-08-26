@@ -75,14 +75,14 @@ export const TeamCard = ({ img, title, pos }: { img: string; title: string; pos:
 export const BlogCard = ({ title, author, date, description, img, current }: blogCardProps) => {
   return (
     <Link href={`/blog/${current}`} >
-      <div className="max-w-sm md:max-w-2xl  rounded overflow-hidden bg-white shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25),-2px_-2px_4px_0px_rgba(0,0,0,0.25)]">
+      <div className="max-w-sm md:max-w-2xl  rounded-2xl overflow-hidden bg-white shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25),-2px_-2px_4px_0px_rgba(0,0,0,0.25)]">
 
-        <div className="relative h-48 md:h-[400px]">
+        <div className="relative h-48 md:h-[350px]">
           <Image
             src={img ? urlFor(img).url() : "/img/home/review.svg"}
             alt="Blog Image"
             layout="fill"
-            className="rounded-t-sm object-cover"
+            className="rounded-t-2xl object-cover"
           />
           <div className="absolute inset-0 bg-black opacity-50 rounded-t-lg"></div> {/* Overlay */}
           <div className="absolute bottom-0 left-0 p-4 space-y-4">
@@ -100,7 +100,7 @@ export const BlogCard = ({ title, author, date, description, img, current }: blo
             </div>
           </div>
         </div>
-        <div className="p-4 flex flex-col  markdown-content-preview">
+        <div className="p-4 flex flex-col   markdown-content-preview">
           <Markdown>{description ? description : "...."}</Markdown> {/* `blogInfo` should contain the blog information */}
           <div className="flex justify-between items-center">
             <div className=" flex items-center gap-3 text-gray-400">
