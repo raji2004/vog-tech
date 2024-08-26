@@ -9,7 +9,7 @@ import { ChevronRight, ChevronLeft } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-export const Post = async ({ isPrev, publishedAt }: { isPrev?: boolean, publishedAt?: string }) => {
+ const Post = async ({ isPrev, publishedAt }: { isPrev?: boolean, publishedAt?: string }) => {
 
   const post: NextBlogPost | PreviousBlogPost | null = await sanityFetch<NextBlogPost | PreviousBlogPost>({
     query: isPrev ? PREVIOUS_QUERY : NEXT_QUERY,
