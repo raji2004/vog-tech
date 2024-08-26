@@ -9,7 +9,10 @@ export type PostsQueryResult = {
   author: {
     name: string;
     image?: {
-      url: string;
+      asset: {
+        _ref: string;
+        _type: 'reference';
+      };
     };
   };
   mainImage: {

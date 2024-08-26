@@ -37,7 +37,7 @@ export default async function Page({ params }: { params: { slug?: string, } }) {
           alt="Blog Image"
           width={800}
           height={800}
-          className="rounded-2xl w-[900px] mx-auto h-auto"
+          className="rounded-2xl w-[1200px] mx-auto h-auto"
         />
 
         <Markdown>{fullBody}</Markdown>

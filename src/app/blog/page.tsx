@@ -18,7 +18,7 @@ export default async function Page() {
             .map((block) => block.children.map((child) => child.text).join(''))
             .join('\n');
             const date = new Date(post.publishedAt).toDateString();
-          
+            console.log(post.author.image)
             return <BlogCard 
             key={post._id} 
             title={post.title}
@@ -26,7 +26,7 @@ export default async function Page() {
               date={date}
                author={{
                    ...post.author,
-                   image: post.author.image?.url
+                   image: post.author.image?.asset._ref
                }}
                 img={post.mainImage.asset._ref}
                 current={post.slug.current}

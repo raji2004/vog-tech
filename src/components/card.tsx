@@ -73,6 +73,7 @@ export const TeamCard = ({ img, title, pos }: { img: string; title: string; pos:
   );
 };
 export const BlogCard = ({ title, author, date, description, img, current }: blogCardProps) => {
+  console.log(author?.image)
   return (
     <div className="max-w-sm md:max-w-2xl  rounded overflow-hidden bg-white shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25),-2px_-2px_4px_0px_rgba(0,0,0,0.25)]">
       <div className="relative h-48 md:h-[400px]">
