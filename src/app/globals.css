@@ -84,7 +84,7 @@
   }
   
   .markdown-content h2 {
-    @apply text-2xl font-bold md:text-3xl;
+    @apply text-2xl my-6 font-bold md:text-3xl;
   }
   
   .markdown-content h3 {

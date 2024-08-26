@@ -73,43 +73,45 @@ export const TeamCard = ({ img, title, pos }: { img: string; title: string; pos:
   );
 };
 export const BlogCard = ({ title, author, date, description, img, current }: blogCardProps) => {
-  console.log(author?.image)
   return (
-    <div className="max-w-sm md:max-w-2xl  rounded overflow-hidden bg-white shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25),-2px_-2px_4px_0px_rgba(0,0,0,0.25)]">
-      <div className="relative h-48 md:h-[400px]">
-        <Image
-          src={img ? urlFor(img).url() : "/img/home/review.svg"}
-          alt="Blog Image"
-          layout="fill"
-          className="rounded-t-sm object-cover"
-        />
-        <div className="absolute inset-0 bg-black opacity-50 rounded-t-lg"></div> {/* Overlay */}
-        <div className="absolute bottom-0 left-0 p-4 space-y-4">
-          <H2 color="text-primary-foreground" >{title ? title : "The Importance of Regular Financial Audits for Business Success"}</H2>
-          <div className=" flex items-center gap-4">
-            <Image 
-            src={author?.image ? urlFor(author.image).url() : '/img/home/review.svg'} 
-            alt="author img" 
-  
-            width={300}
-            height={300}
-            className=" w-10 h-10 rounded-full"
-            />
-            <P color="text-primary-foreground">{author ? author.name : "vog"}</P>
+    <Link href={`/blog/${current}`} >
+      <div className="max-w-sm md:max-w-2xl  rounded overflow-hidden bg-white shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25),-2px_-2px_4px_0px_rgba(0,0,0,0.25)]">
+
+        <div className="relative h-48 md:h-[400px]">
+          <Image
+            src={img ? urlFor(img).url() : "/img/home/review.svg"}
+            alt="Blog Image"
+            layout="fill"
+            className="rounded-t-sm object-cover"
+          />
+          <div className="absolute inset-0 bg-black opacity-50 rounded-t-lg"></div> {/* Overlay */}
+          <div className="absolute bottom-0 left-0 p-4 space-y-4">
+            <H2 color="text-primary-foreground" >{title ? title : "The Importance of Regular Financial Audits for Business Success"}</H2>
+            <div className=" flex items-center gap-4">
+              <Image
+                src={author?.image ? urlFor(author.image).url() : '/img/home/review.svg'}
+                alt="author img"
+
+                width={300}
+                height={300}
+                className=" w-10 h-10 rounded-full"
+              />
+              <P color="text-primary-foreground">{author ? author.name : "vog"}</P>
+            </div>
+          </div>
+        </div>
+        <div className="p-4 flex flex-col  markdown-content-preview">
+          <Markdown>{description ? description : "...."}</Markdown> {/* `blogInfo` should contain the blog information */}
+          <div className="flex justify-between items-center">
+            <div className=" flex items-center gap-3 text-gray-400">
+              <Clock size={16} />
+              <P className=" md:text-[15px]" color="text-gray-400">{date ? date : "2 min read"}</P>
+            </div>
+            <Link href={`/blog/${current}`} className="flex  items-center text-gray-400">Read More <ChevronRight className=" pt-1" size={27} /></Link>
           </div>
         </div>
       </div>
-      <div className="p-4 flex flex-col  markdown-content-preview">
-        <Markdown>{description ? description : "...."}</Markdown> {/* `blogInfo` should contain the blog information */}
-        <div className="flex justify-between items-center">
-          <div className=" flex items-center gap-3 text-gray-400">
-            <Clock size={16} />
-            <P className=" md:text-[15px]" color="text-gray-400">{date ? date : "2 min read"}</P>
-          </div>
-          <Link href={`/blog/${current}`} className="flex  items-center text-gray-400">Read More <ChevronRight className=" pt-1" size={27} /></Link>
-        </div>
-      </div>
-    </div>
+    </Link>
 
   )
 }
