@@ -9,7 +9,7 @@ export const TeamCard = ({ title, position, image, description }: TeamProps) => 
     return (
         <div className={cn("flex flex-col text-center items-center justify-between gap-5 md:flex-row md:text-left")}>
 
-            <Image src={image} height={dimension} width={dimension} className="w-[220px] lg:w-[220px] h-[220px] object-cover" alt={title} />
+            <Image src={image} height={dimension} width={dimension} className="w-[220px] lg:w-[220px] h-[220px] object-cover" alt={title??''} />
             <div className=" space-y-5" >
 
                 <H3 className=" font-light" color={'text-secondary-foreground'}>{title}</H3>
