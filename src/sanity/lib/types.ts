@@ -35,6 +35,33 @@ export type PostsQueryResult = {
   }[];
 }[];
 
+export type NextBlogPost = {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  mainImage: {
+    asset: {
+      _ref: string;
+      _type: 'reference';
+    };
+  }
+  publishedAt: string;
+};
+
+// Get the previous blog post
+export type PreviousBlogPost = {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  mainImage: {
+    asset: {
+      _ref: string;
+      _type: 'reference';
+    };
+  };
+  publishedAt: string;
+};
+
 
 export type PostQueryResult = {
   title: string | null;
@@ -64,6 +91,7 @@ export type PostQueryResult = {
       _type: string | null;
     } | null;
   } | null;
+  publishedAt: string;
 };
 
 export interface SanityBlock {
