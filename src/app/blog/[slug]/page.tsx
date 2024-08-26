@@ -16,7 +16,6 @@ export const Post = async ({ isPrev, publishedAt }: { isPrev?: boolean, publishe
     params: { publishedAt },
   })
   const title = post?.title.slice(0, 15) + (post?.title?.length ?? 0 > 15 ? '...' : '');
-  console.log(post)
   return (
    <Link href={`/blog/${post?.slug.current}`}>
   <div
