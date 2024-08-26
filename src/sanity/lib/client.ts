@@ -9,21 +9,23 @@ export const client = createClient({
   useCdn: true, // Set to false if statically generating pages, using ISR or tag-based revalidation
 })
 
-export async function sanityFetch<const QueryString extends string>({
+// Update the sanityFetch function to use the PostQueryResult type
+export async function sanityFetch<T>({
   query,
   params = {},
-  revalidate = 60, // default revalidation time in seconds
+  revalidate = 60,
   tags = [],
 }: {
-  query: QueryString
-  params?: QueryParams
-  revalidate?: number | false
-  tags?: string[]
-}) {
+  query: string;
+  params?: QueryParams;
+  revalidate?: number | false;
+  tags?: string[];
+}): Promise<T | null> {
   return client.fetch(query, params, {
     next: {
-      revalidate: tags.length ? false : revalidate, // for simple, time-based revalidation
-      tags, // for tag-based revalidation
+      revalidate: tags.length ? false : revalidate,
+      tags,
     },
-  })
+  });
 }
+export default client

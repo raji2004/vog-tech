@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 const navigationMenuItems = [
     { title: "Home", href: "/" },
     { title: "About Us", href: "/about" },
+    { title: "Blog", href: "/blog" },
     { title: "Our Services", href: "/services" },
     { title: "Contact Us", href: "/contact" },
 ];
@@ -56,7 +57,7 @@ const NavItem = ({ href, title, isMobile, setIsOpen }: { href: string, title: st
                     "text-white": !isMobile,
                     "text-secondary-foreground hover:text-primary": isMobile,
                     "bg-gray-300": isMobile && pathname === href,
-                    " after:float-left after:bg-white after:w-full after:h-1 after:rounded-full ": pathname === href && !isMobile,
+                    " after:float-left after:bg-popover text-popover after:w-full after:h-1 after:rounded-full ": pathname === href && !isMobile,
                 }
             )}
             onClick={() => {

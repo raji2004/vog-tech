@@ -7,12 +7,12 @@ export type elementProps = {
     children?: React.ReactNode;
 };
 export type titleDescriptionProps = {
-    title: string;
-    description: string;
+    title?: string;
+    description?: string;
 };
 
 export type typographyProps = elementProps & {
-    color?: 'text-primary' | 'text-secondary' | 'text-primary-foreground' | 'text-secondary-foreground' | 'text-popover';
+    color?: 'text-primary' | 'text-secondary' | 'text-primary-foreground' | 'text-secondary-foreground' | 'text-popover'|'text-gray-400';
 };
 
 
@@ -52,7 +52,15 @@ export type CardObj = titleDescriptionProps & {
 };
 export type cardProps = elementProps & CardObj;
 
-
+export type blogCardProps = titleDescriptionProps &{
+    date?: string;
+    author?: {
+        name: string;
+        image?: string;
+    };
+    img?: string;
+    current?: string;
+}
 
 
 export type buttonProps = elementProps & {
