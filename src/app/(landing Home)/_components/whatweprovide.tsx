@@ -4,7 +4,7 @@ import { IconButton } from "@/components/button";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { useRef, useEffect } from "react";
 import { heroCarouselImg } from "./data";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { imgObj } from "@/lib/types";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from 'react-intersection-observer';

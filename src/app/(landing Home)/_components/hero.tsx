@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { H1, H2, P ,UnderLine} from "@/components/typography"
 import { Button } from "@/components/button"
-import Image from "next/image"
+import Image from "next/legacy/image"
 
 export const Hero = () => {
     const imgDimensions: number = 500;

@@ -5,7 +5,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import { faqProps } from "@/lib/types"
-import Image from "next/image"
+import Image from "next/legacy/image"
 
 export const Faq = ({ value, content }: faqProps) => {
     return (

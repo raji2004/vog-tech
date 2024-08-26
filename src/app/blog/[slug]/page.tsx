@@ -2,7 +2,7 @@ import Markdown from "markdown-to-jsx";
 import { POST_QUERY } from '@/sanity/lib/queries'
 import { PostQueryResult, PostsQueryResult } from "@/sanity/lib/types";
 import { sanityFetch } from '@/sanity/lib/client'
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { urlFor } from "@/sanity/lib/image";
 import { H1,H2,H3 } from "@/components/typography";
 

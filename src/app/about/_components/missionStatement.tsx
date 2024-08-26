@@ -1,5 +1,5 @@
 import { H1,UnderLine } from "@/components/typography";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export const MissionStatement = () => {
     return(

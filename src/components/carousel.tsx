@@ -1,7 +1,7 @@
 'use client';
 import { cn } from "@/lib/utils";
 import { HTMLAttributes, forwardRef } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { H3, H4, List, P } from "@/components/typography";
 import { motion } from "framer-motion";
 import { ReviewCardProps } from "@/lib/types";

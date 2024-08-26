@@ -1,6 +1,6 @@
 import { H1, P,UnderLine } from "@/components/typography"
 import { Faq } from "@/components/faq"
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { faqData } from "./data";
 
 

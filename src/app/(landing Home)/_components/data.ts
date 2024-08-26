@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { CardObj } from "@/lib/types"
 import React from "react"
 

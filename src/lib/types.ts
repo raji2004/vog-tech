@@ -56,7 +56,7 @@ export type blogCardProps = titleDescriptionProps &{
     date?: string;
     author?: {
         name: string;
-        image?: string;
+        image?:string;
     };
     img?: string;
     current?: string;

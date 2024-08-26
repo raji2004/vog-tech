@@ -1,6 +1,6 @@
 'use client'
 import { H1, P, List, UnderLine } from "@/components/typography"
-import Image from "next/image"
+import Image from "next/legacy/image"
 import { Button } from "@/components/button"
 import { icondata } from "./data"
 import CountUp from "react-countup"
