@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { H3, P, } from '@/components/typography'
 import { Button } from "./button";
 import { TeamProps } from "@/lib/types";

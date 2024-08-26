@@ -6,11 +6,10 @@ export type PostsQueryResult = {
     current: string;
   };
   publishedAt: string;
-  authorName: string;
-  authorImage: {
-    asset: {
-      _ref: string;
-      _type: 'reference';
+  author: {
+    name: string;
+    image?: {
+      url: string;
     };
   };
   mainImage: {

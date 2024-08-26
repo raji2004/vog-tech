@@ -1,7 +1,7 @@
 import { Input } from "@/components/input";
 import { Button } from "@/components/button";
 import { H3, P, List,H2 } from "@/components/typography";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 
 export const Footer = () => {

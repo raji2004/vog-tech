@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { H2, P } from "@/components/typography";
 import { Input } from "@/components/input";
 import { Button } from "@/components/button";

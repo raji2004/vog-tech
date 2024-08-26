@@ -25,8 +25,8 @@ export default async function Page() {
              description={description}
               date={date}
                author={{
-                   name: post.authorName,
-                   image: post.authorImage.asset._ref
+                   ...post.author,
+                   image: post.author.image?.url
                }}
                 img={post.mainImage.asset._ref}
                 current={post.slug.current}

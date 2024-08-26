@@ -1,7 +1,7 @@
 'use client';
 import { cn } from "@/lib/utils";
 import { H4, P, H3, H2 } from "./typography";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { cardProps, blogCardProps } from "@/lib/types";
 import { motion } from "framer-motion";
 import { Clock, ChevronRight } from 'lucide-react';
@@ -73,7 +73,6 @@ export const TeamCard = ({ img, title, pos }: { img: string; title: string; pos:
   );
 };
 export const BlogCard = ({ title, author, date, description, img, current }: blogCardProps) => {
-  console.log(author?.image)
   return (
     <div className="max-w-sm md:max-w-2xl  rounded overflow-hidden bg-white shadow-[2px_2px_4px_0px_rgba(0,0,0,0.25),-2px_-2px_4px_0px_rgba(0,0,0,0.25)]">
       <div className="relative h-48 md:h-[400px]">
@@ -87,12 +86,13 @@ export const BlogCard = ({ title, author, date, description, img, current }: blo
         <div className="absolute bottom-0 left-0 p-4 space-y-4">
           <H2 color="text-primary-foreground" >{title ? title : "The Importance of Regular Financial Audits for Business Success"}</H2>
           <div className=" flex items-center gap-4">
-            <Image
-              src={author?.image ? urlFor(author.image).url() : '/img/home/review.svg'}
-              alt="author img"
-              width={40}
-              height={40}
-              className="w-10 h-10 rounded-full"
+            <Image 
+            src={author?.image ? urlFor(author.image).url() : '/img/home/review.svg'} 
+            alt="author img" 
+  
+            width={300}
+            height={300}
+            className=" w-10 h-10 rounded-full"
             />
             <P color="text-primary-foreground">{author ? author.name : "vog"}</P>
           </div>

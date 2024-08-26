@@ -9,11 +9,11 @@ export const POSTS_QUERY = defineQuery(`*[_type == "post" && defined(slug.curren
   title, 
   slug, 
   publishedAt,
-  "authorName": author->name,
-  "authorImage": author->image,
+  author->{name, image} , 
   mainImage,
   body
 }`)
+
 
 export const POST_QUERY = defineQuery(`*[_type == "post" && slug.current == $slug][0]{
   title, body, mainImage

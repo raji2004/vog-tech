@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { TeamCard } from "@/components/team";
 import { H1, P,H2,UnderLine } from "@/components/typography";
 import { teamData } from "./data";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Button } from "@/components/button";
 import { useRef } from "react";
 
