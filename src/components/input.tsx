@@ -5,13 +5,13 @@ import { useState } from "react";
 import { inputProps } from "@/lib/types";
 
 
-export const Input = ({ className, type, placeholder, label,noLabel, onChange }: inputProps) => {
+export const Input = ({ className, type, placeholder, label,noLabel, onChange,  }: inputProps) => {
     const [showPassword, setShowPassword] = useState(false);
     function changeVisibility() {
         setShowPassword(!showPassword);
     }
     return (
-        <div className={cn("flex flex-col w-full ", className)}>
+        <div className={cn("flex flex-col w-full space-y-1 ", className)}>
             {!noLabel && <label className="text-primary font-semibold">{label}</label>}
             <div className=" relative w-full ">
                 {type === 'email' && <Mail size={24} className="absolute top-2 left-4 text-primary" />}
@@ -23,7 +23,7 @@ export const Input = ({ className, type, placeholder, label,noLabel, onChange }:
                     onChange={onChange}
 
                     className={cn(
-                        "pl-12 py-2 font-semibold rounded-md placeholder:text-secondary-foreground  text-primary border border-black w-full",
+                        "pl-12 py-2 font-semibold rounded-md   text-primary border border-black w-full",
                         "bg-transparent",
                         className
                     )}

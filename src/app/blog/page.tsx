@@ -11,7 +11,7 @@ export default async function Page() {
         revalidate: 30, // update cache at most once every hour
     })
     return (
-        <div className=" p-section-padding-sm md:p-section-padding flex flex-col gap-10">
+        <div className=" p-section-padding-sm md:p-section-padding flex flex-row flex-wrap gap-10">
             {posts?.map((post) => {
                 const description = post.body
                     .slice(0, 2)
