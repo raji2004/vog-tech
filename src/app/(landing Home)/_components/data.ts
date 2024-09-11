@@ -155,7 +155,7 @@ export const faqData = [
 ]
 export const teamData = [
     {
-        image: '/img/home/meettheteam.svg',
+        image: '/img/home/meettheteam5.svg',
         title: 'UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK),PHD (USA), CNA, ACTI.',
         position: 'CEO, VOG Global',
         description: `Udo is a graduate of Economics from the University of Calabar,
@@ -197,17 +197,16 @@ export const teamData = [
     },
     {
         image: '/img/home/meettheteam4.svg',
-        title: 'KALU UCHE EME, NSA, MPA, HND..',
+        title: 'BENEDICT O. UWAOKHONYE BSc, Msc, ACIHRM.',
         position: 'Admin Officer and Head Of ICT Department, VOG Global Consult',
-        description: `Benedict Uwaokhonye is a graduate of Applied Mathematics from the University of Benin, Edo state, he also is an Associate of the Chartered institute of Human Resource Managers (ACIHRM). He has Msc. in Financial Mathematics, and is in the final stage of being an associate member of the
-Institute of chartered accountant in Nigeria (ICAN).`
+        description: `Benedict Uwaokhonye is a graduate of Applied Mathematics from the University of Benin, Edo state, he also is an Associate of the Chartered institute of Human Resource Managers (ACIHRM). He has Msc. in Financial Mathematics, and is in the final stage of being an associate member of the Institute of chartered accountant in Nigeria (ICAN).`
     },
-    {
-        image: '/img/home/meettheteam.svg',
-        title: 'VIVIAN ENEOKAFOR BSc, CNA.',
-        position: 'Audit and Accounting Department, VOG Global Consult',
-        description: `Vivian Eneokafor holds a Bsc in Accounting. She is also a Certified National Accountant a certificate earned from the Association of National Accountants (ANAN). She is also a member of the Audit and Accounting Department.`
-    },
+    // {
+    //     image: '/img/home/meettheteam.svg',
+    //     title: 'VIVIAN ENEOKAFOR BSc, CNA.',
+    //     position: 'Audit and Accounting Department, VOG Global Consult',
+    //     description: `Vivian Eneokafor holds a Bsc in Accounting. She is also a Certified National Accountant a certificate earned from the Association of National Accountants (ANAN). She is also a member of the Audit and Accounting Department.`
+    // },
 ]
 export const reviews = [
     {
