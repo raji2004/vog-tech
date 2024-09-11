@@ -165,12 +165,12 @@ export const teamData = [
         a practicing licenced member of the Chartered Institute of Taxation of Nigeria (CITN) and a Fellow 
         of the Association of Chartered System Accountants (ACSA), USA.`
     },
-    {
-        image: '/img/home/meettheteam.svg',
-        title: 'EMMANUEL UDUMA GEORGE BSc, ACA.',
-        position: 'Head Auditor in the Audit and Accounting Service Department, VOG Global Consult',
-        description: `Emmanuel Uduma George is a graduate of Government and Public Administration, Abia State University, where he obtained a Bachelor of Science Degree. He is also an Associate member of the institute of Chartered Accountants of Nigeria (ICAN). He has a profound knowledge in audit system and taxation...`
-    },
+    // {
+    //     image: '/img/home/meettheteam.svg',
+    //     title: 'EMMANUEL UDUMA GEORGE BSc, ACA.',
+    //     position: 'Head Auditor in the Audit and Accounting Service Department, VOG Global Consult',
+    //     description: `Emmanuel Uduma George is a graduate of Government and Public Administration, Abia State University, where he obtained a Bachelor of Science Degree. He is also an Associate member of the institute of Chartered Accountants of Nigeria (ICAN). He has a profound knowledge in audit system and taxation...`
+    // },
     {
         image: '/img/home/meettheteam1.svg',
         title: 'ANGELA ADAMU, BSc, ACA.',
