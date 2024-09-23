@@ -1,9 +1,13 @@
 import { Hero } from "./_components/hero"
 import { Leftbar } from "./_components/leftbar"
 import { Rightbar } from "./_components/rightbar";
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
 
 
-export default function Page() {
+export default function Services() {
     return (
         <main className="p-section-padding-sm md:p-section-padding space-y-10">
             <Hero />
