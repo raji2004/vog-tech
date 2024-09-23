@@ -1,5 +1,5 @@
-import Image from "next/image"
-import { CardObj } from "@/lib/types"
+// import Image from "next/image"
+// import { CardObj } from "@/lib/types"
 import React from "react"
 
 
