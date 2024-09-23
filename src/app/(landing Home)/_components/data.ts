@@ -2,36 +2,6 @@ import Image from "next/image"
 import { CardObj } from "@/lib/types"
 import React from "react"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const heroCarouselImg = [
     {
         src: '/img/home/whatweprovide1.svg',
