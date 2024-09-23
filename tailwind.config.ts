@@ -41,6 +41,7 @@ const config: Config = {
       colors: {
         'custom-green': '#024D52',
         'custom-purple': '#5F5D99',
+        'service-green': '#9BAE9B',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
