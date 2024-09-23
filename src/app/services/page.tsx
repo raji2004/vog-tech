@@ -1,10 +1,9 @@
 import { Hero } from "./_components/hero"
 import { Leftbar } from "./_components/leftbar"
 import { Rightbar } from "./_components/rightbar";
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
+
+
 
 
 export default function Services() {
