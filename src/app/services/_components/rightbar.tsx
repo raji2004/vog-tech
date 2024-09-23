@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { H1, H2, H4, P, List, UnderLine } from "@/components/typography"
 import { FaqServices, } from "@/components/services";
-import { services } from "./data";
+
 
 
 export const Rightbar = () => {
