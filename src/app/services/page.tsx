@@ -1,10 +1,7 @@
-import { H1, H2,H3,H4,P, UnderLine } from "@/components/typography";
 import { Hero } from "./_components/hero"
 import { Leftbar } from "./_components/leftbar"
 import { Rightbar } from "./_components/rightbar";
-import Image from "next/image";
-import { FaqServices, } from "@/components/services";
-import { services } from "./_components/data";
+
 
 export default function Page() {
     return (
