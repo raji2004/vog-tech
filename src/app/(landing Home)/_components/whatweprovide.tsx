@@ -75,7 +75,7 @@ export const WhatWeProvide = () => {
                 animate={controls}
                 transition={{ delay: 0.6 }}
             >
-                <P color={"text-primary-foreground"}>Here at VOG Tech:</P>
+                <P color={"text-primary-foreground"}>Here at VOG Global:</P>
                 <List color={"text-primary-foreground"}>
                     <li>We are utilizing the latest technologies and methodologies to ensure compliance and efficiency.</li>
                     <li>Ensuring your business meets all Nigerian tax laws and regulations.</li>

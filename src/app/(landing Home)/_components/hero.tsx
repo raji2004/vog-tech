@@ -49,7 +49,7 @@ export const Hero = () => {
                             <UnderLine> Services in Nigeria.</UnderLine>
                         </H1>
                         <P>
-                            Ensuring Compliance, Maximizing Efficiency, Driving Success
+                            BUILDING  REWARDING PARTNERSHIPS...
                         </P>
                     </motion.div>
                     <Image
