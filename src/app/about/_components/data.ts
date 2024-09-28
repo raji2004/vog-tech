@@ -1,7 +1,7 @@
 export const icondata = [
     {
         src: '/icon/Handshake.svg',
-        title: 20,
+        title: 5000,
         desc: 'Clients Serviced',
         percent:false
     },

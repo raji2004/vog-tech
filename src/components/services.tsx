@@ -11,7 +11,7 @@ export const FaqServices = ({ value, content }: faqProps) => {
     return (
         <>
             <Accordion className="rounded-lg m-0 p-2" type="single" collapsible>
-                <AccordionItem className="rounded-lg bg-white" value={value}>
+                <AccordionItem className="rounded-lg bg-white p-1" value={value}>
                     <AccordionTrigger className="hover:no-underline p-2 text-left  ">
                         <div className="flex items-center justify-start gap-5 pl-2 ">
 

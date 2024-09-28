@@ -97,7 +97,7 @@ export const Hero = () => {
 
                     <div>
                         <P color="text-secondary-foreground">
-                            Here at VOG Tech:
+                            Here at VOG Global:
                         </P>
                         <List className=" mt-0 p-0" color="text-secondary-foreground">
                             <li>
