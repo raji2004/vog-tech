@@ -79,8 +79,7 @@ export const cardData: CardObj[] = [
     },
     {
         title: 'Expert Guidance',
-        description: `We understand that every business is unique. Our team takes the time to thoroughly understand your specific needs, 
-        challenges, and goals. We tailor our services to provide customized solutions that drive your business forward. `,
+        description: `With years of industry experience, our team of seasoned professionals offers expert guidance at every step of your business journey. We combine deep knowledge with practical insights to help you make informed decisions, optimize processes, and achieve sustainable growth. Our goal is to empower you with the tools and strategies needed to navigate challenges and seize opportunities with confidence. `,
         icon: '/icon/Guidance.svg'
     },
     {
@@ -98,9 +97,7 @@ export const cardData: CardObj[] = [
     },
     {
         title: 'Cutting-Edge Technology',
-        description: `We are committed to continuous improvement and staying ahead of industry trends.
-         Our methodologies and training programs are regularly updated to incorporate the latest best practices and regulatory 
-         changes, ensuring you receive the best possible service.`,
+        description: `We leverage the latest advancements in technology to deliver innovative solutions that keep your business ahead of the curve. Our team utilizes state-of-the-art tools and platforms to streamline processes, enhance efficiency, and provide real-time insights. By embracing cutting-edge technology, we help you stay competitive in an ever-evolving marketplace, ensuring your business operates with the highest level of precision and agility.`,
         icon: '/icon/Touch.svg'
     },
     {
