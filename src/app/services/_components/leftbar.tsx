@@ -31,9 +31,9 @@ export const Leftbar = () => {
                 <div className="flex flex-col">
                     <div className="flex flex-col  justify-between p-1  rounded-lg">
                         {
-                            services.map((item, i) => {
+                            brochure.map((item, i) => {
                                 return (
-                                    <FaqServices key={i} value={item.title} content={item.information} />
+                                    <FaqServices key={i} value={item.title} content={item.src} />
                                 )
                             })
                         }

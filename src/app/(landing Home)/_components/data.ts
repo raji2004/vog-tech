@@ -248,11 +248,11 @@ export const teamMembers = [
         title: "ANGELA ADAMU, BSc,ACA",
         pos: "Chief Executive Officer",
     },
-    {
-        img: "/img/home/coreteam.svg",
-        title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
-        pos: "CEO",
-    },
+    // {
+    //     img: "/img/home/coreteam.svg",
+    //     title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
+    //     pos: "CEO",
+    // },
     {
         img: "/img/home/coreteam.svg",
         title: "UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK), PHD (USA), CNA, ACTI.",
