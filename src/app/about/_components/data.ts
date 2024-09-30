@@ -29,15 +29,15 @@ export const clientData = [
         title: 'Julius Berger'
     },
     {
-        icon: '/img/about/client.svg',
+        icon: '/img/about/client1.svg',
         title: 'Julius Berger'
     },
     {
-        icon: '/img/about/client1.svg',
+        icon: '/img/about/client.svg',
         title: 'Family Health International'
     },
     {
-        icon: '/img/about/client.svg',
+        icon: '/img/about/client1.svg',
         title: 'Julius Berger'
     },
 
@@ -54,7 +54,7 @@ export const clientData = [
         title: 'Julius Berger'
     },
     {
-        icon: '/img/about/client.svg',
+        icon: '/img/about/client1.svg',
         title: 'Julius Berger'
     },
 ]
