@@ -183,8 +183,8 @@ export const teamData = [
     {
         image: '/img/home/meettheteam3.svg',
         title: 'IDIKA KALU IBE, FCIIN, MPA, BSc, CILRM.',
-        position: 'head of Insurance & Risk Assessment Team, VOG Global Consult',
-        description: `Kalu Uche Eme is an astute Statistician, he is an associate of the Nigerian Statistical Association (NSA) and having worked with several international organizations including the British Council, UNODC and others. He comes over with above 22 years of experience with statistics.`
+        position: 'Head of Insurance & Risk Assessment Team, VOG Global ',
+        description: `Idika is a graduate of Government and Public Administration (B.Sc) Abia State University, Master of Public and International Affairs (MPIA) from the University of Lagos, Fellow Chartered Institute of Insurance Nigeria (CIIN), Associate member Chartered Institute of Loan and Risk Management (CILRM). Insurance Loss Adjuster and management expert, Train communication and Control Room professional. Idika loves God and things of the Kingdom.`
     },
     {
         image: '/img/home/meettheteam.svg',
