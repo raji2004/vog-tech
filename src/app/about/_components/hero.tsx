@@ -108,7 +108,7 @@ export const Hero = () => {
                             </li>
                             <li>
 
-                                Recognized by leading industry bodies and certified by [relevant authority]
+                                Recognized by leading industry bodies and certified by authorities.
                             </li>
                             <li>
 
