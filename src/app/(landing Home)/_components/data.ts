@@ -198,6 +198,14 @@ export const teamData = [
         position: 'Admin Officer and Head Of ICT Department, VOG Global Consult',
         description: `Benedict Uwaokhonye is a graduate of Applied Mathematics from the University of Benin, Edo state, he also is an Associate of the Chartered institute of Human Resource Managers (ACIHRM). He has Msc. in Financial Mathematics, and is in the final stage of being an associate member of the Institute of chartered accountant in Nigeria (ICAN).`
     },
+   
+    {
+        image: '/img/home/meettheteam6.svg',
+        title: 'GRACE BAIYE ONYIENEOIZA (ACA, ANIM, MBA)',
+        position: 'Head of Public Relations, VOG Global Consult',
+        description: `Ogbe, Esther Mofe is a graduate of Applied Microbiology and Brewing from Nnamdi Azikiwe University, Awka,Anambra State.
+She is a professional accountant who is tenacious, detail-oriented and result-driven. `
+    },
     // {
     //     image: '/img/home/meettheteam.svg',
     //     title: 'VIVIAN ENEOKAFOR BSc, CNA.',

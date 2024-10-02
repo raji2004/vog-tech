@@ -38,6 +38,39 @@ export const Input = ({ className, type, placeholder, label,noLabel, onChange,  
     );
 }
 
+export const Input2 = ({ className, type, placeholder, label, noLabel, onChange, }: inputProps) => {
+    const [showPassword, setShowPassword] = useState(false);
+    function changeVisibility() {
+        setShowPassword(!showPassword);
+    }
+    return (
+        <div className={cn("flex flex-col w-full space-y-1 ", className)}>
+            {!noLabel && <label className="text-primary font-semibold">{label}</label>}
+            <div className=" relative w-full ">
+                {type === 'email' && <Mail size={24} className="absolute top-2 left-4 text-primary" />}
+                {type === 'password' && <Lock size={24} className="absolute top-2 left-4 text-primary" />}
+                <input
+                    type={type != 'password' ? type : showPassword ? 'text' : 'password'}
+                    placeholder={placeholder}
+                    name={label}
+                    onChange={onChange}
+
+                    className={cn(
+                        "pl-12 py-2 font-semibold rounded-md   text-primary border border-black w-full",
+                        "bg-transparent",
+                        className
+                    )}
+                />
+                {type === 'password'
+
+                    && (showPassword ? <Eye size={24} onClick={changeVisibility} className="absolute top-2 right-4 text-primary" />
+                        : <EyeOff size={24} onClick={changeVisibility} className="absolute top-2 right-4 text-primary" />)
+                }
+            </div>
+        </div>
+    );
+}
+
 export const CheckBox = ({ className, label, onChange }: inputProps) => {
     return (
         <div className={cn("flex flex-row items-center gap-2", className)}>
