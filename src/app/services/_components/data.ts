@@ -20,8 +20,6 @@ export const services = [
         title: "Financial Statement Preparation",
         information: "We prepare financial statements like balance sheets, income statements, and cash flow reports, following both Nigerian regulatory requirements and global accounting principles. Our cloud-based tools provide a comprehensive view of your business's financial health."
     },
-<<<<<<< Updated upstream
-=======
     {
         title: "Tech-Integrated Payroll Services",
         information: "Our payroll services ensure compliance with both local employment laws and international payroll standards. We use advanced payroll software to manage wage calculations, tax withholdings, and employee payments efficiently and accurately."
