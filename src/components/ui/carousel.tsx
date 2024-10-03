@@ -5,7 +5,6 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -19,8 +18,9 @@ type CarouselProps = {
   plugins?: CarouselPlugin;
   orientation?: "horizontal" | "vertical";
   setApi?: (api: CarouselApi) => void;
-  autoplay?: boolean; // Add autoplay prop
-  autoplayInterval?: number; // Add autoplayInterval prop
+  autoplay?: boolean; 
+  autoplayInterval?: number; 
+  onChange?: (index: number) => void; // Add onChange prop
 };
 
 type CarouselContextProps = {
@@ -56,8 +56,9 @@ const Carousel = React.forwardRef<
       plugins,
       className,
       children,
-      autoplay = false, // Default value for autoplay
-      autoplayInterval = 3000, // Default value for autoplay interval
+      autoplay = false,
+      autoplayInterval = 3000,
+      onChange, // Accept onChange as a prop
       ...props
     },
     ref
@@ -79,7 +80,10 @@ const Carousel = React.forwardRef<
 
       setCanScrollPrev(api.canScrollPrev());
       setCanScrollNext(api.canScrollNext());
-    }, []);
+      if (onChange) {
+        onChange(api.selectedScrollSnap()); // Call onChange with the current index
+      }
+    }, [onChange]);
 
     const scrollPrev = React.useCallback(() => {
       api?.scrollPrev();
@@ -134,7 +138,7 @@ const Carousel = React.forwardRef<
         if (api.selectedScrollSnap() === api.scrollSnapList().length - 1) {
           api.scrollTo(0);
         }
-      }, autoplayInterval); // Use the autoplayInterval prop
+      }, autoplayInterval);
 
       return () => {
         clearInterval(intervalId);
@@ -153,8 +157,8 @@ const Carousel = React.forwardRef<
           scrollNext,
           canScrollPrev,
           canScrollNext,
-          autoplay, // Pass autoplay to the context
-          autoplayInterval, // Pass autoplayInterval to the context
+          autoplay,
+          autoplayInterval,
         }}
       >
         <div

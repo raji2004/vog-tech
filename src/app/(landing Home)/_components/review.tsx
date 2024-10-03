@@ -1,5 +1,5 @@
 "use client";
-import { P, H1,UnderLine } from "@/components/typography";
+import { P, H1, UnderLine } from "@/components/typography";
 import {
     Carousel,
     CarouselContent,
@@ -16,6 +16,12 @@ import { useState } from "react";
 
 export const Review = () => {
     const [api, setApi] = useState<CarouselApi>();
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const handleDotClick = (index: number) => {
+        setCurrentIndex(index);
+        api && api.scrollTo(index);
+    };
 
     const handleNext = () => {
         if (api) {
@@ -25,22 +31,23 @@ export const Review = () => {
 
     const handlePrevious = () => {
         if (api) {
-            api.scrollPrev()
+            api.scrollPrev();
         }
+    };
 
+
+    const updateCurrentIndex = (index: number) => {
+            setCurrentIndex(index);
+     
     };
 
     return (
-        <div
-            className={cn(
-                "   p-section-padding-sm my-10 md:p-section-padding text-center space-y-7 flex flex-col"
-            )}
-        >
-            <div className="flex flex-row items-center justify-center ">
+        <div className={cn("p-section-padding-sm my-10 md:p-section-padding text-center space-y-7 flex flex-col")}>
+            <div className="flex flex-row items-center justify-center">
                 <H1 color="text-primary" className="text-center flex-1">
                     What Do Our <UnderLine> Clients Say?</UnderLine>
                 </H1>
-                <div className=" hidden md:block space-x-7">
+                <div className="hidden md:block space-x-7">
                     <IconButton onClick={handlePrevious} aria-label="Previous">
                         <ArrowLeft />
                     </IconButton>
@@ -50,7 +57,7 @@ export const Review = () => {
                 </div>
             </div>
             <P>We serve and are trusted by numerous companies and small businesses across the country.</P>
-            <div className=" md:hidden block  space-x-7 self-end">
+            <div className="md:hidden block space-x-7 self-end">
                 <IconButton onClick={handlePrevious} aria-label="Previous">
                     <ArrowLeft />
                 </IconButton>
@@ -64,6 +71,7 @@ export const Review = () => {
                 opts={{ loop: true }}
                 autoplay={true}
                 autoplayInterval={5000}
+                onChange={updateCurrentIndex} // Ensure this matches your carousel's event
             >
                 <CarouselContent>
                     {reviews.map((review, index) => (
@@ -78,11 +86,16 @@ export const Review = () => {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-
-                {/* Custom navigation buttons */}
-
-
             </Carousel>
+            <div className="flex justify-center mt-4">
+                {reviews.map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => handleDotClick(index)}
+                        className={`w-3 h-3 mx-1 rounded-full ${currentIndex === index ? 'bg-primary/80' : 'bg-gray-300'}`}
+                    />
+                ))}
+            </div>
         </div>
     );
 };

@@ -20,42 +20,6 @@ export const services = [
         title: "Financial Statement Preparation",
         information: "We prepare financial statements like balance sheets, income statements, and cash flow reports, following both Nigerian regulatory requirements and global accounting principles. Our cloud-based tools provide a comprehensive view of your business's financial health."
     },
-    {
-        title: "Business Consulting",
-        information: "Input"
-    },
-    {
-        title: "Business Consulting",
-        information: "Input"
-    },
-    {
-        title: "Business Consulting",
-        information: "Input"
-    },
-    {
-        title: "Business Consulting",
-        information: "Input"
-    },
-    {
-        title: "Business Consulting",
-        information: "Input"
-    },
-    {
-        title: "Business Consulting",
-        information: "Input"
-    },
-    {
-        title: "Business Consulting",
-        information: "Input"
-    },
-    {
-        title: "Business Consulting",
-        information: "Input"
-    },
-    {
-        title: "Business Consulting",
-        information: "Input"
-    },
 ]
 
 
