@@ -12,7 +12,7 @@ export const FaqServices = ({ value, content }: faqProps) => {
         <>
             <Accordion className="rounded-lg m-0 p-2" type="single" collapsible>
                 <AccordionItem className="rounded-lg bg-white p-1" value={value}>
-                    <AccordionTrigger className="hover:no-underline p-2 text-left  ">
+                    <AccordionTrigger className="hover:no-underline p-4 text-left  ">
                         <div className="flex items-center justify-start gap-5 pl-2 ">
 
                             {/* <Image src="/icon/check.svg" width={20} height={20} alt="plus" /> */}
