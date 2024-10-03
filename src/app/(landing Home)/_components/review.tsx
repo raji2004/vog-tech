@@ -16,12 +16,12 @@ import { useState } from "react";
 
 export const Review = () => {
     const [api, setApi] = useState<CarouselApi>();
-    const [currentIndex, setCurrentIndex] = useState(0);
+    // const [currentIndex, setCurrentIndex] = useState(0);
 
-    const handleDotClick = (index: number) => {
-        setCurrentIndex(index);
-        api && api.scrollTo(index);
-    };
+    // const handleDotClick = (index: number) => {
+    //     setCurrentIndex(index);
+    //     api && api.scrollTo(index);
+    // };
 
     const handleNext = () => {
         if (api) {
@@ -36,10 +36,10 @@ export const Review = () => {
     };
 
 
-    const updateCurrentIndex = (index: number) => {
-            setCurrentIndex(index);
+    // const updateCurrentIndex = (index: number) => {
+    //         setCurrentIndex(index);
      
-    };
+    // };
 
     return (
         <div className={cn("p-section-padding-sm my-10 md:p-section-padding text-center space-y-7 flex flex-col")}>
@@ -71,7 +71,7 @@ export const Review = () => {
                 opts={{ loop: true }}
                 autoplay={true}
                 autoplayInterval={5000}
-                onChange={updateCurrentIndex} // Ensure this matches your carousel's event
+                // onChange={updateCurrentIndex} // Ensure this matches your carousel's event
             >
                 <CarouselContent>
                     {reviews.map((review, index) => (
@@ -87,7 +87,7 @@ export const Review = () => {
                     ))}
                 </CarouselContent>
             </Carousel>
-            <div className="flex justify-center mt-4">
+            {/* <div className="flex justify-center mt-4">
                 {reviews.map((_, index) => (
                     <button
                         key={index}
@@ -95,7 +95,7 @@ export const Review = () => {
                         className={`w-3 h-3 mx-1 rounded-full ${currentIndex === index ? 'bg-primary/80' : 'bg-gray-300'}`}
                     />
                 ))}
-            </div>
+            </div> */}
         </div>
     );
 };
