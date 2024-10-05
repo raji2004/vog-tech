@@ -65,7 +65,7 @@ export const services = [
         information: "Our staff outsourcing solutions follow Nigerian labor laws and global HR best practices. Using advanced HR management systems, we provide top-tier talent that matches your business needs, ensuring compliance and operational efficiency"
     },
    
->>>>>>> Stashed changes
+
 ]
 
 
