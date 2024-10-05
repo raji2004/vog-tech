@@ -199,37 +199,43 @@ export const teamData = [
         description: `Benedict Uwaokhonye is a graduate of Applied Mathematics from the University of Benin, Edo state, he also is an Associate of the Chartered institute of Human Resource Managers (ACIHRM). He has Msc. in Financial Mathematics, and is in the final stage of being an associate member of the Institute of chartered accountant in Nigeria (ICAN).`
     },
    
-    {
-        image: '/img/home/meettheteam6.svg',
-        title: 'GRACE BAIYE ONYIENEOIZA (ACA, ANIM, MBA)',
-        position: 'Head of Public Relations, VOG Global Consult',
-        description: `Ogbe, Esther Mofe is a graduate of Applied Microbiology and Brewing from Nnamdi Azikiwe University, Awka,Anambra State.
-She is a professional accountant who is tenacious, detail-oriented and result-driven. `
-    },
-    {
-        image: '/img/home/meettheteam6.svg',
-        title: 'GRACE BAIYE ONYIENEOIZA (ACA, ANIM, MBA)',
-        position: 'Head of Public Relations, VOG Global Consult',
-        description: `Grace Baiye is a Chartered Accountant  with the Institute of Chartered Accountant of Nigeria(ICAN), an Associate member of Nigeria Institute of Management (NIM) with more than 5 years of experience in internal auditing, accounting, taxation, and business management across diverse industries. 
+//     {
+//         image: '/img/home/meettheteam6.svg',
+//         title: 'GRACE BAIYE ONYIENEOIZA (ACA, ANIM, MBA)',
+//         position: 'Head of Public Relations, VOG Global Consult',
+//         description: `Ogbe, Esther Mofe is a graduate of Applied Microbiology and Brewing from Nnamdi Azikiwe University, Awka,Anambra State.
+// She is a professional accountant who is tenacious, detail-oriented and result-driven. `
+//     },
+//     {
+//         image: '/img/home/meettheteam6.svg',
+//         title: 'GRACE BAIYE ONYIENEOIZA (ACA, ANIM, MBA)',
+//         position: 'Head of Public Relations, VOG Global Consult',
+//         description: `Grace Baiye is a Chartered Accountant  with the Institute of Chartered Accountant of Nigeria(ICAN), an Associate member of Nigeria Institute of Management (NIM) with more than 5 years of experience in internal auditing, accounting, taxation, and business management across diverse industries. 
 
-She holds her first degree in Entrepreneurship and Business Management  from Federal University of Technology(FUT) Minna Niger State and hold an MBA focusing on Entrepreneurship and Venture Creation from Bayero University Kano, Dangote Business School. 
-Grace has also taken several short professional courses inorder to sharpen her as a go to expert in financial management, strategic planning, financial analysis, budgeting, internal controls and taxation.
- `
-    },
-    {
-        image: '/img/home/meettheteam6.svg',
-        title: 'Benedict Onosereme Uwaokhonye, ACA, MSc, ACIHRM',
-        position: 'Head of Public Relations, VOG Global Consult',
-        description: `Benedict Uwaokhonye is a highly skilled professional with a strong academic background in Applied Mathematics from the University of Benin, Edo State. He is a Chartered Accountant and an Associate member of both the Institute of Chartered Accountants of Nigeria (ICAN) and the Chartered Institute of Human Resource Managers (ACIHRM). In addition, he holds a Master’s degree in Financial Mathematics, equipping him with advanced analytical and quantitative skills. With extensive expertise in computer programs and accounting software, Benedict combines technical proficiency with excellent critical thinking and problem-solving abilities. His professional development is further strengthened by a range of technology-focused certifications. Currently, he serves as the Administrative Officer and Head of the ICT Department, where he applies his knowledge to drive efficiency and innovation.`
-    },
-    {
-        image: '/img/home/meettheteam6.svg',
-        title: 'GRACE AMARACHI WILLIE – B-Tech, CNA, BDA.',
-        position: 'Accountant and Tax Consultant, VOG Global Consult',
-        description: `Grace is a Certified Accountant and Tax Consultant at VOG GLOBAL CONSULT with over 10 years’ experience. A Graduate of Entrepreneurship and Management Studies (B.Tech) at Federal University of Technology Minna, Niger State. A member of the Certified National Accountants of Nigeria, ANAN, Diploma in Business Development Academy HUB (BDA) and several other short professional courses.
-Grace, is an enthusiastic person ready to leverage her strong analytical skills, attention to detail, knowledge of accounting principles, and practice in a challenging and dynamic environment. My drive is to contribute to the financial health of an organization by providing accurate financial record. 
-`
-    },
+// She holds her first degree in Entrepreneurship and Business Management  from Federal University of Technology(FUT) Minna Niger State and hold an MBA focusing on Entrepreneurship and Venture Creation from Bayero University Kano, Dangote Business School. 
+// Grace has also taken several short professional courses inorder to sharpen her as a go to expert in financial management, strategic planning, financial analysis, budgeting, internal controls and taxation.
+//  `
+//     },
+//     {
+//         image: '/img/home/meettheteam6.svg',
+//         title: 'Benedict Onosereme Uwaokhonye, ACA, MSc, ACIHRM',
+//         position: 'Head of Public Relations, VOG Global Consult',
+//         description: `Benedict Uwaokhonye is a highly skilled professional with a strong academic background in Applied Mathematics from the University of Benin, Edo State. He is a Chartered Accountant and an Associate member of both the Institute of Chartered Accountants of Nigeria (ICAN) and the Chartered Institute of Human Resource Managers (ACIHRM). In addition, he holds a Master’s degree in Financial Mathematics, equipping him with advanced analytical and quantitative skills. With extensive expertise in computer programs and accounting software, Benedict combines technical proficiency with excellent critical thinking and problem-solving abilities. His professional development is further strengthened by a range of technology-focused certifications. Currently, he serves as the Administrative Officer and Head of the ICT Department, where he applies his knowledge to drive efficiency and innovation.`
+//     },
+//     {
+//         image: '/img/home/meettheteam6.svg',
+//         title: 'HABIB ADAMU HND',
+//         position: 'Accountant and Tax Consultant, VOG Global Consult',
+//         description: `Habib Adamu is from Zamfara State, a graduate of Waziri Umaru Federal Polytechnic Birnin Kebbi in Kebbi State Nigeria. 
+// He holds HND in Accounting and also have completed all proficiency exams for certified member of Association of Nationaal Accountant of Nigeria waiting for next induction. He is currently into the team of VOG Global Audit.`
+//     },
+//     {
+//         image: '/img/home/coreteam1.svg',
+//         title: 'Emmanuel Uduma George. B.Sc, ACA',
+//         position: 'Head Audit VOG Global Consult.',
+//         description: `Mr Emmanuel is a graduate of Government and Public Administration from Abia State University, Uturu. A chartered accountant (ICAN) with over 24 years experience in corporate and management accounting. He has held many accounting and management administration positions with various organisations including Coca-Cola Bottling Company Plc before joining the VOG Global Consult. He is also H.R consultant to various companies in the Hospitality industry. Mr George also lectures ICAN and ANAN students in various centres within FCT Abuja. He has attended many workshops and seminars including Forensic Auditing.`
+//     },
+    
     // {
     //     image: '/img/home/meettheteam.svg',
     //     title: 'VIVIAN ENEOKAFOR BSc, CNA.',
