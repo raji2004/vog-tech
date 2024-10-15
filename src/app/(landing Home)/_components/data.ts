@@ -160,7 +160,18 @@ export const teamData = [
           PHD in finance from the Walden University, USA. 
           He is a practicing licenced member of the Association of National Accountants of Nigeria (ANAN), 
         a practicing licenced member of the Chartered Institute of Taxation of Nigeria (CITN) and a Fellow 
-        of the Association of Chartered System Accountants (ACSA), USA.`
+        of the Association of Chartered System Accountants (ACSA), USA.
+        He served his internship at the firm of Nasir Ozamah & Co. (Chartered
+Accountants) where he rose to the post of Audit Manager before moving to
+VOG Global investment limited as the financial Controller a position he headed
+before joining Oasis Insurance Plc as head; Marketing Department.
+For his burning desire to excel in his chosen profession, he set up the firm VOG
+GLOBAL CONSULT (Financial and management Consultants) to offer
+accounting, auditing, tax advisory management consulting, special
+investigations etc. He is the principal partner of VOG GLOBAL CONSULT.
+Udo is happily married and blessed with wonderful children.
+
+        `
     },
     // {
     //     image: '/img/home/meettheteam.svg',
@@ -172,25 +183,34 @@ export const teamData = [
         image: '/img/home/meettheteam1.svg',
         title: 'ANGELA ADAMU, BSc, ACA.',
         position: 'Head the Audit and Accounting Service department, VOG Global Consult',
-        description: `Angela Adamu is a graduate of Economics from Ambrose Ali University, Edo state. She is also an associate member of the Institute of Chartered Accountants of Nigeria (ICAN). She has in dept knowledge and skills in accounting system...`
+        description: `Angela Adamu is a graduate of Economics from Ambrose Ali University, Edo state. She is also an associate member of the Institute of Chartered Accountants of Nigeria (ICAN). She has in dept knowledge and skills in accounting system. She currently holds the position of Head the Audit and Accounting Service 
+department of VOG GLOBAL CONSULT.`
     },
     {
         image: '/img/home/meettheteam2.svg',
         title: 'AJAYIOLUWANIYIMOSES, MBA, ACA, CISA, CAMS, CFLT.',
         position: 'Manager, Corporate Services and Business Development Department, VOG Global Consult',
-        description: `Ajayi Oluwaniyi Moses is a young and dynamic self-motivated and result oriented person that is committed to producing result in any area or field of empowerment and high core value. He is an associate of the institute of chartered accountants of Nigeria (ICAN),a certified Anti money Laundry Specialist (CAMS), a certified Information System Auditor (CISA) and a Certified Financial Literacy Trainer (CFLT)...`
+        description: `Ajayi Oluwaniyi Moses is a young and dynamic self-motivated and result oriented person that is committed to producing result in any area or field of empowerment and high core value. He is an associate of the institute of chartered accountants of Nigeria (ICAN),a certified Anti money Laundry Specialist (CAMS), a certified Information System Auditor (CISA) and a Certified Financial Literacy Trainer (CFLT). Having garnered much experience from the banking sector, where he rose 
+through the ranks over the years, with further experience in Audit Compliance 
+and Business Development obtained from other financial institutions where he 
+worked, He is currently in charge of management, corporate services and 
+business development department VOG Global Consult. `
     },
     {
         image: '/img/home/meettheteam3.svg',
         title: 'IDIKA KALU IBE, FCIIN, MPA, BSc, CILRM.',
         position: 'Head of Insurance & Risk Assessment Team, VOG Global ',
-        description: `Idika is a graduate of Government and Public Administration (B.Sc) Abia State University, Master of Public and International Affairs (MPIA) from the University of Lagos, Fellow Chartered Institute of Insurance Nigeria (CIIN), Associate member Chartered Institute of Loan and Risk Management (CILRM). Insurance Loss Adjuster and management expert, Train communication and Control Room professional. Idika loves God and things of the Kingdom.`
+        description: `Idika is a graduate of Government and Public Administration (B.Sc) Abia State University, Master of Public and International Affairs (MPIA) from the University of Lagos, Fellow Chartered Institute of Insurance Nigeria (CIIN), Associate member Chartered Institute of Loan and Risk Management (CILRM). Insurance Loss Adjuster and management expert, Train communication and Control Room professional. Having worked with several top-notch insurance firms, he comes over with 
+more than 20 years of experience in the Insurance, Assurance and Risk 
+management Field. 
+He is the current head of Insurance & Risk Assessment Team of VOG Global 
+Consult. Idika loves God and things of the Kingdom.`
     },
     {
         image: '/img/home/meettheteam.svg',
         title: 'KALU UCHE EME, NSA, MPA, HND..',
         position: 'Head of Actuary, VOG Global Consult',
-        description: `Kalu Uche Eme is an astute Statistician, he is an associate of the Nigerian Statistical Association (NSA) and having worked with several international organizations including the British Council, UNODC and others. He comes over with above 22 years of experience with statistics.`
+        description: `Kalu Uche Eme is an astute Statistician, he is an associate of the Nigerian Statistical Association (NSA) and having worked with several international organizations including the British Council, UNODC and others. He comes over with above 22 years of experience with statistics. He’s currently the Head of Actuary for VOG Global Consult. `
     },
     {
         image: '/img/home/meettheteam4.svg',
