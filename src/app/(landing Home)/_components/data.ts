@@ -182,7 +182,7 @@ Udo is happily married and blessed with wonderful children.
     {
         image: '/img/home/meettheteam1.svg',
         title: 'ANGELA ADAMU, BSc, ACA.',
-        position: 'Head the Audit and Accounting Service department, VOG Global Consult',
+        position: 'COO, VOG Global Consult',
         description: `Angela Adamu is a graduate of Economics from Ambrose Ali University, Edo state. She is also an associate member of the Institute of Chartered Accountants of Nigeria (ICAN). She has in dept knowledge and skills in accounting system. She currently holds the position of Head the Audit and Accounting Service 
 department of VOG GLOBAL CONSULT.`
     },
@@ -296,7 +296,7 @@ export const teamMembers = [
     {
         img: "/img/home/coreteam1.svg",
         title: "EMMANUEL UDUMA GEORGE BSc,ACA.",
-        pos: "Head Auditor in the Audit and Accounting Service Department",
+        pos: "COO",
     },
     {
         img: "/img/home/coreteam2.svg",
