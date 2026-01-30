@@ -296,12 +296,12 @@ export const teamMembers = [
     {
         img: "/img/home/coreteam1.svg",
         title: "EMMANUEL UDUMA GEORGE BSc,ACA.",
-        pos: "COO",
+        pos: "Head Auditor in the Audit and Accounting Service Department",
     },
     {
         img: "/img/home/coreteam2.svg",
         title: "ANGELA ADAMU, BSc,ACA",
-        pos: "Chief Executive Officer",
+        pos: "COO",
     },
     // {
     //     img: "/img/home/coreteam.svg",
