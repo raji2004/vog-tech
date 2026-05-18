@@ -153,115 +153,58 @@ export const faqData = [
 export const teamData = [
     {
         image: '/img/home/meettheteam5.svg',
-        title: 'UDO, OKEY OKORO CPA, MNIM, M.Sc.(UK),PHD (USA), CNA, ACTI.',
-        position: 'CEO, VOG Global',
-        description: `Udo is a graduate of Economics from the University of Calabar,
-         MSc in international finance and account from the University of Liverpool.
-          PHD in finance from the Walden University, USA. 
-          He is a practicing licenced member of the Association of National Accountants of Nigeria (ANAN), 
-        a practicing licenced member of the Chartered Institute of Taxation of Nigeria (CITN) and a Fellow 
-        of the Association of Chartered System Accountants (ACSA), USA.
-        He served his internship at the firm of Nasir Ozamah & Co. (Chartered
-Accountants) where he rose to the post of Audit Manager before moving to
-VOG Global investment limited as the financial Controller a position he headed
-before joining Oasis Insurance Plc as head; Marketing Department.
-For his burning desire to excel in his chosen profession, he set up the firm VOG
-GLOBAL CONSULT (Financial and management Consultants) to offer
-accounting, auditing, tax advisory management consulting, special
-investigations etc. He is the principal partner of VOG GLOBAL CONSULT.
-Udo is happily married and blessed with wonderful children.
+        title: 'Dr Okey Okoro Udo. PhD, FCTI, CPA, CNA, FIIAS, MNIM, FCCSA, FFAR, FCCrFA, FCCFI.',
+        position: 'MANAGING CONSULTANT, VOG Global',
+        description: `Dr Okey Okoro Udo is an Adjunct Faculty member at Emmanuel University, Raleigh, North Carolina, USA, and a distinguished finance, taxation, and management professional with over twenty-five years of multidisciplinary experience spanning economics, taxation, accounting, SME development, forensic audit, sustainability, and strategic advisory services.
+        He is a member of several professional bodies including the Chartered Institute of Accountants of Nigeria (ICAN), the Nigerian Institute of Management (NIM), the Chartered Institute of Taxation of Nigeria (CITN), the Institute of Internal Auditors (IIA), and the Forensic Accounting Association of Nigeria (FAAN). His professional affiliations underscore his commitment to excellence and continuous professional development.
+He currently serves as the Managing Director of VOG Global Investment Limited and VOG Global Farms, and as the Managing Consultant of VOG Global Consults, where he provides high-level financial, tax, and organisational advisory services that strengthen institutional efficiency, fiscal responsibility, and sustainable economic development across both public and private sector institutions. He also serves as a Board Member of the Michael Okpara University of Agriculture Business School, Umudike.
 
-        `
+Dr Udo holds a Bachelor of Science degree in Economics from University of Calabar, a Master of Science in International Accounting and Finance from University of Liverpool, a Doctor of Philosophy (PhD) in Management with specialisation in Finance from Walden University, and a Post-Doctoral certification in Education from Emmanuel University. Throughout his distinguished professional career, he has provided advisory, consulting, and research services to reputable institutions across both the public and private sectors.
+
+A respected author, researcher, and socio-economic commentator, Dr Udo has authored and co-authored numerous books, academic papers, and policy-oriented publications on taxation, finance, economic development, and governance. His scholarly contributions continue to support policy dialogue, strengthen fiscal systems, and promote responsible economic management.
+
+Dr Udo is also the Founder of Grace Intervention for Triumph (GIFT) Foundation, a social development initiative established to promote positive societal change through the provision of scholarships, mentorship, and capacity-building training programmes for indigent children and underserved communities.
+
+He remains deeply committed to advancing institutional development, fiscal transparency, and sustainable economic progress through scholarship, professional practice, and strategic leadership. Dr Udo is happily married with children.`
     },
-    // {
-    //     image: '/img/home/meettheteam.svg',
-    //     title: 'EMMANUEL UDUMA GEORGE BSc, ACA.',
-    //     position: 'Head Auditor in the Audit and Accounting Service Department, VOG Global Consult',
-    //     description: `Emmanuel Uduma George is a graduate of Government and Public Administration, Abia State University, where he obtained a Bachelor of Science Degree. He is also an Associate member of the institute of Chartered Accountants of Nigeria (ICAN). He has a profound knowledge in audit system and taxation...`
-    // },
     {
         image: '/img/home/meettheteam1.svg',
         title: 'ANGELA ADAMU, BSc, ACA.',
-        position: 'COO, VOG Global Consult',
-        description: `Angela Adamu is a graduate of Economics from Ambrose Ali University, Edo state. She is also an associate member of the Institute of Chartered Accountants of Nigeria (ICAN). She has in dept knowledge and skills in accounting system. She currently holds the position of Head the Audit and Accounting Service 
-department of VOG GLOBAL CONSULT.`
+        position: 'Head the Audit and Accounting Service department, VOG Global Consult',
+        description: `Angela Adamu is a graduate of Economics from Ambrose Ali University, Edo state. She is also an associate member of the Institute of Chartered Accountants of Nigeria (ICAN).
+
+She has in-depth knowledge and skills in accounting systems and currently holds the position of Head of the Audit and Accounting Service Department of VOG Global Consult.`
     },
     {
         image: '/img/home/meettheteam2.svg',
-        title: 'AJAYIOLUWANIYIMOSES, MBA, ACA, CISA, CAMS, CFLT.',
+        title: 'AJAYI OLUWANIYI MOSES, MBA, ACA, CISA, CAMS, CFLT.',
         position: 'Manager, Corporate Services and Business Development Department, VOG Global Consult',
-        description: `Ajayi Oluwaniyi Moses is a young and dynamic self-motivated and result oriented person that is committed to producing result in any area or field of empowerment and high core value. He is an associate of the institute of chartered accountants of Nigeria (ICAN),a certified Anti money Laundry Specialist (CAMS), a certified Information System Auditor (CISA) and a Certified Financial Literacy Trainer (CFLT). Having garnered much experience from the banking sector, where he rose 
-through the ranks over the years, with further experience in Audit Compliance 
-and Business Development obtained from other financial institutions where he 
-worked, He is currently in charge of management, corporate services and 
-business development department VOG Global Consult. `
+        description: `Ajayi Oluwaniyi Moses is a young, dynamic, self-motivated, and result-oriented professional committed to delivering excellence in empowerment and upholding high core values.
+
+He is an associate of the Institute of Chartered Accountants of Nigeria (ICAN), a Certified Anti-Money Laundering Specialist (CAMS), a Certified Information System Auditor (CISA), and a Certified Financial Literacy Trainer (CFLT). With extensive experience from the banking sector, where he rose through the ranks over the years, and further expertise in Audit Compliance and Business Development obtained from other financial institutions, he currently manages the Corporate Services and Business Development Department of VOG Global Consult.`
     },
     {
         image: '/img/home/meettheteam3.svg',
         title: 'IDIKA KALU IBE, FCIIN, MPA, BSc, CILRM.',
-        position: 'Head of Insurance & Risk Assessment Team, VOG Global ',
-        description: `Idika is a graduate of Government and Public Administration (B.Sc) Abia State University, Master of Public and International Affairs (MPIA) from the University of Lagos, Fellow Chartered Institute of Insurance Nigeria (CIIN), Associate member Chartered Institute of Loan and Risk Management (CILRM). Insurance Loss Adjuster and management expert, Train communication and Control Room professional. Having worked with several top-notch insurance firms, he comes over with 
-more than 20 years of experience in the Insurance, Assurance and Risk 
-management Field. 
-He is the current head of Insurance & Risk Assessment Team of VOG Global 
-Consult. Idika loves God and things of the Kingdom.`
+        position: 'Head of Insurance & Risk Assessment Team, VOG Global',
+        description: `Idika is a graduate of Government and Public Administration (B.Sc) from Abia State University, with a Master of Public and International Affairs (MPIA) from the University of Lagos. He is a Fellow of the Chartered Institute of Insurance Nigeria (CIIN) and an Associate member of the Chartered Institute of Loan and Risk Management (CILRM).
+
+As an Insurance Loss Adjuster and management expert with over 20 years of experience in the Insurance, Assurance, and Risk Management field, Idika brings comprehensive expertise to his role. He currently serves as the Head of the Insurance & Risk Assessment Team of VOG Global Consult. Idika is deeply committed to his faith and values.`
     },
     {
         image: '/img/home/meettheteam.svg',
-        title: 'KALU UCHE EME, NSA, MPA, HND..',
+        title: 'KALU UCHE EME, NSA, MPA, HND.',
         position: 'Head of Actuary, VOG Global Consult',
-        description: `Kalu Uche Eme is an astute Statistician, he is an associate of the Nigerian Statistical Association (NSA) and having worked with several international organizations including the British Council, UNODC and others. He comes over with above 22 years of experience with statistics. He’s currently the Head of Actuary for VOG Global Consult. `
+        description: `Kalu Uche Eme is an astute Statistician and Associate of the Nigerian Statistical Association (NSA). With over 22 years of experience in statistics and a background working with several international organizations including the British Council and UNODC, he brings extensive expertise to the field.
+
+He currently serves as the Head of Actuary for VOG Global Consult.`
     },
     {
         image: '/img/home/meettheteam4.svg',
-        title: 'BENEDICT O. UWAOKHONYE BSc, Msc, ACIHRM.',
+        title: 'BENEDICT O. UWAOKHONYE, BSc, MSc, ACIHRM.',
         position: 'Admin Officer and Head Of ICT Department, VOG Global Consult',
-        description: `Benedict Uwaokhonye is a graduate of Applied Mathematics from the University of Benin, Edo state, he also is an Associate of the Chartered institute of Human Resource Managers (ACIHRM). He has Msc. in Financial Mathematics, and is in the final stage of being an associate member of the Institute of chartered accountant in Nigeria (ICAN).`
+        description: `Benedict Uwaokhonye is a graduate of Applied Mathematics from the University of Benin, Edo State, with a Master's degree in Financial Mathematics. He is an Associate of the Chartered Institute of Human Resource Managers (ACIHRM) and is in the final stages of becoming an associate member of the Institute of Chartered Accountants in Nigeria (ICAN).`
     },
-   
-//     {
-//         image: '/img/home/meettheteam6.svg',
-//         title: 'GRACE BAIYE ONYIENEOIZA (ACA, ANIM, MBA)',
-//         position: 'Head of Public Relations, VOG Global Consult',
-//         description: `Ogbe, Esther Mofe is a graduate of Applied Microbiology and Brewing from Nnamdi Azikiwe University, Awka,Anambra State.
-// She is a professional accountant who is tenacious, detail-oriented and result-driven. `
-//     },
-//     {
-//         image: '/img/home/meettheteam6.svg',
-//         title: 'GRACE BAIYE ONYIENEOIZA (ACA, ANIM, MBA)',
-//         position: 'Head of Public Relations, VOG Global Consult',
-//         description: `Grace Baiye is a Chartered Accountant  with the Institute of Chartered Accountant of Nigeria(ICAN), an Associate member of Nigeria Institute of Management (NIM) with more than 5 years of experience in internal auditing, accounting, taxation, and business management across diverse industries. 
-
-// She holds her first degree in Entrepreneurship and Business Management  from Federal University of Technology(FUT) Minna Niger State and hold an MBA focusing on Entrepreneurship and Venture Creation from Bayero University Kano, Dangote Business School. 
-// Grace has also taken several short professional courses inorder to sharpen her as a go to expert in financial management, strategic planning, financial analysis, budgeting, internal controls and taxation.
-//  `
-//     },
-//     {
-//         image: '/img/home/meettheteam6.svg',
-//         title: 'Benedict Onosereme Uwaokhonye, ACA, MSc, ACIHRM',
-//         position: 'Head of Public Relations, VOG Global Consult',
-//         description: `Benedict Uwaokhonye is a highly skilled professional with a strong academic background in Applied Mathematics from the University of Benin, Edo State. He is a Chartered Accountant and an Associate member of both the Institute of Chartered Accountants of Nigeria (ICAN) and the Chartered Institute of Human Resource Managers (ACIHRM). In addition, he holds a Master’s degree in Financial Mathematics, equipping him with advanced analytical and quantitative skills. With extensive expertise in computer programs and accounting software, Benedict combines technical proficiency with excellent critical thinking and problem-solving abilities. His professional development is further strengthened by a range of technology-focused certifications. Currently, he serves as the Administrative Officer and Head of the ICT Department, where he applies his knowledge to drive efficiency and innovation.`
-//     },
-//     {
-//         image: '/img/home/meettheteam6.svg',
-//         title: 'HABIB ADAMU HND',
-//         position: 'Accountant and Tax Consultant, VOG Global Consult',
-//         description: `Habib Adamu is from Zamfara State, a graduate of Waziri Umaru Federal Polytechnic Birnin Kebbi in Kebbi State Nigeria. 
-// He holds HND in Accounting and also have completed all proficiency exams for certified member of Association of Nationaal Accountant of Nigeria waiting for next induction. He is currently into the team of VOG Global Audit.`
-//     },
-//     {
-//         image: '/img/home/coreteam1.svg',
-//         title: 'Emmanuel Uduma George. B.Sc, ACA',
-//         position: 'Head Audit VOG Global Consult.',
-//         description: `Mr Emmanuel is a graduate of Government and Public Administration from Abia State University, Uturu. A chartered accountant (ICAN) with over 24 years experience in corporate and management accounting. He has held many accounting and management administration positions with various organisations including Coca-Cola Bottling Company Plc before joining the VOG Global Consult. He is also H.R consultant to various companies in the Hospitality industry. Mr George also lectures ICAN and ANAN students in various centres within FCT Abuja. He has attended many workshops and seminars including Forensic Auditing.`
-//     },
-    
-    // {
-    //     image: '/img/home/meettheteam.svg',
-    //     title: 'VIVIAN ENEOKAFOR BSc, CNA.',
-    //     position: 'Audit and Accounting Department, VOG Global Consult',
-    //     description: `Vivian Eneokafor holds a Bsc in Accounting. She is also a Certified National Accountant a certificate earned from the Association of National Accountants (ANAN). She is also a member of the Audit and Accounting Department.`
-    // },
 ]
 export const reviews = [
     {
