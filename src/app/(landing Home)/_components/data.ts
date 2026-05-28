@@ -152,7 +152,7 @@ export const faqData = [
 ]
 export const teamData = [
     {
-        image: '/img/home/meettheteam5.svg',
+        image: '/img/home/meettheteam5.jpeg',
         title: 'Dr Okey Okoro Udo. PhD, FCTI, CPA, CNA, FIIAS, MNIM, FCCSA, FFAR, FCCrFA, FCCFI.',
         position: 'MANAGING CONSULTANT, VOG Global',
         description: `Dr Okey Okoro Udo is an Adjunct Faculty member at Emmanuel University, Raleigh, North Carolina, USA, and a distinguished finance, taxation, and management professional with over twenty-five years of multidisciplinary experience spanning economics, taxation, accounting, SME development, forensic audit, sustainability, and strategic advisory services.
