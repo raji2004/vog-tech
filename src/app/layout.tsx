@@ -6,8 +6,12 @@ import { Footer } from "@/components/footer";
 
 
 export const metadata: Metadata = {
-  title: "Vog tech",
-  description: "start up",
+  title: "Vog Global",
+  description: `At VOG Global, we are more than just consultants; we are your
+                            dedicated partners in success. With over two decades of industry experience,
+                            our team of seasoned professionals is committed to delivering tailored solutions that drive growth,
+                            ensure compliance, and foster long-term success
+                            .`,
 
 };
 

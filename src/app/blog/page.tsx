@@ -30,9 +30,9 @@ export default async function Page() {
                     date={date}
                     author={{
                         ...post.author,
-                        image: post.author.image?.asset._ref
+                        image: post.author?.image?.asset?._ref ?? null
                     }}
-                    img={post.mainImage.asset._ref}
+                    img={post.mainImage?.asset?._ref ?? null}
                     current={post.slug.current}
                 />
             }) : (
