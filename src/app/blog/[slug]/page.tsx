@@ -1,4 +1,5 @@
 import Markdown from "markdown-to-jsx";
+import { PortableText } from '@/sanity/portableText'
 import { POST_QUERY, NEXT_QUERY, PREVIOUS_QUERY } from '@/sanity/lib/queries'
 import { PostQueryResult, NextBlogPost, PreviousBlogPost } from "@/sanity/lib/types";
 import { sanityFetch } from '@/sanity/lib/client'
@@ -85,7 +86,8 @@ export default async function Page({ params }: { params: { slug?: string, } }) {
           className="rounded-2xl w-[1200px] mx-auto h-auto"
         />
 
-        <Markdown>{fullBody}</Markdown>
+        {/* Render rich Portable Text */}
+        <PortableText value={post?.body} />
         <div className=" flex justify-between">
 
         <Post isPrev publishedAt={post?.publishedAt} />
