@@ -18,20 +18,22 @@ export default async function Page() {
     return (
         <div className=" p-section-padding-sm md:p-section-padding flex flex-row flex-wrap gap-10">
             {hasPosts ? posts.map((post) => {
-                const description = post.body
-                    .slice(0, 2)
-                    .map((block) => block.children.map((child) => child.text).join(''))
-                    .join('\n');
+                const description = Array.isArray(post.body) 
+                    ? post.body
+                        .slice(0, 2)
+                        .map((block) => block._type === 'block' ? block.children?.map((child) => child.text).join('') : '')
+                        .join('\n')
+                    : '';
                 const date = new Date(post.publishedAt).toDateString();
                 return <BlogCard
                     key={post._id}
                     title={post.title}
                     description={description}
                     date={date}
-                    author={{
+                    author={post.author ? {
                         ...post.author,
                         image: post.author?.image?.asset?._ref ?? undefined
-                    }}
+                    } : undefined}
                     img={post.mainImage?.asset?._ref ?? undefined}
                     current={post.slug.current}
                 />
