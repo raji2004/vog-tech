@@ -1,86 +1,50 @@
-import { Hero } from "./_components/hero"
-import { Leftbar } from "./_components/leftbar"
-import { Rightbar } from "./_components/rightbar";
+import Link from "next/link";
 
-
-
-
+const SERVICES = [
+  { t: "Technology-Enabled Bookkeeping", d: "Cloud-based recording of daily transactions — sales, purchases, receipts and payments — so your financial data is accurate, up-to-date and accessible anywhere." },
+  { t: "Tax Preparation & Filing", d: "Aligned with Nigerian tax law and international regulations. Our technology-driven process ensures compliance while helping you maximise deductions and credits." },
+  { t: "Auditing Services", d: "Compliant with IFRS and local auditing standards. Advanced tools ensure the accuracy of your financial statements and full regulatory compliance." },
+  { t: "Financial Statement Preparation", d: "Balance sheets, income statements and cash-flow reports following Nigerian regulatory requirements and global accounting principles." },
+  { t: "Tech-Integrated Payroll Services", d: "Advanced payroll software managing wage calculations, tax withholdings and employee payments efficiently, accurately and compliantly." },
+  { t: "Tax Planning & Advisory", d: "Strategies that comply with Nigerian tax policy while incorporating global best practice to minimise liabilities and support long-term financial health." },
+  { t: "Consulting & Advisory Services", d: "Data-driven insight and industry best practice to guide mergers, acquisitions, restructuring and investment decisions." },
+  { t: "Internal Controls & Risk Management", d: "Technology-driven controls that adhere to Nigeria's financial regulations and global standards, safeguarding your assets and operations." },
+  { t: "Forensic Accounting", d: "Advanced data analytics to investigate discrepancies and fraud, offering expert insight and legal support as needed." },
+  { t: "Business Valuation", d: "Cutting-edge financial modelling for accurate assessments in mergers, acquisitions or legal proceedings, guided by international valuation standards." },
+  { t: "Budgeting & Financial Forecasting", d: "Predictive analytics to project financial trends and help your business manage cash flow effectively for future growth." },
+  { t: "Compliance & Regulatory Support", d: "Real-time compliance tracking that simplifies government reporting and meets Nigerian and global regulatory standards." },
+  { t: "Business Research & Re-engineering", d: "Data analytics and process optimisation to help your business improve efficiency, reduce costs and drive profitability." },
+  { t: "Training & Development", d: "E-learning platforms and customised training solutions to enhance your staff's skills and business acumen." },
+  { t: "Staff Outsourcing", d: "Top-tier talent matched to your business needs through advanced HR management systems — compliant and operationally efficient." },
+];
+const SvcIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M9 11l3 3 8-8" /><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9" /></svg>
+);
 
 export default function Services() {
-    return (
-        <main className="p-section-padding-sm md:p-section-padding space-y-10">
-            <Hero />
-            <div className="flex">
-                <Leftbar />
-                <Rightbar />
-            </div>
-            
-        </main>
-       
-        // <div className="flex p-section-padding-sm md:p-section-padding space-y-10">
-        //     <div className="items-center  w-full ">
-               
-        //         <div className="flex">
-                 
-        //         <div className="w-full flex flex-col items-center lg:w-8/12 space-y-7 p-section-padding-sm md:p-section-padding ">
-        //                 <Image src={"/img/services/service_main_image.svg"} width={881} height={731} className=" w-full " alt="whychooseus"></Image>
-        //                 <div className="gap-2 " color="text-secondary-foreground">
-        //                     <H2 className="p-2 font-bold" color="text-secondary-foreground">Strategic Planning and Execution</H2>
-        //                     <P className="p-2 font-normal text-secondary-foreground" color="text-secondary-foreground">At Vog Consult, we believe that a robust strategic plan is the cornerstone of any successful business. Our expert consultants work closely with your leadership team to develop comprehensive strategies tailored to your unique business needs. We analyze market trends, competitive landscapes, and internal capabilities to formulate actionable plans that drive growth and enhance profitability. From setting clear objectives to defining measurable goals and executing actionable plans, we guide you through every step of the strategic planning process.</P>
-        //                 </div>
-        //                 <div className="gap-2 " color="text-secondary-foreground">
-        //                     <H2 className="p-2 font-bold" color="text-secondary-foreground">Operational Excellence</H2>
-        //                     <P className="p-2 font-normal text-secondary-foreground" color="text-secondary-foreground">Achieving operational excellence is crucial for maintaining a competitive edge in today's dynamic business environment. Our consulting services focus on optimizing your business processes to enhance efficiency, reduce costs, and improve overall performance. We conduct thorough assessments of your current operations, identify bottlenecks, and implement industry best practices to streamline workflows. By leveraging cutting-edge technologies and innovative methodologies, we help you achieve operational excellence and deliver superior value to your customers.</P>
-        //                 </div>
-        //                 <div className="flex md:flex-row flex-col-reverse p-2 items-center">
-        //                     <div className="md:w-4/6 " color="text-secondary-foreground">
-        //                         <H2 className="p-2 font-bold" color="text-secondary-foreground">Market Research and Analysis</H2>
-        //                         <P className="p-2 font-normal text-secondary-foreground" color="text-secondary-foreground">Achieving operational excellence is crucial for maintaining a competitive edge in today's dynamic business environment. Our consulting services focus on optimizing your business processes to enhance efficiency, reduce costs, and improve overall performance. We conduct thorough assessments of your current operations, identify bottlenecks, and implement industry best practices to streamline workflows. By leveraging cutting-edge technologies and innovative methodologies, we help you achieve operational excellence and deliver superior value to your customers.</P>
-        //                     </div>
-        //                     <div className=" flex justify-center  md:w-2/6 items-center ">
-        //                         <Image src={"/img/services/happy_customers.svg"} width={252} height={34.6} className="hidden md:block " alt="whychooseus"></Image>
-        //                     </div>
-        //                 </div>
-        //                 <div className="gap-2 " color="text-secondary-foreground">
-        //                     <H2 className="p-2 font-bold" color="text-secondary-foreground">Organisational Development</H2>
-        //                     <P className="p-2 font-normal text-secondary-foreground" color="text-secondary-foreground">Building a strong organizational foundation is critical for achieving long-term success. Our organizational development services focus on enhancing your company's structure, culture, and capabilities.</P>
-        //                 </div>
-        //                 <div className="flex gap-6">
-        //                     <Image src={"/img/services/services_mini_image.svg"} className="hidden md:block w-1/2" alt="whychooseus" width={252} height={34.6} ></Image>
-        //                     <Image src={"/img/services/services_mini_image2.svg"} className="hidden md:block w-1/2" alt="whychooseus" width={252} height={34.6} ></Image>
-        //                 </div>
-        //                 <div className="w-full">
-        //                     <Image src={"/img/services/card_uba.svg"} width={252} height={50} className=" md:block w-full" alt="whychooseus"></Image>
-        //                 </div>
-        //         </div>
-        //         </div>
-                 
-        //     </div>
-                                    
-        //     <div className=" space-y-10 md:space-y-0" >
-        //         <H2 className="text-center" color="text-popover">
-        //             Get A
-        //             <UnderLine>  Qoute!</UnderLine>
-        //         </H2>
-        //         <div className=" flex items-center  ">
-        //             <div className=" w-full md:w-1/2 space-y-5">
-        //                 <Input placeholder="Enter your First Name" label=" First Name" />
-        //                 <Input placeholder="Enter your Last Name" label=" Last Name" />
-        //                 <Input placeholder="Enter your Number" label=" Mobile Number" />
-        //                 <div className=" flex flex-col gap-2" >
-        //                     <label> Message</label>
-        //                     <textarea className=" rounded-md border h-52 border-black p-2" placeholder="Enter your message here" />
-        //                 </div>
-        //                 <Button className=" rounded-full">Send Message</Button>
-        //             </div>
-        //             <Image src={'/img/contact/contact2.svg'} alt="contact" width={500} height={500} className="hidden md:block" />
-        //         </div>
+  return (
+    <div>
+      <section className="banner"><div className="wrap"><div className="crumb">Home <b>›</b> Our Services</div><h1>Our Services</h1><p>A full spectrum of technology-enabled audit, tax, accounting and advisory services — compliant with Nigerian and international standards.</p></div></section>
 
-        //     </div>
+      <section className="section"><div className="wrap">
+        <div className="svc-grid">
+          {SERVICES.map((s) => (
+            <div className="svc" key={s.t}><div className="ic"><SvcIcon /></div><h3>{s.t}</h3><p>{s.d}</p><Link href="/contact" className="lk">Enquire →</Link></div>
+          ))}
+        </div>
+      </div></section>
 
-        // </div>
+      <section className="section soft"><div className="wrap">
+        <div className="sec-head"><h2>How we work</h2><p>A clear, collaborative process from first conversation to final report.</p></div>
+        <div className="pillars" style={{ gridTemplateColumns: "repeat(4,1fr)" }}>
+          <div className="pillar"><div className="top"><span className="ck">1</span><h4>Discover</h4></div><p>We learn your business, risks and goals.</p></div>
+          <div className="pillar"><div className="top"><span className="ck">2</span><h4>Assess</h4></div><p>Thorough audit and review against standards.</p></div>
+          <div className="pillar"><div className="top"><span className="ck">3</span><h4>Advise</h4></div><p>Clear findings and practical recommendations.</p></div>
+          <div className="pillar"><div className="top"><span className="ck">4</span><h4>Support</h4></div><p>Ongoing guidance, updates and reporting.</p></div>
+        </div>
+      </div></section>
 
-                                 
-
-    )
+      <section className="section"><div className="wrap"><div className="ctaband"><h2>Not sure which service you need?</h2><p>Tell us about your business and we&apos;ll recommend the right engagement.</p><div className="cta-row"><Link href="/contact" className="btn btn-gold">Talk to our team</Link></div></div></div></section>
+    </div>
+  );
 }

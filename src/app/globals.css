@@ -138,4 +138,41 @@
   .markdown-content-preview pre {
     @apply bg-gray-800 text-white px-2 py-1 overflow-x-auto rounded md:px-4 md:py-2;
   }
+
+  /* Comfortable reading typography for the article body */
+  .vog-prose {
+    @apply text-[1.0625rem] leading-8 text-gray-700 md:text-lg;
+  }
+  .vog-prose p {
+    @apply my-5 leading-8;
+  }
+  .vog-prose h1,
+  .vog-prose h2,
+  .vog-prose h3 {
+    @apply scroll-mt-24 font-montserrat text-primary;
+  }
+  .vog-prose h2 {
+    @apply mb-3 mt-10 border-l-4 border-popover pl-4 text-2xl font-semibold md:text-3xl;
+  }
+  .vog-prose h3 {
+    @apply mb-2 mt-8 text-xl font-semibold md:text-2xl;
+  }
+  .vog-prose strong {
+    @apply font-semibold text-primary;
+  }
+  .vog-prose a {
+    @apply font-medium text-popover underline underline-offset-2;
+  }
+  .vog-prose ul {
+    @apply my-5 list-disc space-y-2 pl-6;
+  }
+  .vog-prose ol {
+    @apply my-5 list-decimal space-y-2 pl-6;
+  }
+  .vog-prose blockquote {
+    @apply my-8 rounded-r-xl border-l-4 border-popover bg-[#f5f7f3] py-4 pl-6 pr-5 font-montserrat text-lg italic text-primary;
+  }
+  .vog-prose img {
+    @apply my-8 rounded-2xl;
+  }
 }

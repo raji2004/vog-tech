@@ -5,18 +5,21 @@ import { PostQueryResult } from './types';
 
 
 export const POSTS_QUERY = defineQuery(`*[_type == "post" && defined(slug.current)][0...12]{
-  _id, 
-  title, 
-  slug, 
+  _id,
+  title,
+  slug,
   publishedAt,
-  author->{name, image} , 
+  author->{name, image} ,
   mainImage,
-  body
+  body,
+  categories[]->{title, "slug": slug.current}
 }`)
 
 
 export const POST_QUERY = defineQuery(`*[_type == "post" && slug.current == $slug][0]{
-  title, body, mainImage,publishedAt
+  title, body, mainImage, publishedAt,
+  author->{name, image},
+  categories[]->{title, "slug": slug.current}
 }`)
 export const NEXT_QUERY = defineQuery(`
   *[_type == "post" && publishedAt > $publishedAt]

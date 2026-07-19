@@ -33,6 +33,10 @@ export type PostsQueryResult = {
     markDefs: any[];
     style: string;
   }[];
+  categories?: {
+    title: string | null;
+    slug: string | null;
+  }[] | null;
 }[];
 
 export type NextBlogPost = {
@@ -92,6 +96,19 @@ export type PostQueryResult = {
     } | null;
   } | null;
   publishedAt: string;
+  author?: {
+    name: string | null;
+    image?: {
+      asset?: {
+        _ref: string | null;
+        _type: string | null;
+      } | null;
+    } | null;
+  } | null;
+  categories?: {
+    title: string | null;
+    slug: string | null;
+  }[] | null;
 };
 
 export interface SanityBlock {
