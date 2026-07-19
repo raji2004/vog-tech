@@ -1,56 +1,83 @@
-import { BlogCard } from "@/components/card";
-import { H2, P } from "@/components/typography";
-import { Newspaper } from "lucide-react";
-import { sanityFetch } from '@/sanity/lib/client'
-import { POSTS_QUERY } from '@/sanity/lib/queries'
+import { sanityFetch } from "@/sanity/lib/client";
+import { POSTS_QUERY } from "@/sanity/lib/queries";
 import { PostsQueryResult } from "@/sanity/lib/types";
+import { BlogList, BlogListItem } from "./_components/blog-list";
 
+function toPlainText(body: PostsQueryResult[number]["body"]): string {
+  if (!Array.isArray(body)) return "";
+  return body
+    .map((block) =>
+      block._type === "block"
+        ? block.children?.map((child) => child.text).join("") ?? ""
+        : ""
+    )
+    .join(" ");
+}
 
+function readingTime(text: string): string {
+  const words = text.trim().split(/\s+/).filter(Boolean).length;
+  const mins = Math.max(1, Math.round(words / 200));
+  return `${mins} min read`;
+}
 
 export default async function Page() {
-    const posts: PostsQueryResult | null = await sanityFetch<PostsQueryResult>({
-        query: POSTS_QUERY,
-        revalidate: 30, // update cache at most once every hour
-    })
+  const posts: PostsQueryResult | null = await sanityFetch<PostsQueryResult>({
+    query: POSTS_QUERY,
+    revalidate: 30,
+  });
 
-    const hasPosts = Array.isArray(posts) && posts.length > 0
+  const items: BlogListItem[] = Array.isArray(posts)
+    ? posts.map((post) => {
+        const plain = toPlainText(post.body);
+        return {
+          id: post._id,
+          title: post.title,
+          excerpt:
+            plain.length > 170 ? `${plain.slice(0, 170).trimEnd()}…` : plain,
+          date: new Date(post.publishedAt).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          }),
+          readTime: readingTime(plain),
+          authorName: post.author?.name ?? "VOG Global",
+          authorImageRef: post.author?.image?.asset?._ref ?? undefined,
+          imageRef: post.mainImage?.asset?._ref ?? undefined,
+          slug: post.slug.current,
+          categories: (post.categories ?? [])
+            .filter((c): c is { title: string; slug: string } =>
+              Boolean(c?.title && c?.slug)
+            )
+            .map((c) => ({ title: c.title, slug: c.slug })),
+        };
+      })
+    : [];
 
-    return (
-        <div className=" p-section-padding-sm md:p-section-padding flex flex-row flex-wrap gap-10">
-            {hasPosts ? posts.map((post) => {
-                const description = Array.isArray(post.body) 
-                    ? post.body
-                        .slice(0, 2)
-                        .map((block) => block._type === 'block' ? block.children?.map((child) => child.text).join('') : '')
-                        .join('\n')
-                    : '';
-                const date = new Date(post.publishedAt).toDateString();
-                return <BlogCard
-                    key={post._id}
-                    title={post.title}
-                    description={description}
-                    date={date}
-                    author={post.author ? {
-                        ...post.author,
-                        image: post.author?.image?.asset?._ref ?? undefined
-                    } : undefined}
-                    img={post.mainImage?.asset?._ref ?? undefined}
-                    current={post.slug.current}
-                />
-            }) : (
-                <div className="w-full">
-                    <div className="mx-auto flex max-w-3xl flex-col items-center rounded-3xl border border-primary/20 bg-gradient-to-b from-popover/40 to-popover/10 px-6 py-10 text-center shadow-sm md:px-10 md:py-14">
-                        <span className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full border border-primary/20 bg-background/80">
-                            <Newspaper className="h-6 w-6 text-primary" />
-                        </span>
-                        <H2 className="mb-3" color="text-secondary-foreground">No Blog Posts Yet</H2>
-                        <P className="max-w-xl !text-base leading-relaxed md:!text-lg" color="text-secondary-foreground">
-                            We are preparing insightful articles and practical updates. Check back soon for fresh content from our team.
-                        </P>
-                    </div>
-                </div>
-            )}
-
+  return (
+    <div>
+      {/* Banner */}
+      <section className="relative overflow-hidden bg-primary py-14 text-center md:py-16">
+        <div className="pointer-events-none absolute -right-24 -top-28 h-72 w-72 rounded-full bg-popover/25 blur-2xl" />
+        <div className="relative mx-auto max-w-3xl px-6">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
+            VOG Global Insights
+          </p>
+          <h1 className="mb-4 font-montserrat text-3xl font-semibold text-white md:text-5xl">
+            The Blog
+          </h1>
+          <p className="mx-auto max-w-xl text-white/80">
+            Clear analysis of tax, public finance and the policies shaping
+            Nigeria&apos;s economy — from the VOG Global team.
+          </p>
         </div>
-    )
+      </section>
+
+      {/* Listing */}
+      <section className="bg-[#f5f7f3] p-section-padding-sm md:p-section-padding">
+        <div className="mx-auto max-w-6xl">
+          <BlogList items={items} />
+        </div>
+      </section>
+    </div>
+  );
 }
