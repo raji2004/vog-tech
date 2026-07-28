@@ -34,6 +34,7 @@ export default async function Page() {
           title: post.title,
           excerpt:
             plain.length > 170 ? `${plain.slice(0, 170).trimEnd()}…` : plain,
+          publishedAt: post.publishedAt,
           date: new Date(post.publishedAt).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",

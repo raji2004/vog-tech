@@ -12,6 +12,7 @@ export type BlogListItem = {
   title: string;
   excerpt: string;
   date: string;
+  publishedAt: string;
   readTime: string;
   authorName: string;
   authorImageRef?: string;
@@ -33,11 +34,43 @@ export function BlogList({ items }: { items: BlogListItem[] }) {
   }, [items]);
 
   const [active, setActive] = useState<string>("all");
+  const [month, setMonth] = useState<string>("all");
+  const [sort, setSort] = useState<"newest" | "oldest">("newest");
 
-  const filtered =
-    active === "all"
-      ? items
-      : items.filter((it) => it.categories.some((c) => c.slug === active));
+  // Unique months (e.g. "2026-07") present in the posts, newest first
+  const months = useMemo(() => {
+    const map = new Map<string, string>();
+    items.forEach((it) => {
+      const d = new Date(it.publishedAt);
+      if (isNaN(d.getTime())) return;
+      const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+      const label = d.toLocaleDateString("en-US", {
+        month: "long",
+        year: "numeric",
+      });
+      map.set(key, label);
+    });
+    return Array.from(map, ([key, label]) => ({ key, label })).sort((a, b) =>
+      b.key.localeCompare(a.key)
+    );
+  }, [items]);
+
+  const filtered = items
+    .filter(
+      (it) =>
+        active === "all" || it.categories.some((c) => c.slug === active)
+    )
+    .filter((it) => {
+      if (month === "all") return true;
+      const d = new Date(it.publishedAt);
+      const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+      return key === month;
+    })
+    .sort((a, b) => {
+      const diff =
+        new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime();
+      return sort === "newest" ? -diff : diff;
+    });
 
   return (
     <div>
@@ -60,8 +93,34 @@ export function BlogList({ items }: { items: BlogListItem[] }) {
         </div>
       )}
 
+      {/* Date controls */}
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <select
+          value={month}
+          onChange={(e) => setMonth(e.target.value)}
+          className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 outline-none transition-colors hover:border-popover focus:border-primary"
+          aria-label="Filter by month"
+        >
+          <option value="all">All dates</option>
+          {months.map((m) => (
+            <option key={m.key} value={m.key}>
+              {m.label}
+            </option>
+          ))}
+        </select>
+        <select
+          value={sort}
+          onChange={(e) => setSort(e.target.value as "newest" | "oldest")}
+          className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 outline-none transition-colors hover:border-popover focus:border-primary"
+          aria-label="Sort by date"
+        >
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+        </select>
+      </div>
+
       {/* Count */}
-      <p className="mt-8 mb-6 text-center text-sm text-gray-500">
+      <p className="mt-6 mb-6 text-center text-sm text-gray-500">
         Showing <span className="font-semibold text-primary">{filtered.length}</span>{" "}
         {filtered.length === 1 ? "article" : "articles"}
         {active !== "all" &&

@@ -4,7 +4,7 @@ import { PostQueryResult } from './types';
 
 
 
-export const POSTS_QUERY = defineQuery(`*[_type == "post" && defined(slug.current)][0...12]{
+export const POSTS_QUERY = defineQuery(`*[_type == "post" && defined(slug.current)] | order(publishedAt desc) [0...100]{
   _id,
   title,
   slug,
