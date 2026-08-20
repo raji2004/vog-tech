@@ -30,6 +30,13 @@ export const Footer = () => {
             <Link href="/blog">Blog</Link>
             <Link href="/contact">Contact Us</Link>
           </div>
+          <div className="foot-col">
+            <h6>Contact</h6>
+            <a href="mailto:info@vog.global">info@vog.global</a>
+            <a href="mailto:vogglobal@yahoo.com">vogglobal@yahoo.com</a>
+            <a href="tel:+2348072323237">0807 232 3237</a>
+            <a href="tel:+2348092147147">0809 214 7147</a>
+          </div>
           <div className="foot-col news">
             <h6>Newsletter</h6>
             <p className="desc" style={{ marginBottom: "12px" }}>
