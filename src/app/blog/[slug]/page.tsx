@@ -8,6 +8,7 @@ import { ChevronRight, ChevronLeft, Clock } from "lucide-react";
 import { cn, slugifyHeading } from "@/lib/utils";
 import Link from "next/link";
 import { ArticleToc, ReadingProgress, Heading } from "../_components/article-toc";
+import { ShareButtons } from "../_components/share-buttons";
 
 const Post = async ({
   isPrev,
@@ -184,6 +185,9 @@ export default async function Page({
           <div className="markdown-content vog-prose space-y-5">
             <ArticlePortableText value={post?.body} />
           </div>
+
+          {/* Share */}
+          <ShareButtons slug={params.slug} title={post?.title ?? ""} />
 
           {/* Prev / Next */}
           <div className="mt-14 flex items-stretch justify-between gap-4 border-t border-gray-100 pt-8">
