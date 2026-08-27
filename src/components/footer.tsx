@@ -8,7 +8,7 @@ export const Footer = () => {
           <div>
             <img className="foot-logo" src="/icon/logo.svg" alt="VOG Global" />
             <p className="desc">
-              More than just consultants — your dedicated partners in success, with over two
+              More than just consultants. Your dedicated partners in success, with over two
               decades of industry experience.
             </p>
             <div style={{ fontSize: "13px" }}>
