@@ -1,4 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "VOG Global brings over two decades of audit, tax and advisory experience to Nigerian businesses, across VOG Global Consult, VOG Global Investment Ltd and VOG Global Farms.",
+  alternates: { canonical: "https://www.vog.global/about" },
+};
 
 const DEPTS = [
   { t: "Audit & Assurance", d: "Statutory and internal audits, investigation and special audits — accurate, independent, standards-based assurance." },
