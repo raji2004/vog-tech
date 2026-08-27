@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Clock, ChevronRight, Newspaper } from "lucide-react";
 import { urlFor } from "@/sanity/lib/image";
+import { categoryCover } from "@/lib/blog-images";
 
 export type BlogListItem = {
   id: string;
@@ -184,7 +185,12 @@ function BlogCardNew({ item, index }: { item: BlogListItem; index: number }) {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             ) : (
-              <div className="h-full w-full bg-gradient-to-br from-primary to-popover" />
+              <Image
+                src={categoryCover(item.categories)}
+                alt={item.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
             )}
             {item.categories[0]?.title && (
               <span className="absolute left-3 top-3 rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-primary">
