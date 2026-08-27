@@ -9,11 +9,11 @@ import { Footer } from "@/components/footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.vog.global"),
   title: {
-    default: "VOG Global — Expert Tax Auditing & Business Consulting in Nigeria",
+    default: "VOG Global: Expert Tax Auditing & Business Consulting in Nigeria",
     template: "%s | VOG Global",
   },
   description:
-    "VOG Global is a leading provider of consulting, tax audit and assurance services in Nigeria — more than just consultants, your dedicated partners in success, with over two decades of industry experience.",
+    "VOG Global provides consulting, tax audit and assurance services to businesses across Nigeria, with over two decades of experience in audit, tax, forensic accounting and advisory.",
   applicationName: "VOG Global",
   keywords: [
     "VOG Global",
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     "Dr. Okey Okoro Udo",
   ],
   openGraph: {
-    title: "VOG Global — Expert Tax Auditing & Business Consulting in Nigeria",
+    title: "VOG Global: Expert Tax Auditing & Business Consulting in Nigeria",
     description:
-      "More than just consultants — your dedicated partners in success. Audit, tax and advisory services across Nigeria.",
+      "Audit, tax and advisory services for businesses across Nigeria, backed by more than two decades of experience.",
     url: "https://www.vog.global",
     siteName: "VOG Global",
     type: "website",
