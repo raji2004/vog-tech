@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | VOG Global",
   },
   description:
-    "VOG Global provides consulting, tax audit and assurance services to businesses across Nigeria, with over two decades of experience in audit, tax, forensic accounting and advisory.",
+    "VOG Global provides consulting, tax audit and assurance services to businesses in Nigeria and beyond, with over two decades of experience in audit, tax, forensic accounting and advisory.",
   applicationName: "VOG Global",
   keywords: [
     "VOG Global",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "VOG Global: Expert Tax Auditing & Business Consulting in Nigeria",
     description:
-      "Audit, tax and advisory services for businesses across Nigeria, backed by more than two decades of experience.",
+      "Audit, tax and advisory for businesses in Nigeria and beyond, backed by more than two decades of experience.",
     url: "https://www.vog.global",
     siteName: "VOG Global",
     type: "website",
