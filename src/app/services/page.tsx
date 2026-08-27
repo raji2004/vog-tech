@@ -1,4 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services",
+  description:
+    "Audit and assurance, tax preparation and filing, forensic accounting, bookkeeping, payroll, business valuation and compliance support for businesses across Nigeria.",
+  alternates: { canonical: "https://www.vog.global/services" },
+};
 
 const SERVICES = [
   { t: "Technology-Enabled Bookkeeping", d: "Cloud-based recording of daily transactions — sales, purchases, receipts and payments — so your financial data is accurate, up-to-date and accessible anywhere." },
