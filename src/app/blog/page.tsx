@@ -2,6 +2,21 @@ import { sanityFetch } from "@/sanity/lib/client";
 import { POSTS_QUERY } from "@/sanity/lib/queries";
 import { PostsQueryResult } from "@/sanity/lib/types";
 import { BlogList, BlogListItem } from "./_components/blog-list";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tax, Audit & Business Insight for Nigeria",
+  description:
+    "Practical analysis of Nigerian tax, audit and compliance from VOG Global: NRS e-invoicing, VAT, withholding tax, IFRS and the reforms changing how businesses file.",
+  alternates: { canonical: "https://www.vog.global/blog" },
+  openGraph: {
+    type: "website",
+    title: "VOG Global Blog: Tax, Audit & Business Insight for Nigeria",
+    description:
+      "Practical analysis of Nigerian tax, audit and compliance, updated as the rules change.",
+    url: "https://www.vog.global/blog",
+  },
+};
 
 function toPlainText(body: PostsQueryResult[number]["body"]): string {
   if (!Array.isArray(body)) return "";
