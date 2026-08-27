@@ -23,7 +23,7 @@ const DeptIcon = () => (
 export default function About() {
   return (
     <div>
-      <section className="banner"><div className="wrap"><div className="crumb">Home <b>›</b> About Us</div><h1>About VOG Global</h1><p>More than just consultants. Your dedicated partners in success, with over two decades of industry experience.</p></div></section>
+      <section className="banner"><div className="wrap"><div className="crumb">Home <b>›</b> About Us</div><h1>About VOG Global</h1><p>Audit, tax and advisory for businesses in Nigeria and beyond, with over two decades of industry experience.</p></div></section>
 
       <section className="section"><div className="wrap prose-col">
         <p style={{ fontSize: "20px", color: "var(--ink)" }}>VOG Global is a consulting, tax audit and assurance firm helping organisations across Nigeria attain financial security and stay compliant with confidence.</p>
