@@ -8,7 +8,7 @@ const SERVICES = [
   "General enquiry",
 ];
 
-// FormSubmit delivers submissions straight to this inbox — no server/API key needed.
+// FormSubmit delivers submissions straight to this inbox, no server or API key needed.
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/info@vog.global";
 const CC_EMAIL = "vogglobal@yahoo.com";
 
@@ -50,7 +50,7 @@ export function ContactForm() {
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_cc" value={CC_EMAIL} />
-      {/* honeypot — bots fill this, humans never see it */}
+      {/* honeypot: bots fill this, humans never see it */}
       <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
       <div className="row">
@@ -88,7 +88,7 @@ export function ContactForm() {
 
       {status === "sent" && (
         <p style={{ marginTop: "14px", textAlign: "center", color: "var(--green-accent)", fontWeight: 600 }}>
-          Thanks — your message is on its way. We&apos;ll be in touch shortly.
+          Thanks, your message is on its way. We&apos;ll be in touch shortly.
         </p>
       )}
       {status === "error" && (
