@@ -18,7 +18,7 @@ const SERVICES = [
   { t: "Consulting & Advisory Services", d: "Data-driven insight and industry best practice to guide mergers, acquisitions, restructuring and investment decisions." },
   { t: "Internal Controls & Risk Management", d: "Technology-driven controls that adhere to Nigeria's financial regulations and global standards, safeguarding your assets and operations." },
   { t: "Forensic Accounting", d: "Advanced data analytics to investigate discrepancies and fraud, offering expert insight and legal support as needed." },
-  { t: "Business Valuation", d: "Cutting-edge financial modelling for accurate assessments in mergers, acquisitions or legal proceedings, guided by international valuation standards." },
+  { t: "Business Valuation", d: "Detailed financial modelling for accurate assessments in mergers, acquisitions or legal proceedings, guided by international valuation standards." },
   { t: "Budgeting & Financial Forecasting", d: "Predictive analytics to project financial trends and help your business manage cash flow effectively for future growth." },
   { t: "Compliance & Regulatory Support", d: "Real-time compliance tracking that simplifies government reporting and meets Nigerian and global regulatory standards." },
   { t: "Business Research & Re-engineering", d: "Data analytics and process optimisation to help your business improve efficiency, reduce costs and drive profitability." },
