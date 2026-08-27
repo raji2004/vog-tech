@@ -11,9 +11,9 @@ import { ArticleToc, ReadingProgress, Heading } from "../_components/article-toc
 import { ShareButtons } from "../_components/share-buttons";
 import type { Metadata } from "next";
 import { POST_SEO_QUERY } from "@/sanity/lib/queries";
+import { categoryCover } from "@/lib/blog-images";
 import {
   SITE_URL,
-  DEFAULT_OG_IMAGE,
   metaDescription,
   extractFaq,
   faqJsonLd,
@@ -51,10 +51,10 @@ function ogImageFor(post: PostSeo | null): string {
         .fit("crop")
         .url();
     } catch {
-      // fall through to the site default
+      // fall through to the category cover
     }
   }
-  return `${SITE_URL}${DEFAULT_OG_IMAGE}`;
+  return `${SITE_URL}${categoryCover(post?.categories)}`;
 }
 
 export async function generateMetadata({
@@ -293,7 +293,7 @@ export default async function Page({
       <div className="mx-auto -mt-8 max-w-4xl px-6">
         <div className="relative aspect-[16/8] w-full overflow-hidden rounded-2xl shadow-xl">
           <Image
-            src={post?.mainImage ? urlFor(post.mainImage).url() : "/img/home/review.svg"}
+            src={post?.mainImage ? urlFor(post.mainImage).url() : categoryCover(post?.categories)}
             alt={post?.title ?? "Blog image"}
             fill
             className="object-cover"
