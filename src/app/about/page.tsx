@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const DEPTS = [
-  { t: "Audit & Assurance", d: "Statutory and internal audits, investigation and special audits — accurate, independent, standards-based assurance." },
+  { t: "Audit & Assurance", d: "Statutory and internal audits, investigation and special audits: accurate, independent and standards-based." },
   { t: "Tax Advisory Services", d: "Handles all tax matters, from FIRS and state tax to reviews, filings and revenue-authority liaison." },
   { t: "Management & Corporate Services", d: "Corporate routines in line with CAC and regulatory obligations, keeping your business in good standing." },
   { t: "Business Development", d: "Drives company development in engineering, forensics, studies, sustainability, advisory and related areas." },
@@ -23,11 +23,11 @@ const DeptIcon = () => (
 export default function About() {
   return (
     <div>
-      <section className="banner"><div className="wrap"><div className="crumb">Home <b>›</b> About Us</div><h1>About VOG Global</h1><p>More than just consultants — your dedicated partners in success, with over two decades of industry experience.</p></div></section>
+      <section className="banner"><div className="wrap"><div className="crumb">Home <b>›</b> About Us</div><h1>About VOG Global</h1><p>More than just consultants. Your dedicated partners in success, with over two decades of industry experience.</p></div></section>
 
       <section className="section"><div className="wrap prose-col">
         <p style={{ fontSize: "20px", color: "var(--ink)" }}>VOG Global is a consulting, tax audit and assurance firm helping organisations across Nigeria attain financial security and stay compliant with confidence.</p>
-        <p>For over two decades we have partnered with businesses of every size — providing bookkeeping, auditing, tax, forensic accounting, risk management and advisory through specialised departments. We are certified by the relevant authorities and recognised by leading industry bodies, and we pride ourselves on transparent processes backed by regular updates and reports.</p>
+        <p>For over two decades we have partnered with businesses of every size, providing bookkeeping, auditing, tax, forensic accounting, risk management and advisory through specialised departments. We are certified by the relevant authorities and recognised by leading industry bodies, and we pride ourselves on transparent processes backed by regular updates and reports.</p>
         <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "22px", color: "var(--green)", fontWeight: 600, borderLeft: "4px solid var(--green-accent)", paddingLeft: "18px" }}>Our mission: to support clients in attaining financial security by combining the latest technologies and methodologies with deep knowledge of Nigerian tax regulation.</p>
       </div></section>
 
