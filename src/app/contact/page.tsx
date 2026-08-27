@@ -1,4 +1,12 @@
 import { ContactForm } from "./_components/contact-form";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Talk to VOG Global about audit, tax and advisory work. Call 0807 232 3237 or 0809 214 7147, or email info@vog.global. Orago Complex, Area 10, Garki, Abuja.",
+  alternates: { canonical: "https://www.vog.global/contact" },
+};
 
 export default function Contact() {
   return (
