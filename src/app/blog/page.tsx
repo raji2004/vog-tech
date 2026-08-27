@@ -83,7 +83,7 @@ export default async function Page() {
           </h1>
           <p className="mx-auto max-w-xl text-white/80">
             Clear analysis of tax, public finance and the policies shaping
-            Nigeria&apos;s economy — from the VOG Global team.
+            Nigeria&apos;s economy, from the VOG Global team.
           </p>
         </div>
       </section>
