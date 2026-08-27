@@ -59,7 +59,7 @@ export default async function Home() {
           <div>
             <span className="eyebrow light">Building Rewarding Partnerships</span>
             <h1>Expert Tax Auditing &amp; <span className="u">Business Consulting</span> in Nigeria.</h1>
-            <p className="lead">We are more than just consultants. We are your dedicated partners in success. With over two decades of experience, we build solutions around your business, so you stay compliant and keep growing.</p>
+            <p className="lead">Twenty-five years of getting businesses through their numbers, in Nigeria and beyond. We build audit, tax and advisory work around how your company actually operates, so you stay compliant and keep growing.</p>
             <div className="cta-row">
               <Link href="/contact" className="btn btn-gold">Get Started →</Link>
               <Link href="/services" className="btn btn-ghost">See all our services</Link>
@@ -149,16 +149,6 @@ export default async function Home() {
               <div className="info"><h4>{m.name}</h4><div className="cred">{m.cred}</div><div className="pos">{m.pos}</div><p className="bio">{m.bio}</p></div>
             </div>
           ))}
-        </div>
-      </div></section>
-
-      {/* TESTIMONIALS */}
-      <section className="section soft"><div className="wrap">
-        <div className="sec-head"><span className="eyebrow" style={{ justifyContent: "center" }}>Testimonials</span><h2>What our clients say</h2></div>
-        <div className="tgrid">
-          <div className="tcard"><div className="stars">★★★★★</div><p>&quot;VOG Global has been an invaluable partner for our company. Their expertise in tax auditing and business consulting has helped us streamline our operations and achieve significant cost savings.&quot;</p><div className="who"><span className="av">JD</span><div><b>John Doe</b><span>Chief Executive Officer</span></div></div></div>
-          <div className="tcard"><div className="stars">★★★★★</div><p>&quot;The team is professional, knowledgeable, and always available to provide guidance. We couldn&apos;t have asked for a better partner for our compliance and assurance needs.&quot;</p><div className="who"><span className="av">JD</span><div><b>Jane Doe</b><span>Chief Operating Officer</span></div></div></div>
-          <div className="tcard"><div className="stars">★★★★★</div><p>&quot;Responsive, thorough and genuinely invested in our growth. VOG Global delivers measurable results, every engagement, and their integrity is second to none.&quot;</p><div className="who"><span className="av">MS</span><div><b>Michael Smith</b><span>Chief Technology Officer</span></div></div></div>
         </div>
       </div></section>
 
