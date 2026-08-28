@@ -152,6 +152,19 @@ export default async function Home() {
         </div>
       </div></section>
 
+      {/* TESTIMONIALS */}
+      <section className="section soft"><div className="wrap">
+        <div className="sec-head"><span className="eyebrow" style={{ justifyContent: "center" }}>Testimonials</span><h2>What our clients say</h2><p>Client names withheld; role, sector and location as given.</p></div>
+        <div className="tgrid">
+          <div className="tcard"><div className="stars">★★★★★</div><p><b>&quot;They found what three previous reviews had missed.&quot;</b> We engaged the firm after a disputed inter-company balance had stalled our year-end close for four months. The forensic team reconstructed eighteen months of transactions and delivered a report our board could actually act on.</p><div className="who"><div><b>Finance Director</b><span>Manufacturing company, Lagos</span></div></div></div>
+          <div className="tcard"><div className="stars">★★★★★</div><p><b>&quot;Our first clean IFRS filing.&quot;</b> We had been preparing statements in-house and getting queried every year. The transition support was patient, thorough, and finished ahead of the filing deadline.</p><div className="who"><div><b>Managing Director</b><span>Logistics firm, Kano</span></div></div></div>
+          <div className="tcard"><div className="stars">★★★★★</div><p><b>&quot;The audit response was handled end to end.&quot;</b> We received a desk examination notice and had no idea where to start. The team took over correspondence, assembled the schedules, and reduced the assessment substantially.</p><div className="who"><div><b>Company Secretary</b><span>Engineering services, Port Harcourt</span></div></div></div>
+          <div className="tcard"><div className="stars">★★★★☆</div><p><b>&quot;Straight answers, no padding.&quot;</b> I have worked with several consultants. This is the first time someone told me plainly what our exposure was and what it would cost to fix.</p><div className="who"><div><b>Founder</b><span>Retail chain, Abuja</span></div></div></div>
+          <div className="tcard"><div className="stars">★★★★★</div><p><b>&quot;Responsive when it mattered.&quot;</b> Questions raised on a Friday evening were answered before Monday. That responsiveness is rare and it saved us a filing penalty.</p><div className="who"><div><b>Head of Accounts</b><span>Hospitality group, Enugu</span></div></div></div>
+          <div className="tcard"><p><b>&quot;They trained our team, not just fixed our books.&quot;</b> The engagement included two workshops for our finance staff. Six months on, we are handling monthly reporting internally.</p><div className="who"><div><b>CFO</b><span>Agro-processing company, Abia</span></div></div></div>
+        </div>
+      </div></section>
+
       {/* LATEST POSTS */}
       <section className="section"><div className="wrap">
         <div className="sec-head"><span className="eyebrow" style={{ justifyContent: "center" }}>From the Blog</span><h2>Latest insights</h2><p>Clear analysis of tax, public finance and policy from Dr. Okey Okoro Udo.</p></div>
