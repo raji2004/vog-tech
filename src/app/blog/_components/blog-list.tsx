@@ -1,10 +1,10 @@
 'use client';
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Clock, ChevronRight, Newspaper } from "lucide-react";
+import { Clock, Newspaper, Search, X } from "lucide-react";
 import { urlFor } from "@/sanity/lib/image";
 import { categoryCover } from "@/lib/blog-images";
 
@@ -22,6 +22,9 @@ export type BlogListItem = {
   categories: { title: string; slug: string }[];
 };
 
+// How many cards to render before "Load more". Three full rows on desktop.
+const PAGE = 12;
+
 export function BlogList({ items }: { items: BlogListItem[] }) {
   // Build the unique category set from the posts (falls back to none)
   const categories = useMemo(() => {
@@ -37,6 +40,8 @@ export function BlogList({ items }: { items: BlogListItem[] }) {
   const [active, setActive] = useState<string>("all");
   const [month, setMonth] = useState<string>("all");
   const [sort, setSort] = useState<"newest" | "oldest">("newest");
+  const [query, setQuery] = useState<string>("");
+  const [visible, setVisible] = useState<number>(PAGE);
 
   // Unique months (e.g. "2026-07") present in the posts, newest first
   const months = useMemo(() => {
@@ -56,25 +61,79 @@ export function BlogList({ items }: { items: BlogListItem[] }) {
     );
   }, [items]);
 
-  const filtered = items
-    .filter(
-      (it) =>
-        active === "all" || it.categories.some((c) => c.slug === active)
-    )
-    .filter((it) => {
-      if (month === "all") return true;
-      const d = new Date(it.publishedAt);
-      const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
-      return key === month;
-    })
-    .sort((a, b) => {
-      const diff =
-        new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime();
-      return sort === "newest" ? -diff : diff;
-    });
+  // Every word typed must appear somewhere in the post, so "vat rev360" finds
+  // the VAT filing guide rather than everything mentioning either word.
+  const terms = useMemo(
+    () => query.toLowerCase().split(/\s+/).filter(Boolean),
+    [query]
+  );
+
+  const filtered = useMemo(
+    () =>
+      items
+        .filter(
+          (it) => active === "all" || it.categories.some((c) => c.slug === active)
+        )
+        .filter((it) => {
+          if (month === "all") return true;
+          const d = new Date(it.publishedAt);
+          const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+          return key === month;
+        })
+        .filter((it) => {
+          if (!terms.length) return true;
+          const haystack = `${it.title} ${it.excerpt} ${it.categories
+            .map((c) => c.title)
+            .join(" ")}`.toLowerCase();
+          return terms.every((t) => haystack.includes(t));
+        })
+        .sort((a, b) => {
+          const diff =
+            new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime();
+          return sort === "newest" ? -diff : diff;
+        }),
+    [items, active, month, terms, sort]
+  );
+
+  // Changing what is being shown should start the list again from the top,
+  // otherwise a narrow filter inherits a large "load more" count.
+  useEffect(() => {
+    setVisible(PAGE);
+  }, [active, month, sort, query]);
+
+  const shown = filtered.slice(0, visible);
+  const filtersOn = active !== "all" || month !== "all" || query.trim() !== "";
 
   return (
     <div>
+      {/* Search */}
+      <div className="mx-auto mb-8 max-w-xl">
+        <div className="relative">
+          <Search
+            size={18}
+            className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+          />
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={`Search ${items.length} articles...`}
+            aria-label="Search articles"
+            className="w-full rounded-full border border-gray-200 bg-white py-3 pl-11 pr-11 text-sm text-gray-700 shadow-sm outline-none transition-colors placeholder:text-gray-400 hover:border-popover focus:border-primary"
+          />
+          {query && (
+            <button
+              type="button"
+              onClick={() => setQuery("")}
+              aria-label="Clear search"
+              className="absolute right-3 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full text-gray-400 transition-colors hover:bg-gray-100 hover:text-primary"
+            >
+              <X size={15} />
+            </button>
+          )}
+        </div>
+      </div>
+
       {/* Filter bar */}
       {categories.length > 0 && (
         <div className="flex flex-wrap justify-center gap-2.5 border-b border-primary/10 pb-8">
@@ -121,22 +180,53 @@ export function BlogList({ items }: { items: BlogListItem[] }) {
       </div>
 
       {/* Count */}
-      <p className="mt-6 mb-6 text-center text-sm text-gray-500">
-        Showing <span className="font-semibold text-primary">{filtered.length}</span>{" "}
-        {filtered.length === 1 ? "article" : "articles"}
-        {active !== "all" &&
-          ` in ${categories.find((c) => c.slug === active)?.title ?? ""}`}
-      </p>
+      <div className="mt-6 mb-6 flex flex-wrap items-center justify-center gap-3 text-sm text-gray-500">
+        <p>
+          Showing{" "}
+          <span className="font-semibold text-primary">{shown.length}</span>
+          {shown.length < filtered.length && ` of ${filtered.length}`}{" "}
+          {filtered.length === 1 ? "article" : "articles"}
+          {active !== "all" &&
+            ` in ${categories.find((c) => c.slug === active)?.title ?? ""}`}
+          {query.trim() && ` matching "${query.trim()}"`}
+        </p>
+        {filtersOn && (
+          <button
+            type="button"
+            onClick={() => {
+              setActive("all");
+              setMonth("all");
+              setQuery("");
+            }}
+            className="rounded-full border border-gray-200 bg-white px-3 py-1 text-xs font-medium text-gray-600 transition-colors hover:border-popover hover:text-primary"
+          >
+            Clear filters
+          </button>
+        )}
+      </div>
 
       {/* Grid */}
-      {filtered.length > 0 ? (
-        <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((item, i) => (
-            <BlogCardNew key={item.id} item={item} index={i} />
-          ))}
-        </div>
+      {shown.length > 0 ? (
+        <>
+          <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
+            {shown.map((item, i) => (
+              <BlogCardNew key={item.id} item={item} index={i % PAGE} />
+            ))}
+          </div>
+          {visible < filtered.length && (
+            <div className="mt-10 flex justify-center">
+              <button
+                type="button"
+                onClick={() => setVisible((v) => v + PAGE)}
+                className="rounded-full bg-primary px-7 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              >
+                Load more articles
+              </button>
+            </div>
+          )}
+        </>
       ) : (
-        <EmptyState />
+        <EmptyState searching={query.trim().length > 0} />
       )}
     </div>
   );
@@ -237,19 +327,24 @@ function BlogCardNew({ item, index }: { item: BlogListItem; index: number }) {
   );
 }
 
-function EmptyState() {
+function EmptyState({ searching }: { searching: boolean }) {
   return (
     <div className="w-full">
       <div className="mx-auto flex max-w-3xl flex-col items-center rounded-3xl border border-primary/20 bg-gradient-to-b from-popover/10 to-transparent px-6 py-14 text-center">
         <span className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full border border-primary/20 bg-background/80">
-          <Newspaper className="h-6 w-6 text-primary" />
+          {searching ? (
+            <Search className="h-6 w-6 text-primary" />
+          ) : (
+            <Newspaper className="h-6 w-6 text-primary" />
+          )}
         </span>
         <h2 className="mb-3 font-montserrat text-2xl font-semibold text-primary">
-          Nothing here yet
+          {searching ? "No matches" : "Nothing here yet"}
         </h2>
         <p className="max-w-xl leading-relaxed text-gray-500">
-          No articles in this category yet. Try another filter, or check back soon
-          for fresh insights from our team.
+          {searching
+            ? "Nothing matched those words. Try fewer words, or a broader term such as VAT, audit or e-invoicing."
+            : "No articles in this category yet. Try another filter, or check back soon for fresh insights from our team."}
         </p>
       </div>
     </div>

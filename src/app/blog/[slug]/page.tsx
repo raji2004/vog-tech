@@ -9,6 +9,7 @@ import { cn, slugifyHeading } from "@/lib/utils";
 import Link from "next/link";
 import { ArticleToc, ReadingProgress, Heading } from "../_components/article-toc";
 import { ShareButtons } from "../_components/share-buttons";
+import { RelatedPosts } from "../_components/related-posts";
 import type { Metadata } from "next";
 import { POST_SEO_QUERY } from "@/sanity/lib/queries";
 import { categoryCover } from "@/lib/blog-images";
@@ -321,6 +322,9 @@ export default async function Page({
             <Post isPrev publishedAt={post?.publishedAt} />
             <Post publishedAt={post?.publishedAt} />
           </div>
+
+          {/* Related reading */}
+          <RelatedPosts slug={params.slug ?? ""} title={post?.title ?? ""} />
         </article>
       </div>
     </div>

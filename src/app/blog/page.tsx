@@ -1,6 +1,5 @@
 import { sanityFetch } from "@/sanity/lib/client";
-import { POSTS_QUERY } from "@/sanity/lib/queries";
-import { PostsQueryResult } from "@/sanity/lib/types";
+import { BLOG_INDEX_QUERY } from "@/sanity/lib/queries";
 import { BlogList, BlogListItem } from "./_components/blog-list";
 import type { Metadata } from "next";
 
@@ -18,56 +17,55 @@ export const metadata: Metadata = {
   },
 };
 
-function toPlainText(body: PostsQueryResult[number]["body"]): string {
-  if (!Array.isArray(body)) return "";
-  return body
-    .map((block) =>
-      block._type === "block"
-        ? block.children?.map((child) => child.text).join("") ?? ""
-        : ""
-    )
-    .join(" ");
-}
+// Shape returned by BLOG_INDEX_QUERY. Declared here rather than taken from the
+// generated types, because the generated ones track POSTS_QUERY.
+type IndexPost = {
+  _id: string;
+  title: string | null;
+  slug: string | null;
+  publishedAt: string | null;
+  excerpt: string | null;
+  words: number | null;
+  mainImage: { asset?: { _ref?: string } } | null;
+  author: { name?: string | null; image?: { asset?: { _ref?: string } } } | null;
+  categories: { title: string | null; slug: string | null }[] | null;
+};
 
-function readingTime(text: string): string {
-  const words = text.trim().split(/\s+/).filter(Boolean).length;
-  const mins = Math.max(1, Math.round(words / 200));
-  return `${mins} min read`;
+function readingTime(words: number | null): string {
+  return `${Math.max(1, Math.round((words ?? 0) / 200))} min read`;
 }
 
 export default async function Page() {
-  const posts: PostsQueryResult | null = await sanityFetch<PostsQueryResult>({
-    query: POSTS_QUERY,
+  const posts = await sanityFetch<IndexPost[]>({
+    query: BLOG_INDEX_QUERY,
     revalidate: 30,
   });
 
-  const items: BlogListItem[] = Array.isArray(posts)
-    ? posts.map((post) => {
-        const plain = toPlainText(post.body);
-        return {
-          id: post._id,
-          title: post.title,
-          excerpt:
-            plain.length > 170 ? `${plain.slice(0, 170).trimEnd()}…` : plain,
-          publishedAt: post.publishedAt,
-          date: new Date(post.publishedAt).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          }),
-          readTime: readingTime(plain),
-          authorName: post.author?.name ?? "VOG Global",
-          authorImageRef: post.author?.image?.asset?._ref ?? undefined,
-          imageRef: post.mainImage?.asset?._ref ?? undefined,
-          slug: post.slug.current,
-          categories: (post.categories ?? [])
-            .filter((c): c is { title: string; slug: string } =>
-              Boolean(c?.title && c?.slug)
-            )
-            .map((c) => ({ title: c.title, slug: c.slug })),
-        };
-      })
-    : [];
+  const items: BlogListItem[] = (Array.isArray(posts) ? posts : [])
+    .filter((post) => post?.slug && post?.title && post?.publishedAt)
+    .map((post) => ({
+      id: post._id,
+      title: post.title as string,
+      // Posts carry a hand-written excerpt (the meta description), which reads
+      // better on a card than a truncated first paragraph.
+      excerpt: post.excerpt?.trim() ?? "",
+      publishedAt: post.publishedAt as string,
+      date: new Date(post.publishedAt as string).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }),
+      readTime: readingTime(post.words),
+      authorName: post.author?.name ?? "VOG Global",
+      authorImageRef: post.author?.image?.asset?._ref ?? undefined,
+      imageRef: post.mainImage?.asset?._ref ?? undefined,
+      slug: post.slug as string,
+      categories: (post.categories ?? [])
+        .filter((c): c is { title: string; slug: string } =>
+          Boolean(c?.title && c?.slug)
+        )
+        .map((c) => ({ title: c.title, slug: c.slug })),
+    }));
 
   return (
     <div>
