@@ -42,6 +42,16 @@ export default function Services() {
         </div>
       </div></section>
 
+      <section className="section"><div className="wrap split">
+        <div className="visual"><img src="/img/team/advisory.jpg" alt="VOG Global advisers reviewing a client file together" /></div>
+        <div>
+          <span className="eyebrow">Working with us</span>
+          <h2>Advice you can act on</h2>
+          <p className="lead">Every engagement starts with understanding how your business actually runs, and ends with findings you can act on.</p>
+          <Link href="/contact" className="btn btn-green">Talk to our team →</Link>
+        </div>
+      </div></section>
+
       <section className="section soft"><div className="wrap">
         <div className="sec-head"><h2>How we work</h2><p>A clear, collaborative process from first conversation to final report.</p></div>
         <div className="pillars" style={{ gridTemplateColumns: "repeat(4,1fr)" }}>

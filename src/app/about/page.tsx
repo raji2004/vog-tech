@@ -31,6 +31,10 @@ export default function About() {
         <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: "22px", color: "var(--green)", fontWeight: 600, borderLeft: "4px solid var(--green-accent)", paddingLeft: "18px" }}>Our mission: to support clients in attaining financial security by combining the latest technologies and methodologies with deep knowledge of Nigerian tax regulation.</p>
       </div></section>
 
+      <section className="section" style={{ paddingTop: 0 }}><div className="wrap">
+        <img src="/img/team/about-team.jpg" alt="VOG Global colleagues at the firm's office" style={{ width: "100%", borderRadius: "20px", display: "block", boxShadow: "var(--shadow-hover)" }} />
+      </div></section>
+
       <section className="section soft"><div className="wrap">
         <div className="sec-head"><h2>Our departments</h2><p>Specialised teams delivering focused expertise across every engagement.</p></div>
         <div className="depts">
