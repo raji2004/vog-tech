@@ -8,6 +8,98 @@ import { ChevronRight, ChevronLeft, Clock } from "lucide-react";
 import { cn, slugifyHeading } from "@/lib/utils";
 import Link from "next/link";
 import { ArticleToc, ReadingProgress, Heading } from "../_components/article-toc";
+import { ShareButtons } from "../_components/share-buttons";
+import { RelatedPosts } from "../_components/related-posts";
+import type { Metadata } from "next";
+import { POST_SEO_QUERY } from "@/sanity/lib/queries";
+import { categoryCover } from "@/lib/blog-images";
+import {
+  SITE_URL,
+  metaDescription,
+  extractFaq,
+  faqJsonLd,
+  articleJsonLd,
+  breadcrumbJsonLd,
+} from "@/lib/seo";
+
+type PostSeo = {
+  title?: string;
+  excerpt?: string;
+  plain?: string;
+  publishedAt?: string;
+  _updatedAt?: string;
+  mainImage?: unknown;
+  slug?: string;
+  author?: { name?: string };
+  categories?: { title?: string }[];
+};
+
+async function getSeo(slug?: string): Promise<PostSeo | null> {
+  if (!slug) return null;
+  return sanityFetch<PostSeo>({
+    query: POST_SEO_QUERY,
+    params: { slug },
+    revalidate: 300,
+  });
+}
+
+function ogImageFor(post: PostSeo | null): string {
+  if (post?.mainImage) {
+    try {
+      return urlFor(post.mainImage as never)
+        .width(1200)
+        .height(630)
+        .fit("crop")
+        .url();
+    } catch {
+      // fall through to the category cover
+    }
+  }
+  return `${SITE_URL}${categoryCover(post?.categories)}`;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug?: string };
+}): Promise<Metadata> {
+  const post = await getSeo(params.slug);
+
+  if (!post?.title) {
+    return {
+      title: "Post not found",
+      robots: { index: false, follow: true },
+    };
+  }
+
+  const description = metaDescription(post.excerpt, post.plain);
+  const url = `${SITE_URL}/blog/${params.slug}`;
+  const image = ogImageFor(post);
+
+  return {
+    title: post.title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description,
+      url,
+      siteName: "VOG Global",
+      publishedTime: post.publishedAt,
+      modifiedTime: post._updatedAt ?? post.publishedAt,
+      authors: post.author?.name ? [post.author.name] : undefined,
+      tags: post.categories?.map((c) => c?.title).filter(Boolean) as string[] | undefined,
+      images: [{ url: image, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description,
+      images: [image],
+    },
+  };
+}
 
 const Post = async ({
   isPrev,
@@ -113,8 +205,45 @@ export default async function Page({
         .filter((h) => h.text.length > 0)
     : [];
 
+  // Structured data: lets Google show this as an article result, and the FAQ
+  // block as an expandable rich result.
+  const seo = await getSeo(params.slug);
+  const description = metaDescription(seo?.excerpt, plain);
+  const faq = faqJsonLd(extractFaq(post?.body));
+  const article = post?.title
+    ? articleJsonLd({
+        title: post.title,
+        description,
+        slug: params.slug ?? "",
+        publishedAt: post.publishedAt,
+        updatedAt: seo?._updatedAt,
+        authorName: authorName,
+        imageUrl: ogImageFor(seo),
+        categories: post.categories?.map((c) => c?.title).filter(Boolean) as string[],
+      })
+    : null;
+  const crumbs = post?.title ? breadcrumbJsonLd(post.title, params.slug ?? "") : null;
+
   return (
     <div>
+      {article && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}
+        />
+      )}
+      {faq && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
+        />
+      )}
+      {crumbs && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbs) }}
+        />
+      )}
       <ReadingProgress />
       {/* Hero */}
       <section className="relative overflow-hidden bg-primary pb-14 pt-12 md:pb-16">
@@ -165,7 +294,7 @@ export default async function Page({
       <div className="mx-auto -mt-8 max-w-4xl px-6">
         <div className="relative aspect-[16/8] w-full overflow-hidden rounded-2xl shadow-xl">
           <Image
-            src={post?.mainImage ? urlFor(post.mainImage).url() : "/img/home/review.svg"}
+            src={post?.mainImage ? urlFor(post.mainImage).url() : categoryCover(post?.categories)}
             alt={post?.title ?? "Blog image"}
             fill
             className="object-cover"
@@ -185,11 +314,17 @@ export default async function Page({
             <ArticlePortableText value={post?.body} />
           </div>
 
+          {/* Share */}
+          <ShareButtons slug={params.slug} title={post?.title ?? ""} />
+
           {/* Prev / Next */}
           <div className="mt-14 flex items-stretch justify-between gap-4 border-t border-gray-100 pt-8">
             <Post isPrev publishedAt={post?.publishedAt} />
             <Post publishedAt={post?.publishedAt} />
           </div>
+
+          {/* Related reading */}
+          <RelatedPosts slug={params.slug ?? ""} title={post?.title ?? ""} />
         </article>
       </div>
     </div>

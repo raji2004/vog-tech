@@ -8,7 +8,7 @@ export const Footer = () => {
           <div>
             <img className="foot-logo" src="/icon/logo.svg" alt="VOG Global" />
             <p className="desc">
-              More than just consultants — your dedicated partners in success, with over two
+              Audit, tax and advisory for businesses in Nigeria and beyond, with over two
               decades of industry experience.
             </p>
             <div style={{ fontSize: "13px" }}>
@@ -29,6 +29,13 @@ export const Footer = () => {
             <Link href="/services">Our Services</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/contact">Contact Us</Link>
+          </div>
+          <div className="foot-col">
+            <h6>Contact</h6>
+            <a href="mailto:info@vog.global">info@vog.global</a>
+            <a href="mailto:vogglobal@yahoo.com">vogglobal@yahoo.com</a>
+            <a href="tel:+2348072323237">0807 232 3237</a>
+            <a href="tel:+2348092147147">0809 214 7147</a>
           </div>
           <div className="foot-col news">
             <h6>Newsletter</h6>
